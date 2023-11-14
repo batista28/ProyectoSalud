@@ -4,186 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Página con Encabezado, Menú y Pie de Página</title>
-    <style>
-      /* Estilos para el encabezado */
-      header {
-        background-color: #315d75;
-        width: 100%;
-        height: 117px;
-        text-align: center;
-        color: white;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      /* Estilos para las pestañas en el encabezado */
-      .tab-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        position: relative;
-        border-radius: 25%;
-      }
-
-      .tab {
-        display: inline-block;
-        background-color: #2cb89f;
-        width: 180px;
-        height: 45px;
-        margin-right: 20px;
-        line-height: 45px;
-        text-align: center;
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        font-family: "Inter", sans-serif;
-      }
-
-      .small-tab {
-        background-color: #2cb89f;
-        color: white;
-        padding: 8px 12px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-family: "Inter", sans-serif;
-      }
-
-      /* Estilos para el menú desplegable de iniciar sesión */
-      .login-menu {
-        display: none;
-        position: absolute;
-        background-color: #2cb89f;
-        padding: 10px;
-        z-index: 1;
-        border-radius: 5px;
-        top: 70px;
-        right: 20px;
-      }
-
-      .login-menu input {
-        margin-bottom: 10px;
-        width: 100%;
-        padding: 8px;
-        box-sizing: border-box;
-      }
-
-      .login-menu button {
-        background-color: #315d75;
-        color: white;
-        padding: 8px 12px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      /* Estilos para el carrusel de imágenes */
-      .carousel-container {
-        text-align: center;
-        margin-top: 20px;
-        overflow: hidden;
-        position: relative;
-      }
-
-      .carousel-img {
-        width: 100%;
-        max-width: 800px;
-        height: auto;
-        display: none;
-      }
-
-      .carousel-caption {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        transform: translateY(-50%);
-        text-align: center;
-        padding: 10px;
-        font-family: "Inter", sans-serif;
-      }
-
-      /* Estilos para el menú de navegación */
-      nav {
-        background-color: #2cb89f;
-        width: 310px;
-        height: 568px;
-        float: left;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .nav-link {
-        position: relative;
-      }
-
-      .nav-link:hover .nav-dropdown {
-        display: block;
-      }
-
-      .nav-dropdown {
-        display: none;
-        position: absolute;
-        background-color: #2cb89f;
-        padding: 10px;
-        z-index: 1;
-        border-radius: 5px;
-        top: 0;
-        left: 110%;
-      }
-
-      .nav-dropdown a {
-        display: block;
-        color: white;
-        text-decoration: none;
-        padding: 8px 12px;
-        margin: 5px 0;
-        text-transform: uppercase;
-        font-size: 24px;
-        font-weight: bold;
-        font-family: "Inter", sans-serif;
-      }
-
-      /* Estilos para el contenido principal */
-      main {
-        margin-left: 330px;
-        padding: 20px;
-      }
-
-      /* Estilos para el pie de página */
-      footer {
-        background-color: #315d75;
-        width: 100%;
-        height: 85px;
-        clear: both;
-        text-align: center;
-        color: white;
-        padding: 20px;
-      }
-
-      /* Estilos para el botón de accesibilidad */
-      .accessibility-button {
-        background-color: #2cb89f;
-        color: white;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 5px;
-        margin-top: 10px;
-        margin-right: 20px;
-        cursor: pointer;
-        float: right;
-      }
-    </style>
+    <style></style>
     <!-- Enlace para cargar la fuente Inter desde Google Fonts -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
     />
+    <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
   <body>
     <!-- Encabezado -->
@@ -213,8 +40,10 @@
           <a href="#">Especialistas</a>
           <!-- Menú desplegable de Especialistas -->
           <div class="nav-dropdown">
-            <a href="#">Subpágina 1</a>
-            <a href="#">Subpágina 2</a>
+            <a href="#">dr mario bros</a>
+            <a href="#">dr rosa melano</a>
+            <a href="#">dr bruce barners</a>
+            <a href="#">dr house</a>
           </div>
         </li>
         <li class="nav-link">
@@ -231,14 +60,19 @@
     <!-- Contenido Principal -->
     <main>
       <div class="carousel-container">
-        <div class="carousel-caption">Texto de la Imagen 1</div>
+        <div class="carousel-caption">
+          En un mundo en constante evolución,<br />
+          estamos comprometidos a brindarte una atención médica de calidad en la comodidad de tu
+          hogar o lugar de preferencia. <br />Nuestra plataforma de consulta médica por
+          videollamadas te permite acceder a la experiencia y conocimientos de nuestros
+          profesionales de la salud desde cualquier ubicación.
+        </div>
         <img class="carousel-img" src="carrusel1.jpg" alt="Imagen 1" />
         <div class="carousel-caption">Texto de la Imagen 2</div>
         <img class="carousel-img" src="carrusel2.jpg" alt="Imagen 2" />
         <div class="carousel-caption">Texto de la Imagen 3</div>
         <img class="carousel-img" src="carrusel3.jpg" alt="Imagen 3" />
       </div>
-      <p>Bienvenido a mi página. Esto es parte del contenido principal.</p>
     </main>
 
     <!-- Botón de Accesibilidad -->

@@ -1,0 +1,175 @@
+/* Estilos para el encabezado */
+header {
+  background-color: #315d75;
+  width: 100%;
+  height: 117px;
+  text-align: right;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+}
+
+/* Estilos para las pestañas en el encabezado */
+.tab-container {
+  display: flex;
+  justify-content: flex-end; /* Alinea las pestañas a la derecha */
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  border-radius: 25%;
+}
+
+.tab {
+  display: inline-block;
+  background-color: #2cb89f;
+  width: 180px;
+  height: 45px;
+  margin-right: 20px; /* Alinea las pestañas a la derecha */
+  line-height: 45px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
+
+.small-tab {
+  background-color: #2cb89f;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+
+/* Estilos para el menú desplegable de iniciar sesión */
+.login-menu {
+  display: flex;
+  position: absolute;
+  background-color: #2cb89f;
+  padding: 10px;
+  z-index: 1;
+  border-radius: 25px;
+  top: 70px;
+  right: 20px;
+  width: 18%;
+}
+
+.login-menu input {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.login-menu button {
+  background-color: #315d75;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos para el carrusel de imágenes */
+.carousel-container {
+  text-align: right;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-img {
+  width: 100%;
+  max-width: 800px;
+  height: 75%;
+  display: none;
+}
+
+.carousel-caption {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 10px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Estilos para el menú de navegación */
+nav {
+  background-color: #2cb89f;
+  width: 310px;
+  height: 568px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link:hover .nav-dropdown {
+  display: block;
+}
+
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #2cb89f;
+  padding: 10px;
+  z-index: 1;
+  border-radius: 5px;
+  top: 100%;
+  left: 0;
+}
+
+.nav-dropdown a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin: 5px 0;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
+
+/* Estilos para el contenido principal */
+main {
+  margin-left: 330px;
+  padding: 20px;
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #315d75;
+  width: 100%;
+  height: 85px;
+  clear: both;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+/* Estilos para el botón de accesibilidad */
+.accessibility-button {
+  background-color: #2cb89f;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-right: 20px;
+  cursor: pointer;
+  float: right;
+}
