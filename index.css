@@ -106,8 +106,9 @@ header {
 }
 
 #searchIcon {
-  width: 20px; /* Ajusta el tamaño según sea necesario */
+  width: 50px; /* Ajusta el tamaño según sea necesario */
   cursor: pointer;
+  margin-top: 15px;
 }
 
 .search-menu {
