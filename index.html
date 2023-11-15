@@ -16,13 +16,28 @@
     <!-- Encabezado -->
     <header>
       <!-- Pestañas en el encabezado -->
+      <a href="#">@salud</a>
       <div class="tab-container">
         <a href="#" class="tab">QUIEN SOMOS?</a>
         <a href="#" class="tab">NOVEDADES</a>
         <a href="#" class="tab">OFERTAS</a>
         <a href="#" class="tab">RRSS</a>
         <a href="#" class="tab">ACERCA DE</a>
-        <div class="small-tab" id="loginTab">Iniciar Sesión</div>
+         <!-- Nueva sección para la imagen de la lupa y el menú de búsqueda -->
+    <div class="search-section">
+      <img src="lupa.png" alt="Buscar" id="searchIcon" />
+      <!-- Menú de búsqueda -->
+      <div class="search-menu" id="searchMenu">
+        <input type="text" placeholder="Buscar..." />
+        <button>Buscar</button>
+      </div>
+    </div>
+
+    <!-- Moví el menú de inicio de sesión fuera del div tab-container -->
+    <div class="small-tab" id="loginTab">Iniciar Sesión</div>
+  </div>
+</header>
+      
         <!-- Menú desplegable de iniciar sesión -->
         <div class="login-menu" id="loginMenu">
           <input type="text" placeholder="Usuario" />
@@ -62,17 +77,15 @@
       <div class="carousel-container">
         <div class="carousel-caption">
           En un mundo en constante evolución,<br />
-          estamos comprometidos a brindarte una atención médica de calidad en la comodidad de tu
+          estamos comprometidos a brindarte una atención médica<br /> de calidad en la comodidad de tu
           hogar o lugar de preferencia. <br />Nuestra plataforma de consulta médica por
-          videollamadas te permite acceder a la experiencia y conocimientos de nuestros
-          profesionales de la salud desde cualquier ubicación.
+          videollamadas te permite acceder<br /> a la experiencia y conocimientos de nuestros
+          profesionales<br />de la salud desde cualquier ubicación.
         </div>
         <img class="carousel-img" src="carrusel1.jpg" alt="Imagen 1" />
-        <div class="carousel-caption">Texto de la Imagen 2</div>
         <img class="carousel-img" src="carrusel2.jpg" alt="Imagen 2" />
-        <div class="carousel-caption">Texto de la Imagen 3</div>
         <img class="carousel-img" src="carrusel3.jpg" alt="Imagen 3" />
-      </div>
+      
     </main>
 
     <!-- Botón de Accesibilidad -->
@@ -89,6 +102,14 @@
         var loginMenu = document.getElementById("loginMenu");
         loginMenu.style.display = loginMenu.style.display === "block" ? "none" : "block";
       });
+     
+  document.getElementById("searchIcon").addEventListener("click", function () {
+    var searchMenu = document.getElementById("searchMenu");
+    searchMenu.style.display = searchMenu.style.display === "block" ? "none" : "block";
+  });
+
+ 
+
 
       // JavaScript para el carrusel de imágenes
       var currentSlide = 0;

@@ -10,6 +10,22 @@ header {
   justify-content: space-between;
   align-items: right;
 }
+/* Estilos para las pestañas en el encabezado */
+.tab-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.search-icon {
+  width: 45px; /* Mismo tamaño que las pestañas */
+  height: 45px;
+  margin-right: 20px;
+}
+
+/* Resto del código permanece igual */
 
 /* Estilos para las pestañas en el encabezado */
 .tab-container {
@@ -33,6 +49,7 @@ header {
   color: white;
   font-weight: bold;
   font-family: "Inter", sans-serif;
+  margin: 0 50px;
 }
 
 .small-tab {
@@ -45,18 +62,26 @@ header {
   font-family: "Inter", sans-serif;
 }
 
-/* Estilos para el menú desplegable de iniciar sesión */
+/* Estilo del menú desplegable de iniciar sesión */
 .login-menu {
-  display: flex;
   position: absolute;
+  top: 165px;
+  right: 0; /* Ajusta la posición a la derecha */
+  display: none;
   background-color: #2cb89f;
-  padding: 10px;
-  z-index: 1;
+  border: 1px solid #aaaaaa;
   border-radius: 25px;
-  top: 70px;
-  right: 20px;
-  width: 18%;
+  padding: 10px;
+  width: 280px;
 }
+/* Ajusta el estilo del menú de inicio de sesión para moverlo a la derecha y hacia abajo */
+#loginTab {
+  margin-left: auto;
+  margin-right: 20px; /* Agrega un margen a la derecha */
+  margin-top: 10px; /* Ajusta el margen superior */
+}
+
+/* Estilos para el menú desplegable de iniciar sesión */
 
 .login-menu input {
   margin-bottom: 10px;
@@ -73,7 +98,28 @@ header {
   border-radius: 5px;
   cursor: pointer;
 }
+/* Nueva sección para la imagen de la lupa y el menú de búsqueda */
+.search-section {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
 
+#searchIcon {
+  width: 20px; /* Ajusta el tamaño según sea necesario */
+  cursor: pointer;
+}
+
+.search-menu {
+  position: absolute;
+  top: 80px; /* Ajusta la posición vertical según sea necesario */
+  left: -70px;
+  display: none;
+  background-color: #2cb89f;
+  border: 1px solid #aaaaaa;
+  border-radius: 25px;
+  padding: 10px;
+}
 /* Estilos para el carrusel de imágenes */
 .carousel-container {
   text-align: right;
@@ -89,11 +135,17 @@ header {
   display: none;
 }
 
+/* Ajusta el estilo del menú de inicio de sesión */
+#loginTab {
+  margin-right: auto; /* Mueve el menú de inicio de sesión a la derecha */
+}
+
 .carousel-caption {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(14, 10, 10);
+
   position: absolute;
   width: 50%;
+  height: 50%;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
