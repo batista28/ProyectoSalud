@@ -122,41 +122,10 @@ header {
   border: 1px solid #aaaaaa;
   border-radius: 25px;
   padding: 10px;
-}
-/* Estilos para el carrusel de imágenes */
-.carousel-container {
-  text-align: right;
-  margin-top: 20px;
-  overflow: hidden;
-  position: relative;
-}
-
-.carousel-img {
-  width: 100%;
-  max-width: 800px;
-  height: 75%;
-  display: none;
-}
-
-/* Ajusta el estilo del menú de inicio de sesión */
+} /* Ajusta el estilo del menú de inicio de sesión */
 #loginTab {
   margin-right: auto; /* Mueve el menú de inicio de sesión a la derecha */
 }
-
-.carousel-caption {
-  color: rgb(14, 10, 10);
-
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  text-align: center;
-  padding: 10px;
-  font-family: "Inter", sans-serif;
-}
-
 /* Estilos para el menú de navegación */
 nav {
   background-color: #2cb89f;
@@ -170,6 +139,7 @@ nav {
 
 .nav-link {
   position: relative;
+  color: white;
 }
 
 .nav-link:hover .nav-dropdown {
@@ -181,7 +151,7 @@ nav {
   position: absolute;
   background-color: #2cb89f;
   padding: 10px;
-  z-index: 3;
+  z-index: 1;
   border-radius: 5px;
   top: 100%;
   left: 0;
@@ -198,6 +168,12 @@ nav {
   font-weight: bold;
   font-family: "Inter", sans-serif;
 }
+
+/* Estilos para el contenido principal */
+main {
+  margin-left: 330px;
+  padding: 20px;
+}
 .nav-link a {
   display: block;
   color: white;
@@ -208,12 +184,6 @@ nav {
   font-size: 24px;
   font-weight: bold;
   font-family: "Inter", sans-serif;
-}
-
-/* Estilos para el contenido principal */
-main {
-  margin-left: 330px;
-  padding: 20px;
 }
 
 footer {
@@ -227,7 +197,30 @@ footer {
   color: white;
   padding: 20px;
 }
-
+.nav-dropdown a:nth-child(0),
+.nav-dropdown a:nth-child(1),
+.nav-dropdown a:nth-child(2) {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin: 5px 0;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
+#saludTab .nav-dropdown a:nth-child(5),
+#saludTab .nav-dropdown a:nth-child(6),
+#saludTab .nav-dropdown a:nth-child(7) {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin: 5px 0;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
 /* Estilos para el botón de accesibilidad */
 .accessibility-button {
   background-color: #2cb89f;
@@ -239,4 +232,32 @@ footer {
   margin-right: 20px;
   cursor: pointer;
   float: right;
+  clear: both; /* Añade clear:both para que el botón esté debajo de todo */
+}
+/* ... (Tu estilo actual) ... */
+
+/* Estilos para las imágenes en círculos */
+/* ... (Tu estilo actual) ... */
+
+/* Estilos para las imágenes en círculos */
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 150px;
+}
+
+.image-link {
+  display: inline-block;
+  width: 270px; /* Nuevo tamaño del contenedor de imagen */
+  height: 270px; /* Nuevo tamaño del contenedor de imagen */
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 5px; /* Espacio entre las imágenes */
+}
+
+.image-link img {
+  width: 100%; /* La imagen ocupa el 100% del contenedor */
+  height: 100%; /* La imagen ocupa el 100% del contenedor */
+  border-radius: 50%; /* Aplica el radio al borde de la imagen para hacerla circular */
+  object-fit: cover; /* Ajusta el tamaño y recorta la imagen para que se ajuste */
 }

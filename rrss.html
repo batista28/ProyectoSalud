@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Página con Encabezado, Menú y Pie de Página</title>
+    <title>RRSS</title>
     <style></style>
     <!-- Enlace para cargar la fuente Inter desde Google Fonts -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
     />
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="rrss.css" />
   </head>
   <body>
     <!-- Encabezado -->
     <header>
       <!-- Pestañas en el encabezado -->
-      <a href="index.html">@salud</a>
+      <a href="inde">@salud</a>
       <div class="tab-container">
         <a href="#" class="tab">QUIEN SOMOS?</a>
         <a href="novedades.html" class="tab">NOVEDADES</a>
@@ -78,71 +78,47 @@
         </li>
       </ul>
     </nav>
+ <!-- Contenido principal -->
+<!-- Contenido principal -->
+<main>
+  <div class="image-container">
+    <a href="https://twitter.com/" class="image-link">
+      <img src="x.png" alt="Imagen 1">
+    </a>
+    <a href="https://twitter.com/" class="image-link">
+      <img src="facebook.png" alt="Imagen 2">
+    </a>
+    <a href="enlace3.html" class="image-link">
+      <img src="linkledin.png" alt="Imagen 3">
+    </a>
+    <a href="enlace4.html" class="image-link">
+      <img src="Instagram.png" alt="Imagen 4">
+    </a>
+  </div>
+</main>
 
-    <!-- Contenido Principal -->
-    <main>
-      <div class="carousel-container">
-        <div class="carousel-caption">
-          En un mundo en constante evolución,<br />
-          estamos comprometidos a brindarte una atención médica<br /> de calidad en la comodidad de tu
-          hogar o lugar de preferencia. <br />Nuestra plataforma de consulta médica por
-          videollamadas te permite acceder<br /> a la experiencia y conocimientos de nuestros
-          profesionales<br />de la salud desde cualquier ubicación.
-        </div>
-        <img class="carousel-img" src="carrusel1.jpg" alt="Imagen 1" />
-        <img class="carousel-img" src="carrusel2.jpg" alt="Imagen 2" />
-        <img class="carousel-img" src="carrusel3.jpg" alt="Imagen 3" />
-      
-    </main>
+ <!-- Botón de Accesibilidad -->
+ <button class="accessibility-button" id="accessibilityButton">A</button>
 
-    <!-- Botón de Accesibilidad -->
-    <button class="accessibility-button" id="accessibilityButton">A</button>
+ <!-- Pie de Página -->
+ <footer>
+   <p>Este es el pie de página. Puedes agregar información adicional aquí.</p>
+ </footer>
 
-    <!-- Pie de Página -->
-    <footer>
-      <p>Este es el pie de página. Puedes agregar información adicional aquí.</p>
-    </footer>
-
-    <script>
-      // JavaScript para mostrar y ocultar el menú de iniciar sesión
-      document.getElementById("loginTab").addEventListener("click", function () {
-        var loginMenu = document.getElementById("loginMenu");
-        loginMenu.style.display = loginMenu.style.display === "block" ? "none" : "block";
-      });
-     
-  document.getElementById("searchIcon").addEventListener("click", function () {
-    var searchMenu = document.getElementById("searchMenu");
-    searchMenu.style.display = searchMenu.style.display === "block" ? "none" : "block";
-  });
-
- 
-
-
-      // JavaScript para el carrusel de imágenes
-      var currentSlide = 0;
-      var slides = document.querySelectorAll(".carousel-img");
-
-      function showSlide(index) {
-        slides.forEach((slide) => (slide.style.display = "none"));
-        slides[index].style.display = "block";
-      }
-
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      }
-
-      // Mostrar la primera imagen al cargar la página
-      showSlide(currentSlide);
-
-      // Cambiar a la siguiente imagen cada 3 segundos (3000 milisegundos)
-      setInterval(nextSlide, 3000);
-
-      // JavaScript para el botón de accesibilidad
-      document.getElementById("accessibilityButton").addEventListener("click", function () {
+ <script>
+   // JavaScript para mostrar y ocultar el menú de iniciar sesión
+   document.getElementById("loginTab").addEventListener("click", function () {
+     var loginMenu = document.getElementById("loginMenu");
+     loginMenu.style.display = loginMenu.style.display === "block" ? "none" : "block";
+   });
+  
+document.getElementById("searchIcon").addEventListener("click", function () {
+ var searchMenu = document.getElementById("searchMenu");
+ searchMenu.style.display = searchMenu.style.display === "block" ? "none" : "block";
+});
+ // JavaScript para el botón de accesibilidad
+ document.getElementById("accessibilityButton").addEventListener("click", function () {
         alert("¡Accesibilidad activada!");
         // Aquí puedes agregar la lógica adicional que desees
       });
     </script>
-  </body>
-</html>
