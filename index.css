@@ -1,29 +1,14 @@
 header {
   background-color: #315d75;
   width: 100%;
-  height: auto; /* Cambiado a auto para adaptarse al contenido */
+  height: 117px;
   text-align: right;
   color: white;
-  padding: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Alinea verticalmente al centro */
-}
-/* Estilos para las pestañas en el encabezado */
-.tab-container {
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
-  margin-top: 20px;
-  position: relative;
+  padding: 0 20px;
 }
-
-.search-icon {
-  width: 45px; /* Mismo tamaño que las pestañas */
-  height: 45px;
-  margin-right: 20px;
-}
-
 
 /* Estilos para las pestañas en el encabezado */
 .tab-container {
@@ -31,12 +16,8 @@ header {
   justify-content: flex-end;
   align-items: center;
   margin-top: 20px;
+  margin-right: -35px;
   position: relative;
-<<<<<<< HEAD
-  margin-right: 60px;
-  border-radius: 25%;
-=======
->>>>>>> 86fb3f47e0540094b7793be843cb0c37689dc140
 }
 
 .tab {
@@ -44,15 +25,28 @@ header {
   background-color: #2cb89f;
   width: 180px;
   height: 45px;
-  margin-right: 20px; /* Alinea las pestañas a la derecha */
+  margin-right: 35px;
   line-height: 45px;
   text-align: center;
   text-decoration: none;
   color: white;
   font-weight: bold;
   font-family: "Inter", sans-serif;
-  margin: 0 50px;
   border-radius: 10%;
+}
+
+#salud-tab {
+  font-size: 24px;
+  text-transform: lowercase;
+  color: white;
+  background-color: transparent;
+  margin-top: 1em;
+  line-height: 45px;
+  margin-right: 12em; /* Reducir el margen derecho */
+}
+
+#salud-tab:hover {
+  background-color: transparent;
 }
 
 .small-tab {
@@ -64,12 +58,11 @@ header {
   cursor: pointer;
   font-family: "Inter", sans-serif;
 }
-
 /* Estilo del menú desplegable de iniciar sesión */
 .login-menu {
   position: absolute;
   top: 165px;
-  right: 0; /* Ajusta la posición a la derecha */
+  right: 0;
   display: none;
   background-color: #2cb89f;
   border: 1px solid #aaaaaa;
@@ -77,12 +70,13 @@ header {
   padding: 10px;
   width: 280px;
 }
-/* Ajusta el estilo del menú de inicio de sesión para moverlo a la derecha y hacia abajo */
-#loginTab {
-  margin-right: auto; /* Mueve el menú de inicio de sesión a la derecha */
-}
 
-/* Estilos para el menú desplegable de iniciar sesión */
+#loginTab {
+  margin-left: auto;
+  margin-right: 20px;
+  margin-top: 1em;
+  margin-right: 1em;
+}
 
 .login-menu input {
   margin-bottom: 10px;
@@ -99,6 +93,7 @@ header {
   border-radius: 5px;
   cursor: pointer;
 }
+
 /* Nueva sección para la imagen de la lupa y el menú de búsqueda */
 .search-section {
   position: relative;
@@ -107,13 +102,14 @@ header {
 }
 
 #searchIcon {
-  width: 5vw; /* Utiliza unidades vw para que sea un porcentaje del ancho de la pantalla */
+  width: 50px;
   cursor: pointer;
   margin-top: 15px;
 }
+
 .search-menu {
   position: absolute;
-  top: 80px; /* Ajusta la posición vertical según sea necesario */
+  top: 80px;
   left: -70px;
   display: none;
   background-color: #2cb89f;
@@ -121,6 +117,12 @@ header {
   border-radius: 25px;
   padding: 10px;
 }
+#logo {
+  width: 9em;
+  height: 9em;
+  margin-right: 20px;
+}
+
 /* Estilos para el carrusel de imágenes */
 .carousel-container {
   text-align: right;
@@ -158,32 +160,21 @@ header {
 /* Estilos para el menú de navegación */
 nav {
   background-color: #2cb89f;
-  width: 100%; /* O ajusta según tus necesidades */
-  min-width: 200px; /* Establece un ancho mínimo */
-  float: none; /* Evita el float para que sea responsive */
+  width: 310px;
+  height: 568px;
+  float: left;
   display: flex;
-  flex-direction:  row;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
 }
-
 
 .nav-link {
   position: relative;
+  color: white;
 }
 
 .nav-link:hover .nav-dropdown {
   display: block;
-}
-
-.nav-dropdown {
-  display: none;
-  position: absolute;
-  background-color: #2cb89f;
-  padding: 10px;
-  z-index: 3;
-  border-radius: 5px;
-  top: 100%;
-  left: 0;
 }
 
 .nav-dropdown {
@@ -196,15 +187,18 @@ nav {
   top: 100%;
   left: 0;
 }
-/* Estilos para las opciones del menú en mayúsculas, en blanco y con la fuente Inter a 24px */
-.nav-dropdown a,
-.nav-link a {
-  text-transform: uppercase;
+
+.nav-dropdown a {
+  display: block;
   color: white;
-  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin: 5px 0;
+  text-transform: uppercase;
   font-size: 24px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
 }
-<<<<<<< HEAD
 .nav-link a {
   display: block;
   color: white;
@@ -217,8 +211,6 @@ nav {
   font-family: "Inter", sans-serif;
 }
 
-=======
->>>>>>> 86fb3f47e0540094b7793be843cb0c37689dc140
 /* Estilos para el contenido principal */
 main {
   padding: 20px;
@@ -244,8 +236,8 @@ footer {
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
-  margin-top: 10px;
-  margin-right: 20px;
+  margin-top: 4em;
   cursor: pointer;
   float: right;
+  clear: both; /* Añade clear:both para que el botón esté debajo de todo */
 }

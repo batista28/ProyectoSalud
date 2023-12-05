@@ -8,21 +8,24 @@
     <!-- Enlace para cargar la fuente Inter desde Google Fonts -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-    />
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+      <link rel="icon" href="LOGO.ico" type="image/x-icon" />
+    
     <link rel="stylesheet" type="text/css" href="rrss.css" />
   </head>
   <body>
     <!-- Encabezado -->
     <header>
       <!-- Pestañas en el encabezado -->
-      <a href="inde">@salud</a>
+      <img src="LOGO.png" alt="Logotipo" id="logo" />
+      <a href="index.html" class="tab" id="salud-tab">@salud</a>
       <div class="tab-container">
         <a href="#" class="tab">QUIEN SOMOS?</a>
         <a href="novedades.html" class="tab">NOVEDADES</a>
         <a href="#" class="tab">OFERTAS</a>
         <a href="rrss.html" class="tab">RRSS</a>
         <a href="#" class="tab">ACERCA DE</a>
+      </div>
          <!-- Nueva sección para la imagen de la lupa y el menú de búsqueda -->
     <div class="search-section">
       <img src="lupa.png" alt="Buscar" id="searchIcon" />
@@ -37,6 +40,7 @@
     <div class="small-tab" id="loginTab">Iniciar Sesión</div>
   </div>
 </header>
+      
       
         <!-- Menú desplegable de iniciar sesión -->
         <div class="login-menu" id="loginMenu">
@@ -65,7 +69,7 @@
           <a href="#">Especialidades</a>
           <!-- Menú desplegable de Especialidades -->
           <div class="nav-dropdown">
-            <a href="#">Traumatologia</a>
+            <a href="traumatologia.html">Traumatologia</a>
             <a href="#">Oncologia</a>
             <a href="#">Pediatria</a>
             <a href="#">Neurologia</a>
