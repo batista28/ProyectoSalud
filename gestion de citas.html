@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Gestion de citas</title>
+    <style></style>
+    <!-- Enlace para cargar la fuente Inter desde Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="icon" href="LOGO.ico" type="image/x-icon" />
+    <!-- Tu hoja de estilos personalizada -->
+    <link rel="stylesheet" type="text/css" href="gestion de citas.css">
+    <!-- Enlace para cargar la fuente Inter desde Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header>
+      <!-- Pestañas en el encabezado -->
+      <img src="LOGO.png" alt="Logotipo" id="logo" />
+      <a href="index.html" class="tab" id="salud-tab">@salud</a>
+      <div class="tab-container">
+        <a href="#" class="tab">QUIEN SOMOS?</a>
+        <a href="novedades.html" class="tab">NOVEDADES</a>
+        <a href="#" class="tab">OFERTAS</a>
+        <a href="rrss.html" class="tab">RRSS</a>
+        <a href="#" class="tab">ACERCA DE</a>
+      </div>
+         <!-- Nueva sección para la imagen de la lupa y el menú de búsqueda -->
+    <div class="search-section">
+      <img src="lupa.png" alt="Buscar" id="searchIcon" />
+      <!-- Menú de búsqueda -->
+      <div class="search-menu" id="searchMenu">
+        <input type="text" placeholder="Buscar..." />
+        <button>Buscar</button>
+      </div>
+    </div>
+
+    <!-- Moví el menú de inicio de sesión fuera del div tab-container -->
+    <div class="small-tab" id="loginTab">Iniciar Sesión</div>
+  </div>
+</header>
+      
+      
+        <!-- Menú desplegable de iniciar sesión -->
+        <div class="login-menu" id="loginMenu">
+          <input type="text" placeholder="Usuario" />
+          <input type="password" placeholder="Contraseña" />
+          <button>Iniciar Sesión</button>
+          <button>Registrarse</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Menú de Navegación -->
+    <nav>
+      <ul>
+        <li class="nav-link">
+          <a href="#">Especialistas</a>
+          <!-- Menú desplegable de Especialistas -->
+          <div class="nav-dropdown">
+            <a href="#">dr mario bros</a>
+            <a href="#">dr rosa melano</a>
+            <a href="#">dr bruce barners</a>
+            <a href="#">dr house</a>
+          </div>
+        </li>
+        <li class="nav-link">
+          <a href="#">Especialidades</a>
+          <!-- Menú desplegable de Especialidades -->
+          <div class="nav-dropdown">
+            <a href="traumatologia.html">Traumatologia</a>
+            <a href="oncologia.html">Oncologia</a>
+            <a href="#">Pediatria</a>
+            <a href="#">Neurologia</a>
+            <a href="#">Psiquiatria</a>
+            <a href="#">Urologia</a>
+            <a href="#">Cardiologia</a>
+            <a href="#">Nefrologia</a>
+            <a href="#">Neumologia(homenaje a pablo valladares)</a>
+          </div>
+        </li>
+        <li class="nav-link">
+          <a href="#">Gestion de citas</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+
+
+      <div id="citasModal" class="lightbox" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Nueva Cita</h5>
+              <button type="button" class="close" data-dismiss="lightbox" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Formulario para agregar una nueva cita -->
+              <form id="citaForm">
+                <div class="form-group">
+                  <label for="nombre">Nombre del Paciente</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre del paciente">
+                </div>
+                <div class="form-group">
+                  <label for="fecha">Fecha de la Cita</label>
+                  <input type="date" class="form-control" id="fecha">
+                </div>
+                <div class="form-group">
+                  <label for="hora">Hora de la Cita</label>
+                  <input type="time" class="form-control" id="hora">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="lightbox" onclick="cancelarCita()">Cancelar</button>
+              <button type="button" class="btn btn-primary" onclick="guardarCita()">Guardar Cita</button>
+            </div>
+          </div>
+        </div>
+      </div>
+            </div>
+            <div class="modal-footer">
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+
+    <!-- Botón de Accesibilidad -->
+    <button class="accessibility-button" id="accessibilityButton">A</button>
+
+    <!-- Pie de Página -->
+    <footer>
+      <p>Este es el pie de página. Puedes agregar información adicional aquí.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+      // JavaScript para mostrar y ocultar el menú de iniciar sesión
+      document.getElementById("loginTab").addEventListener("click", function () {
+        var loginMenu = document.getElementById("loginMenu");
+        loginMenu.style.display = loginMenu.style.display === "block" ? "none" : "block";
+      });
+     
+  document.getElementById("searchIcon").addEventListener("click", function () {
+    var searchMenu = document.getElementById("searchMenu");
+    searchMenu.style.display = searchMenu.style.display === "block" ? "none" : "block";
+  });
+
+  function guardarCita() {
+    // Aquí puedes agregar lógica para guardar la cita (puedes usar AJAX, enviar a un servidor, etc.)
+    // Por ahora, solo mostraremos un mensaje de alerta
+    alert("Cita guardada exitosamente.");
+    // Cierra la ventana modal después de guardar la cita
+    $('#citasModal').modal('hide');
+  }
+
+  function cancelarCita() {
+    // Cierra la ventana modal al hacer clic en el botón de Cancelar
+    $('#citasModal').modal('hide');
+  }
+
+
+     
+
+      // JavaScript para el botón de accesibilidad
+      document.getElementById("accessibilityButton").addEventListener("click", function () {
+        alert("¡Accesibilidad activada!");
+        // Aquí puedes agregar la lógica adicional que desees
+      });
+      
+    </script>
+  </body>
+</html>

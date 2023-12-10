@@ -1,4 +1,3 @@
-/* Estilos para el encabezado */
 header {
     background-color: #315d75;
     width: 100%;
@@ -118,12 +117,54 @@ header {
     border-radius: 25px;
     padding: 10px;
 }
-
 #logo {
     width: 9em;
     height: 9em;
     margin-right: 20px;
 }
+
+//* Ajustes de estilo para la ventana modal y el formulario */
+#citasModal .modal-dialog {
+    max-width: 400px; /* Reducir el ancho de la ventana modal */
+}
+
+#citasModal .modal-content {
+    background-color: #2cb89f; /* Color de fondo de la ventana modal */
+    color: white; /* Color del texto en la ventana modal */
+}
+
+#citasModal .modal-body {
+    padding: 20px;
+}
+/* Aumenta el espacio entre el texto y el cuadro de texto en el formulario de citas */
+#citasModal .modal-body input {
+    margin-bottom: 20px; /* Ajusta según tu preferencia */
+}
+
+/* Cambia el color del texto de los botones "Cerrar" y "Guardar Cita" en la ventana modal */
+#citasModal .modal-footer button {
+    color: #2cb89f; /* Cambia el color del texto a verde */
+}
+#citaForm label {
+    margin-bottom: 5px;
+}
+
+#citaForm input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+/* Cambia el color de los botones en la ventana modal */
+#citasModal .modal-footer button {
+    background-color: #315d75; /* Color azul para los botones */
+    color: #315d75; /* Color del texto en los botones */
+}
+/* Ajusta el estilo del menú de inicio de sesión */
+#loginTab {
+    margin-right: auto; /* Mueve el menú de inicio de sesión a la derecha */
+}
+
 /* Estilos para el menú de navegación */
 nav {
     background-color: #2cb89f;
@@ -166,12 +207,6 @@ nav {
     font-weight: bold;
     font-family: "Inter", sans-serif;
 }
-
-/* Estilos para el contenido principal */
-main {
-    margin-left: 330px;
-    padding: 20px;
-}
 .nav-link a {
     display: block;
     color: white;
@@ -184,40 +219,23 @@ main {
     font-family: "Inter", sans-serif;
 }
 
+/* Estilos para el contenido principal */
+main {
+    padding: 20px;
+    max-width: 1200px; /* O ajusta según tus necesidades */
+    margin: 0 auto; /* Centra el contenido en pantallas más grandes */
+}
+
 footer {
     position: fixed;
     bottom: 0;
     background-color: #315d75;
     width: 100%;
-    height: 85px;
+    height: auto; /* Cambiado a auto para adaptarse al contenido */
     clear: both;
     text-align: center;
     color: white;
     padding: 20px;
-}
-.nav-dropdown a:nth-child(0),
-.nav-dropdown a:nth-child(1),
-.nav-dropdown a:nth-child(2) {
-    color: white;
-    text-decoration: none;
-    padding: 8px 12px;
-    margin: 5px 0;
-    text-transform: uppercase;
-    font-size: 24px;
-    font-weight: bold;
-    font-family: "Inter", sans-serif;
-}
-#saludTab .nav-dropdown a:nth-child(5),
-#saludTab .nav-dropdown a:nth-child(6),
-#saludTab .nav-dropdown a:nth-child(7) {
-    color: white;
-    text-decoration: none;
-    padding: 8px 12px;
-    margin: 5px 0;
-    text-transform: uppercase;
-    font-size: 24px;
-    font-weight: bold;
-    font-family: "Inter", sans-serif;
 }
 .accessibility-button {
     background-color: #2cb89f;
@@ -230,31 +248,4 @@ footer {
     bottom: 20px; /* Ajusta según tu preferencia */
     right: 20px; /* Ajusta según tu preferencia */
     z-index: 1; /* Asegura que esté encima de otros elementos */
-}
-/* ... (Tu estilo actual) ... */
-
-/* Estilos para las imágenes en círculos */
-/* ... (Tu estilo actual) ... */
-
-/* Estilos para las imágenes en círculos */
-.image-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 150px;
-}
-
-.image-link {
-    display: inline-block;
-    width: 270px; /* Nuevo tamaño del contenedor de imagen */
-    height: 270px; /* Nuevo tamaño del contenedor de imagen */
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 5px; /* Espacio entre las imágenes */
-}
-
-.image-link img {
-    width: 100%; /* La imagen ocupa el 100% del contenedor */
-    height: 100%; /* La imagen ocupa el 100% del contenedor */
-    border-radius: 50%; /* Aplica el radio al borde de la imagen para hacerla circular */
-    object-fit: cover; /* Ajusta el tamaño y recorta la imagen para que se ajuste */
 }
