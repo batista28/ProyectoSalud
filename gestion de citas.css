@@ -1,251 +1,247 @@
 header {
-    background-color: #315d75;
-    width: 100%;
-    height: 117px;
-    text-align: right;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+  background-color: #315d75;
+  width: 100%;
+  height: 117px;
+  text-align: right;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
 /* Estilos para las pestañas en el encabezado */
 .tab-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 20px;
-    margin-right: -35px;
-    position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: -35px;
+  position: relative;
 }
 
 .tab {
-    display: inline-block;
-    background-color: #2cb89f;
-    width: 180px;
-    height: 45px;
-    margin-right: 35px;
-    line-height: 45px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-family: "Inter", sans-serif;
-    border-radius: 10%;
+  display: inline-block;
+  background-color: #2cb89f;
+  width: 180px;
+  height: 45px;
+  margin-right: 35px;
+  line-height: 45px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  border-radius: 10%;
 }
 
 #salud-tab {
-    font-size: 24px;
-    text-transform: lowercase;
-    color: white;
-    background-color: transparent;
-    margin-top: 1em;
-    line-height: 45px;
-    margin-right: 12em; /* Reducir el margen derecho */
+  font-size: 24px;
+  text-transform: lowercase;
+  color: white;
+  background-color: transparent;
+  margin-top: 1em;
+  line-height: 45px;
+  margin-right: 12em; /* Reducir el margen derecho */
 }
 
 #salud-tab:hover {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .small-tab {
-    background-color: #2cb89f;
-    color: white;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: "Inter", sans-serif;
+  background-color: #2cb89f;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
 }
 /* Estilo del menú desplegable de iniciar sesión */
 .login-menu {
-    position: absolute;
-    top: 165px;
-    right: 0;
-    display: none;
-    background-color: #2cb89f;
-    border: 1px solid #aaaaaa;
-    border-radius: 25px;
-    padding: 10px;
-    width: 280px;
+  position: absolute;
+  top: 165px;
+  right: 0;
+  display: none;
+  background-color: #2cb89f;
+  border: 1px solid #aaaaaa;
+  border-radius: 25px;
+  padding: 10px;
+  width: 280px;
 }
 
 #loginTab {
-    margin-left: auto;
-    margin-right: 20px;
-    margin-top: 1em;
-    margin-right: 1em;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-top: 1em;
+  margin-right: 1em;
 }
 
 .login-menu input {
-    margin-bottom: 10px;
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
 }
 
 .login-menu button {
-    background-color: #315d75;
-    color: white;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #315d75;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Nueva sección para la imagen de la lupa y el menú de búsqueda */
 .search-section {
-    position: relative;
-    display: inline-block;
-    margin-left: 20px;
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
 }
 
 #searchIcon {
-    width: 50px;
-    cursor: pointer;
-    margin-top: 15px;
+  width: 50px;
+  cursor: pointer;
+  margin-top: 15px;
 }
 
 .search-menu {
-    position: absolute;
-    top: 80px;
-    left: -70px;
-    display: none;
-    background-color: #2cb89f;
-    border: 1px solid #aaaaaa;
-    border-radius: 25px;
-    padding: 10px;
+  position: absolute;
+  top: 80px;
+  left: -70px;
+  display: none;
+  background-color: #2cb89f;
+  border: 1px solid #aaaaaa;
+  border-radius: 25px;
+  padding: 10px;
 }
 #logo {
-    width: 9em;
-    height: 9em;
-    margin-right: 20px;
+  width: 9em;
+  height: 9em;
+  margin-right: 20px;
 }
 
 //* Ajustes de estilo para la ventana modal y el formulario */
 #citasModal .modal-dialog {
-    max-width: 400px; /* Reducir el ancho de la ventana modal */
+  max-width: 400px; /* Reducir el ancho de la ventana modal */
 }
 
 #citasModal .modal-content {
-    background-color: #2cb89f; /* Color de fondo de la ventana modal */
-    color: white; /* Color del texto en la ventana modal */
+  background-color: #2cb89f; /* Color de fondo de la ventana modal */
+  color: white; /* Color del texto en la ventana modal */
 }
 
 #citasModal .modal-body {
-    padding: 20px;
+  padding: 20px;
 }
 /* Aumenta el espacio entre el texto y el cuadro de texto en el formulario de citas */
 #citasModal .modal-body input {
-    margin-bottom: 20px; /* Ajusta según tu preferencia */
+  margin-bottom: 20px; /* Ajusta según tu preferencia */
 }
 
 /* Cambia el color del texto de los botones "Cerrar" y "Guardar Cita" en la ventana modal */
 #citasModal .modal-footer button {
-    color: #2cb89f; /* Cambia el color del texto a verde */
+  color: #2cb89f; /* Cambia el color del texto a verde */
 }
 #citaForm label {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 #citaForm input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
 }
 
 /* Cambia el color de los botones en la ventana modal */
 #citasModal .modal-footer button {
-    background-color: #315d75; /* Color azul para los botones */
-    color: #315d75; /* Color del texto en los botones */
+  background-color: #315d75; /* Color azul para los botones */
+  color: #315d75; /* Color del texto en los botones */
 }
 /* Ajusta el estilo del menú de inicio de sesión */
 #loginTab {
-    margin-right: auto; /* Mueve el menú de inicio de sesión a la derecha */
+  margin-right: auto; /* Mueve el menú de inicio de sesión a la derecha */
 }
 
-/* Estilos para el menú de navegación */
 nav {
-    background-color: #2cb89f;
-    width: 310px;
-    height: 568px;
-    float: left;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #2cb89f;
+  width: 310px;
+  height: 568px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+.nav-link a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin: 5px 0;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
 .nav-link {
-    position: relative;
-    color: white;
+  position: relative;
+  color: white;
 }
 
 .nav-link:hover .nav-dropdown {
-    display: block;
+  display: block;
 }
-
-.nav-dropdown {
-    display: none;
-    position: absolute;
-    background-color: #2cb89f;
-    padding: 10px;
-    z-index: 1;
-    border-radius: 5px;
-    top: 100%;
-    left: 0;
-}
-
 .nav-dropdown a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 8px 12px;
-    margin: 5px 0;
-    text-transform: uppercase;
-    font-size: 24px;
-    font-weight: bold;
-    font-family: "Inter", sans-serif;
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin: 5px 0;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
 }
-.nav-link a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 8px 12px;
-    margin: 5px 0;
-    text-transform: uppercase;
-    font-size: 24px;
-    font-weight: bold;
-    font-family: "Inter", sans-serif;
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #2cb89f;
+  padding: 10px;
+  z-index: 1;
+  border-radius: 5px;
+  top: 100%;
+  left: 0;
 }
 
 /* Estilos para el contenido principal */
 main {
-    padding: 20px;
-    max-width: 1200px; /* O ajusta según tus necesidades */
-    margin: 0 auto; /* Centra el contenido en pantallas más grandes */
+  padding: 20px;
+  max-width: 1200px; /* O ajusta según tus necesidades */
+  margin: 0 auto; /* Centra el contenido en pantallas más grandes */
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    background-color: #315d75;
-    width: 100%;
-    height: auto; /* Cambiado a auto para adaptarse al contenido */
-    clear: both;
-    text-align: center;
-    color: white;
-    padding: 20px;
+  position: fixed;
+  bottom: 0;
+  background-color: #315d75;
+  width: 100%;
+  height: auto; /* Cambiado a auto para adaptarse al contenido */
+  clear: both;
+  text-align: center;
+  color: white;
+  padding: 20px;
 }
 .accessibility-button {
-    background-color: #2cb89f;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px; /* Ajusta según tu preferencia */
-    right: 20px; /* Ajusta según tu preferencia */
-    z-index: 1; /* Asegura que esté encima de otros elementos */
+  background-color: #2cb89f;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px; /* Ajusta según tu preferencia */
+  right: 20px; /* Ajusta según tu preferencia */
+  z-index: 1; /* Asegura que esté encima de otros elementos */
 }
