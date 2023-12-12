@@ -61,7 +61,7 @@ header {
 /* Estilo del menú desplegable de iniciar sesión */
 .login-menu {
   position: absolute;
-  top: 165px;
+  margin-top: 0vh;
   right: 0;
   display: none;
   background-color: #2cb89f;
@@ -109,7 +109,7 @@ header {
 
 .search-menu {
   position: absolute;
-  top: 80px;
+  top: 9.5vh;
   left: -70px;
   display: none;
   background-color: #2cb89f;
@@ -123,48 +123,52 @@ header {
   margin-right: 20px;
 }
 
-//* Ajustes de estilo para la ventana modal y el formulario */
-#citasModal .modal-dialog {
-  max-width: 400px; /* Reducir el ancho de la ventana modal */
+/* Estilos para el carrusel de imágenes */
+.carousel-container {
+  text-align: right;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-img {
+  width: 70%;
+  max-width: 100%; /* Hace que la imagen no sea más grande que su contenedor */
+  height: auto; /* Se ajusta automáticamente a la proporción original */
+  display: none;
 }
 
-#citasModal .modal-content {
-  background-color: #2cb89f; /* Color de fondo de la ventana modal */
-  color: white; /* Color del texto en la ventana modal */
-}
-
-#citasModal .modal-body {
-  padding: 20px;
-}
-/* Aumenta el espacio entre el texto y el cuadro de texto en el formulario de citas */
-#citasModal .modal-body input {
-  margin-bottom: 20px; /* Ajusta según tu preferencia */
-}
-
-/* Cambia el color del texto de los botones "Cerrar" y "Guardar Cita" en la ventana modal */
-#citasModal .modal-footer button {
-  color: #2cb89f; /* Cambia el color del texto a verde */
-}
-#citaForm label {
-  margin-bottom: 5px;
-}
-
-#citaForm input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-}
-
-/* Cambia el color de los botones en la ventana modal */
-#citasModal .modal-footer button {
-  background-color: #315d75; /* Color azul para los botones */
-  color: #315d75; /* Color del texto en los botones */
-}
 /* Ajusta el estilo del menú de inicio de sesión */
 #loginTab {
   margin-right: auto; /* Mueve el menú de inicio de sesión a la derecha */
 }
 
+.carousel-caption {
+  color: rgb(14, 10, 10);
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 60%;
+  right: 9vh;
+  transform: translateY(-70%);
+  transform: translateX(10%);
+  text-align: right;
+  padding: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+/* Ajusta el tamaño del texto en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .carousel-caption {
+    width: 80%;
+    font-size: 18px;
+  }
+}
+
+/* Estilos para el menú de navegación */
+/* Estilos para el menú de navegación */
 nav {
   background-color: #2cb89f;
   width: 310px;
@@ -174,17 +178,7 @@ nav {
   flex-direction: column;
   align-items: center;
 }
-.nav-link a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 8px 12px;
-  margin: 5px 0;
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
-}
+
 .nav-link {
   position: relative;
   color: white;
@@ -193,6 +187,18 @@ nav {
 .nav-link:hover .nav-dropdown {
   display: block;
 }
+
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #2cb89f;
+  padding: 10px;
+  z-index: 1;
+  border-radius: 5px;
+  top: 100%;
+  left: 0;
+}
+
 .nav-dropdown a {
   display: block;
   color: white;
@@ -204,15 +210,16 @@ nav {
   font-weight: bold;
   font-family: "Inter", sans-serif;
 }
-.nav-dropdown {
-  display: none;
-  position: absolute;
-  background-color: #2cb89f;
-  padding: 10px;
-  z-index: 1;
-  border-radius: 5px;
-  top: 100%;
-  left: 0;
+.nav-link a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin: 5px 0;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
 }
 
 /* Estilos para el contenido principal */
