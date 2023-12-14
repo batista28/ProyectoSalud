@@ -1,4 +1,7 @@
 /* Estilos para el encabezado */
+body {
+  background-image: url("../FONDO.jpeg");
+}
 header {
   background-color: #315d75;
   width: 100%;
@@ -194,6 +197,7 @@ footer {
   text-align: center;
   color: white;
   padding: 20px;
+  text-align: left;
 }
 .nav-dropdown a:nth-child(0),
 .nav-dropdown a:nth-child(1),
