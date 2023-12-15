@@ -47,7 +47,6 @@ header {
     line-height: 45px;
     margin-right: 1em; /* Reducir el margen derecho */
 }
-
 #salud-tab:hover {
     background-color: transparent;
 }
@@ -174,6 +173,46 @@ main {
     margin-left: 330px;
     padding: 20px;
 }
+h1 {
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    color: #315d75;
+    text-align: center;
+}
+/* Estilos para la Sección de Ofertas */
+.offers-section {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.offers-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.offer-tab {
+    background-color: #2cb89f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+}
+
+.offer-tab h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+}
+
+.offer-tab p {
+    margin: 5px 0;
+}
+
 .nav-link a {
     display: block;
     color: white;
@@ -224,7 +263,6 @@ footer {
     font-weight: bold;
     font-family: "Inter", sans-serif;
 }
-/* Estilos para el botón de accesibilidad */
 .accessibility-button {
     background-color: #2cb89f;
     color: white;

@@ -1,0 +1,22 @@
+En todas las paginas tengo que hacerlo responsive porque no he conseguido implementaro
+a tiempo,en el carrusel de index el texto de al lado tiene que ir cambiando dependiendo 
+de la imagen que toque ,tambien el boton de accesibilidad cuando le damossale un alert 
+diciendo que se ha activado el boton de accesibilidad,cuando sepa como implementar
+la accesibilidad se cambiara.
+
+gestion de citas:
+aqui lo tengo con lightbox y boostrap pero no me gusta como queda de todo
+aparte tengo que añadir que cuando guardeos la cita no lleve a la pagina mis citas 
+con las citas realizadas.
+
+en el menu de inicia de sesion tengo que añadir a una pagina para forulario para registrarse
+
+en la paginas ofertas añadiremos  que cuando le demos a adquirir nos lleve a la pasarela de pago 
+todavia no implementado.
+
+tengo pendiente el modo movil y el modo tablet.
+
+me ha faltado pulir cosas en cada pagina,pero he querido tener un producto minimo viable
+para ir implementando cosas mas adelante mientras voy aprendiendos las materias nuevas
+
+Antonio Jesus batista sanchez  

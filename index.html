@@ -32,9 +32,9 @@
       <img src="lupa.png" alt="Buscar" id="searchIcon" />
       <!-- Menú de búsqueda -->
       <div class="search-menu" id="searchMenu">
-        <input type="text" placeholder="Buscar..." />
-        <button>Buscar</button>
-      </div>
+        <input type="text" id="searchInput" placeholder="Buscar..." />
+        <button onclick="buscar()">Buscar</button>
+    </div>
     </div>
 
     <!-- Moví el menú de inicio de sesión fuera del div tab-container -->
@@ -152,6 +152,14 @@
         alert("¡Accesibilidad activada!");
         // Aquí puedes agregar la lógica adicional que desees
       });
+      function buscar() {
+        var searchTerm = document.getElementById("searchInput").value;
+        // Puedes realizar alguna lógica adicional con el término de búsqueda si es necesario
+        // Por ejemplo, podrías incluirlo en la URL como parámetro de consulta (?q=termino)
+        // var searchUrl = "resultadoBusqueda.html?q=" + encodeURIComponent(searchTerm);
+        var searchUrl = "resultadoBusqueda.html";
+        window.location.href = searchUrl;
+    }
     </script>
   </body>
 </html>

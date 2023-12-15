@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OFERTAS</title>
+    <title>NOVEDADES</title>
     <style></style>
     <link rel="icon" href="LOGO.ico" type="image/x-icon" />
     <!-- Enlace para cargar la fuente Inter desde Google Fonts -->
@@ -11,7 +11,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
     />
-    <link rel="stylesheet" type="text/css" href="css/ofertas.css" />
+    <link rel="stylesheet" type="text/css" href="css/novedades.css" />
   </head>
   <body>
     <!-- Encabezado -->
@@ -31,9 +31,9 @@
       <img src="lupa.png" alt="Buscar" id="searchIcon" />
       <!-- Menú de búsqueda -->
       <div class="search-menu" id="searchMenu">
-        <input type="text" placeholder="Buscar..." />
-        <button>Buscar</button>
-      </div>
+        <input type="text" id="searchInput" placeholder="Buscar..." />
+        <button onclick="buscar()">Buscar</button>
+    </div>
     </div>
 
     <!-- Moví el menú de inicio de sesión fuera del div tab-container -->
@@ -85,6 +85,7 @@
         </li>
       </ul>
     </nav>
+    <main><h1>NOVEDADES</h1></main>
  <button class="accessibility-button" id="accessibilityButton">A</button>
 
  <!-- Pie de Página -->
@@ -108,4 +109,13 @@ document.getElementById("searchIcon").addEventListener("click", function () {
         alert("¡Accesibilidad activada!");
         // Aquí puedes agregar la lógica adicional que desees
       });
+
+      function buscar() {
+        var searchTerm = document.getElementById("searchInput").value;
+        // Puedes realizar alguna lógica adicional con el término de búsqueda si es necesario
+        // Por ejemplo, podrías incluirlo en la URL como parámetro de consulta (?q=termino)
+        // var searchUrl = "resultadoBusqueda.html?q=" + encodeURIComponent(searchTerm);
+        var searchUrl = "resultadoBusqueda.html";
+        window.location.href = searchUrl;
+    }
     </script>
