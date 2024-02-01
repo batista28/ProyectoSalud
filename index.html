@@ -10,26 +10,56 @@
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
-      <link rel="icon" href="LOGO.ico" type="image/x-icon" />
+      <link rel="icon" href="img/LOGO.ico" type="image/x-icon" />
     
     <link rel="stylesheet" type="text/css" href="css/index.css" />
   </head>
   <body>
-    <!-- Encabezado -->
+  
     <header>
-      <!-- Pestañas en el encabezado -->
-      <img src="LOGO.png" alt="Logotipo" id="logo" />
+   
+      <audio id="audioPlayer" src="_Bienvenidos a Salud.mp3"></audio>
+      <div id="audioControls">
+        <button id="playButton">▶</button>
+        <button id="pauseButton">❚❚</button>
+        <button id="volumeUpButton">+</button>
+        <button id="volumeDownButton">-</button>
+      </div>
+      <img src="img/LOGO.png" alt="Logotipo" id="logo" />
       <a href="index.html" class="tab" id="salud-tab">@SALUD</a>
-      <div class="tab-container">
-        <a href="#" class="tab">QUIEN SOMOS?</a>
+      <div class="tab-container">  <ul><li class="nav-link">
+        <a href="#" class="tab">Especialistas
+            <!-- Menú desplegable de Especialistas -->
+               <div class="nav-dropdown">
+              <a href="traumatologia.html">dr mario bros</a>
+              <a href="#">dr rosa melano</a>
+              <a href="#">dr bruce barners</a>
+              <a href="#">dr house</a></a>
+            </div></li> 
+      
+          <li class="nav-link">
+            <a href="#" class="tab">Especialidades</a>
+            <!-- Menú desplegable de Especialidades -->
+            <div class="nav-dropdown">
+              <a href="traumatologia.html">Traumatologia</a>
+              <a href="oncologia.html">Oncologia</a>
+              <a href="#">Pediatria</a>
+              <a href="#">Neurologia</a>
+              <a href="#">Psiquiatria</a>
+              <a href="#">Urologia</a>
+              <a href="#">Cardiologia</a>
+              <a href="#">Nefrologia</a>
+              <a href="#">Neumologia(homenaje a pablo valladares)</a>
+            </div>
+          </li></ul>
         <a href="novedades.html" class="tab">NOVEDADES</a>
         <a href="ofertas.html" class="tab">OFERTAS</a>
         <a href="rrss.html" class="tab">RRSS</a>
-        <a href="#" class="tab">ACERCA DE</a>
-      </div>
+        <a href="gestion de citas.html" class="tab">GESTION DE CITAS</a>
+     
          <!-- Nueva sección para la imagen de la lupa y el menú de búsqueda -->
     <div class="search-section">
-      <img src="lupa.png" alt="Buscar" id="searchIcon" />
+      <img src="img/LUPA.png" alt="Buscar" id="searchIcon" />
       <!-- Menú de búsqueda -->
       <div class="search-menu" id="searchMenu">
         <input type="text" id="searchInput" placeholder="Buscar..." />
@@ -54,53 +84,15 @@
     </header>
 
     <!-- Menú de Navegación -->
-    <nav>
-      <ul>
-        <li class="nav-link">
-          <a href="#">Especialistas</a>
-          <!-- Menú desplegable de Especialistas -->
-          <div class="nav-dropdown">
-            <a href="traumatologia.html">dr mario bros</a>
-            <a href="#">dr rosa melano</a>
-            <a href="#">dr bruce barners</a>
-            <a href="#">dr house</a>
-          </div>
-        </li>
-        <li class="nav-link">
-          <a href="#">Especialidades</a>
-          <!-- Menú desplegable de Especialidades -->
-          <div class="nav-dropdown">
-            <a href="traumatologia.html">Traumatologia</a>
-            <a href="oncologia.html">Oncologia</a>
-            <a href="#">Pediatria</a>
-            <a href="#">Neurologia</a>
-            <a href="#">Psiquiatria</a>
-            <a href="#">Urologia</a>
-            <a href="#">Cardiologia</a>
-            <a href="#">Nefrologia</a>
-            <a href="#">Neumologia(homenaje a pablo valladares)</a>
-          </div>
-        </li>
-      </li>
-      <li class="nav-link">
-        <a href="gestion de citas.html">Gestion de citas</a>
-      </li>
-      </ul>
-    </nav>
+   
 
     <!-- Contenido Principal -->
     <main>
       <div class="carousel-container">
-        <div class="carousel-caption">
-          En un mundo en constante evolución,<br />
-          estamos comprometidos a brindarte una<br />  atención médicade calidad en la comodidad <br/> tu
-          hogar o lugar de preferencia. <br />Nuestra plataforma de consulta médica por
-          <br>videollamadas te permite acceder<br /> a la experiencia y conocimientos<br> de nuestros
-          profesionales<br />de la salud desde cualquier ubicación.
-        </div>
-        <img class="carousel-img" src="carrusel/carrusel1.jpg" alt="Imagen 1" />
-        <img class="carousel-img" src="carrusel/carrusel2.jpg" alt="Imagen 2" />
-        <img class="carousel-img" src="carrusel/carrusel3.jpg" alt="Imagen 3" />
+      
+        <img class="carousel-img" src="img/carrusel/carrusel1.jpg" alt="Imagen 1" />
+        <img class="carousel-img" src="img/carrusel/carrusel2.jpg" alt="Imagen 2" />
+        <img class="carousel-img" src="img/carrusel/carrusel3.jpg" alt="Imagen 3" />
       
     </main>
 
@@ -160,6 +152,36 @@
         var searchUrl = "resultadoBusqueda.html";
         window.location.href = searchUrl;
     }
+// Referencias a los elementos del DOM
+const audioPlayer = document.getElementById('audioPlayer');
+const playButton = document.getElementById('playButton');
+const pauseButton = document.getElementById('pauseButton');
+const volumeUpButton = document.getElementById('volumeUpButton');
+const volumeDownButton = document.getElementById('volumeDownButton');
+
+// Evento de clic para el botón de reproducción
+playButton.addEventListener('click', () => {
+  audioPlayer.play(); // Reproduce el audio
+});
+
+// Evento de clic para el botón de pausa
+pauseButton.addEventListener('click', () => {
+  audioPlayer.pause(); // Pausa el audio
+});
+
+// Evento de clic para el botón de aumentar volumen
+volumeUpButton.addEventListener('click', () => {
+  if (audioPlayer.volume < 1) {
+    audioPlayer.volume += 0.1; // Aumenta el volumen en un 10%
+  }
+});
+
+// Evento de clic para el botón de disminuir volumen
+volumeDownButton.addEventListener('click', () => {
+  if (audioPlayer.volume > 0) {
+    audioPlayer.volume -= 0.1; // Disminuye el volumen en un 10%
+  }
+});
     </script>
   </body>
 </html>
