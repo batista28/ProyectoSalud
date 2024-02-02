@@ -20,25 +20,25 @@ header {
   justify-content: flex-end;
   align-items: center;
   margin-top: 20px;
-  margin-right: -35px;
+  margin-right: 10px;
+  gap: 1rem;
   position: relative;
 }
 
 .tab {
-  display: inline-block;
+
   background-color: #2cb89f;
-  width: 180px;
+  width: 180px; /* Ancho fijo para todas las pestañas */
   height: 45px;
-  margin-right: 35px;
   line-height: 45px;
   text-align: center;
   text-decoration: none;
   color: white;
   font-weight: bold;
   font-family: "Inter", sans-serif;
-  border-radius: 10%;
+  margin-right: 20px; /* Separación entre las pestañas */
+  padding: 0 15px; /* Añadido relleno horizontal para espacio interno */
 }
-
 #salud-tab {
   font-size: 24px;
   color: white;
@@ -100,15 +100,17 @@ header {
 /* Nueva sección para la imagen de la lupa y el menú de búsqueda */
 .search-section {
   position: relative;
-  display: inline-block;
-  margin-left: 20px;
+  display: inline-block;  
+  margin-right: 5px;
+}
+ 
 }
 
 #searchIcon {
   width: 50px;
   cursor: pointer;
   margin-top: 15px;
-}
+
 
 .search-menu {
   position: absolute;
@@ -265,3 +267,4 @@ button {
 button:hover {
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Sombra en el texto al pasar el mouse */
 }
+git
