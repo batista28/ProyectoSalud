@@ -1,14 +1,16 @@
 body {
   background-color: #9cdbd3;
+  margin: 0px;
 }
+
 header {
   background-color: #315d75;
   width: 100%;
   height: 117px;
-  text-align: right;
+  text-align: left;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 0 20px;
 }
@@ -16,26 +18,29 @@ header {
 /* Estilos para las pestañas en el encabezado */
 .tab-container {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   margin-top: 20px;
-  margin-right: -35px;
+  margin-right: 10px;
+  gap: 1rem;
   position: relative;
 }
 
 .tab {
-  display: inline-block;
   background-color: #2cb89f;
-  width: 180px;
+  width: 180px; /* Ancho fijo para todas las pestañas */
   height: 45px;
-  margin-right: 35px;
   line-height: 45px;
   text-align: center;
   text-decoration: none;
   color: white;
   font-weight: bold;
   font-family: "Inter", sans-serif;
-  border-radius: 10%;
+  margin-right: 200px; /* Espacio entre las pestañas */
+  padding: 0 15px; /* Añadido relleno horizontal para espacio interno */
+}
+
+.tab:last-child {
+  margin-right: 0; /* Eliminar el margen derecho del último elemento */
 }
 
 #salud-tab {
@@ -63,10 +68,10 @@ header {
 /* Estilo del menú desplegable de iniciar sesión */
 .login-menu {
   position: absolute;
-  margin-top: 0vh;
-  right: 0;
+  margin-top: 26vh;
+  right: 0px; /* Ajuste para mover el menú a la izquierda */
   display: none;
-  background-color: #2cb89f;
+  background-color: #315d75;
   border: 1px solid #aaaaaa;
   border-radius: 25px;
   padding: 10px;
@@ -74,10 +79,10 @@ header {
 }
 
 #loginTab {
-  margin-left: auto;
-  margin-right: 20px;
-  margin-top: 1em;
-  margin-right: 1em;
+  width: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+  background-color: transparent;
 }
 
 .login-menu input {
@@ -87,20 +92,11 @@ header {
   box-sizing: border-box;
 }
 
-.login-menu button {
-  background-color: #315d75;
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 /* Nueva sección para la imagen de la lupa y el menú de búsqueda */
 .search-section {
   position: relative;
   display: inline-block;
-  margin-left: 20px;
+  margin-right: 5px;
 }
 
 #searchIcon {
@@ -108,13 +104,12 @@ header {
   cursor: pointer;
   margin-top: 15px;
 }
-
 .search-menu {
   position: absolute;
-  top: 80px;
-  left: -70px;
+  top: 9.5vh;
+  left: -90px; /* Ajuste para mover el menú a la izquierda */
   display: none;
-  background-color: #2cb89f;
+  background-color: #315d75;
   border: 1px solid #aaaaaa;
   border-radius: 25px;
   padding: 10px;
@@ -174,48 +169,27 @@ header {
 }
 /* Ajusta el estilo del menú de inicio de sesión */
 #loginTab {
-  margin-right: auto; /* Mueve el menú de inicio de sesión a la derecha */
+  width: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+  background-color: transparent;
 }
-
 nav {
   background-color: #2cb89f;
-  width: 310px;
-  height: 568px;
   float: left;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.nav-link a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 8px 12px;
-  margin: 5px 0;
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
-}
+
 .nav-link {
-  position: relative;
   color: white;
 }
 
 .nav-link:hover .nav-dropdown {
   display: block;
 }
-.nav-dropdown a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 8px 12px;
-  margin: 5px 0;
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
-}
+
 .nav-dropdown {
   display: none;
   position: absolute;
@@ -225,6 +199,25 @@ nav {
   border-radius: 5px;
   top: 100%;
   left: 0;
+}
+
+.nav-dropdown a {
+  display: block;
+  color: white;
+  padding: 8px 12px;
+  margin: 5px 0;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
+.nav-link a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin: 5px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
 }
 
 /* Estilos para el contenido principal */
@@ -257,4 +250,56 @@ footer {
   bottom: 20px; /* Ajusta según tu preferencia */
   right: 20px; /* Ajusta según tu preferencia */
   z-index: 1; /* Asegura que esté encima de otros elementos */
+}
+.image-container-rrss {
+  display: flex;
+  /* Para distribuir equitativamente el espacio entre las imágenes */
+}
+
+.image-link {
+  width: 50px; /* Tamaño igual para todas las imágenes */
+  height: 50px; /* Tamaño igual para todas las imágenes */
+}
+
+.image-link img {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+  height: 100%; /* Hace que la imagen ocupe todo el alto del contenedor */
+  object-fit: contain; /* Ajusta la imagen dentro del contenedor manteniendo su proporción */
+}
+
+.footer-links {
+  text-align: center; /* Centra los enlaces horizontalmente */
+}
+
+.footer-links a {
+  color: #ffffff; /* Color del texto de los enlaces */
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  margin: 0 10px; /* Ajusta el margen entre los enlaces */
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Subraya los enlaces al pasar el mouse sobre ellos */
+}
+#audioControls {
+  display: flex;
+  align-items: center;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+/* Estilos para los botones de control de audio */
+button {
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin: 0 5px;
+  color: white; /* Color del texto */
+}
+
+button:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Sombra en el texto al pasar el mouse */
 }
