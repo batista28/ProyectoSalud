@@ -15,6 +15,33 @@ header {
   padding: 0 20px;
 }
 
+header ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+/* Estilos para los controles de audio personalizados */
+#audioControls {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para los botones de control de audio */
+button {
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin: 0 5px;
+  color: white; /* Color del texto */
+}
+
+button:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Sombra en el texto al pasar el mouse */
+}
+
 /* Estilos para las pestañas en el encabezado */
 .tab-container {
   display: flex;
@@ -114,68 +141,16 @@ header {
   border-radius: 25px;
   padding: 10px;
 }
-#logo {
-  width: 9em;
-  height: 9em;
-  margin-right: 20px;
-}
-
-.carousel-container {
-  text-align: center; /* Cambiado a center para centrar el contenido */
-  margin-top: 20px;
-  overflow: hidden;
-  position: relative;
-  height: 70%;
-  width: 70%;
-  margin: 0 auto; /* Centra el contenedor */
-}
-
-.carousel-img {
-  width: 100%; /* Ajuste para que la imagen ocupe todo el ancho del contenedor */
-  max-width: 100%;
-  height: auto;
-  display: none;
-  border-radius: 15%;
-}
-
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #315d75;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 10px;
-  font-size: 1.5em;
-  z-index: 2;
-  transform: translateY(-50%);
-}
-
-.prev-arrow {
-  left: 0;
-}
-
-.next-arrow {
-  right: 0;
-}
 
 /* Ajusta el estilo del menú de inicio de sesión */
 #loginTab {
   margin-right: auto; /* Mueve el menú de inicio de sesión a la derecha */
 }
-
-/* Ajusta el tamaño del texto en pantallas más pequeñas */
-@media screen and (max-width: 768px) {
-  .carousel-caption {
-    width: 80%;
-    font-size: 18px;
-    right: 15px;
-  }
+#logo {
+  width: 9em;
+  height: 9em;
+  margin-right: 20px;
 }
-
-/* Estilos para el menú de navegación */
-/* Estilos para el menú de navegación */
 nav {
   background-color: #2cb89f;
   float: left;
@@ -222,12 +197,66 @@ nav {
   font-family: "Inter", sans-serif;
 }
 
-/* Estilos para el contenido principal */
+/*estilo para el contenido principal*/
 main {
   padding: 20px;
   max-width: 1200px; /* O ajusta según tus necesidades */
   margin: 0 auto; /* Centra el contenido en pantallas más grandes */
 }
+
+.carousel-container {
+  text-align: center; /* Cambiado a center para centrar el contenido */
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+  height: 70%;
+  width: 70%;
+  margin: 0 auto; /* Centra el contenedor */
+}
+
+.carousel-img {
+  width: 100%; /* Ajuste para que la imagen ocupe todo el ancho del contenedor */
+  max-width: 100%;
+  height: auto;
+  display: none;
+  border-radius: 15%;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #315d75;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.5em;
+  z-index: 2;
+  transform: translateY(-50%);
+}
+
+.prev-arrow {
+  left: 0;
+}
+
+.next-arrow {
+  right: 0;
+}
+
+/* Ajusta el tamaño del texto en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .carousel-caption {
+    width: 80%;
+    font-size: 18px;
+    right: 15px;
+  }
+}
+
+/* Estilos para el menú de navegación */
+/* Estilos para el menú de navegación */
+
+/* Estilos para el contenido principal */
 
 /* Estilos para el pie de página */
 footer {
@@ -264,32 +293,6 @@ footer {
   z-index: 1; /* Asegura que esté encima de otros elementos */
 }
 
-header ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  margin: 10px;
-}
-
-/* Estilos para los controles de audio personalizados */
-#audioControls {
-  display: flex;
-  align-items: center;
-}
-
-/* Estilos para los botones de control de audio */
-button {
-  font-size: 1.2em;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  margin: 0 5px;
-  color: white; /* Color del texto */
-}
-
-button:hover {
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Sombra en el texto al pasar el mouse */
-}
 /* Estilos para los botones de navegación del carrusel */
 #previousButton,
 #nextButton {

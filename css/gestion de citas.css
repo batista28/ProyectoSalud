@@ -15,6 +15,30 @@ header {
   padding: 0 20px;
 }
 
+#audioControls {
+  display: flex;
+  align-items: center;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+/* Estilos para los botones de control de audio */
+button {
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin: 0 5px;
+  color: white; /* Color del texto */
+}
+
+button:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Sombra en el texto al pasar el mouse */
+}
+
 /* Estilos para las pestañas en el encabezado */
 .tab-container {
   display: flex;
@@ -119,54 +143,7 @@ header {
   height: 9em;
   margin-right: 20px;
 }
-#citasModal .modal-title {
-  text-align: center;
-}
-/* Ajustes de estilo para la ventana modal y el formulario */
-#citasModal .modal-dialog {
-  max-width: 100vh; /* Reducir el ancho de la ventana modal */
-}
 
-#citasModal .lightbox {
-  background-color: #2cb89f; /* Color de fondo de la ventana modal */
-  color: white; /* Color del texto en la ventana modal */
-  max-width: 1200px; /* O ajusta según tus necesidades */
-  height: 1000px;
-}
-
-#citasModal .modal-content {
-  background-color: #2cb89f; /* Color de fondo de la ventana modal */
-  color: white; /* Color del texto en la ventana modal */
-  top: 50%;
-}
-
-#citasModal .modal-body {
-  padding: 20px;
-}
-/* Aumenta el espacio entre el texto y el cuadro de texto en el formulario de citas */
-#citasModal .modal-body input {
-  margin-bottom: 5vh; /* Ajusta según tu preferencia */
-}
-
-/* Cambia el color del texto de los botones "Cerrar" y "Guardar Cita" en la ventana modal */
-#citasModal .modal-footer button {
-  color: #2cb89f; /* Cambia el color del texto a verde */
-}
-#citaForm label {
-  margin-bottom: 5px;
-}
-
-#citaForm input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-}
-
-/* Cambia el color de los botones en la ventana modal */
-#citasModal .modal-footer button {
-  background-color: #315d75; /* Color azul para los botones */
-  color: #f3f8fa; /* Color del texto en los botones */
-}
 /* Ajusta el estilo del menú de inicio de sesión */
 #loginTab {
   width: 50px;
@@ -225,6 +202,68 @@ main {
   margin: 0 auto; /* Centra el contenido en pantallas más grandes */
 }
 
+#citasModal .modal-title {
+  text-align: center;
+}
+/* Ajustes de estilo para la ventana modal y el formulario */
+#citasModal .modal-dialog {
+  max-width: 100vh; /* Reducir el ancho de la ventana modal */
+}
+
+#citasModal .lightbox {
+  background-color: #2cb89f; /* Color de fondo de la ventana modal */
+  color: white; /* Color del texto en la ventana modal */
+  max-width: 1200px; /* O ajusta según tus necesidades */
+  height: 1000px;
+}
+
+#citasModal .modal-content {
+  background-color: #2cb89f; /* Color de fondo de la ventana modal */
+  color: white; /* Color del texto en la ventana modal */
+  top: 50%;
+}
+
+#citasModal .modal-body {
+  padding: 20px;
+}
+/* Aumenta el espacio entre el texto y el cuadro de texto en el formulario de citas */
+#citasModal .modal-body input {
+  margin-bottom: 5vh; /* Ajusta según tu preferencia */
+}
+
+/* Cambia el color del texto de los botones "Cerrar" y "Guardar Cita" en la ventana modal */
+#citasModal .modal-footer button {
+  color: #2cb89f; /* Cambia el color del texto a verde */
+}
+#citaForm label {
+  margin-bottom: 5px;
+}
+
+#citaForm input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+/* Cambia el color de los botones en la ventana modal */
+#citasModal .modal-footer button {
+  background-color: #315d75; /* Color azul para los botones */
+  color: #f3f8fa; /* Color del texto en los botones */
+}
+
+.accessibility-button {
+  background-color: #2cb89f;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px; /* Ajusta según tu preferencia */
+  right: 20px; /* Ajusta según tu preferencia */
+  z-index: 1; /* Asegura que esté encima de otros elementos */
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -239,18 +278,7 @@ footer {
   font-weight: bold;
   font-family: "Inter", sans-serif;
 }
-.accessibility-button {
-  background-color: #2cb89f;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  position: fixed;
-  bottom: 20px; /* Ajusta según tu preferencia */
-  right: 20px; /* Ajusta según tu preferencia */
-  z-index: 1; /* Asegura que esté encima de otros elementos */
-}
+
 .image-container-rrss {
   display: flex;
   /* Para distribuir equitativamente el espacio entre las imágenes */
@@ -279,27 +307,4 @@ footer {
 
 .footer-links a:hover {
   text-decoration: underline; /* Subraya los enlaces al pasar el mouse sobre ellos */
-}
-#audioControls {
-  display: flex;
-  align-items: center;
-}
-header ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  margin: 10px;
-}
-/* Estilos para los botones de control de audio */
-button {
-  font-size: 1.2em;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  margin: 0 5px;
-  color: white; /* Color del texto */
-}
-
-button:hover {
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Sombra en el texto al pasar el mouse */
 }
