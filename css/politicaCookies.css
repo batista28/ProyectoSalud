@@ -219,11 +219,36 @@ nav {
   font-family: "Inter", sans-serif;
 }
 
-/* Estilos para el contenido principal */
 main {
   padding: 20px;
-  max-width: 1200px; /* O ajusta según tus necesidades */
-  margin: 0 auto; /* Centra el contenido en pantallas más grandes */
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; /* Alinea el texto al centro */
+}
+
+main section {
+  margin-bottom: 30px;
+}
+
+main h2 {
+  color: #315d75;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+main p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+main a {
+  color: #2cb89f;
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
 }
 
 /* Estilos para el pie de página */

@@ -12,8 +12,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
     />
-    <link rel="icon" href="img/LOGO.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="icon" href="../img/LOGO.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../css/politicaCookies.css" />
   </head>
   <body>
     <header>
@@ -24,7 +24,7 @@
         <button id="volumeUpButton">+</button>
         <button id="volumeDownButton">-</button>
       </div>
-      <img src="img/LOGO.png" alt="Logotipo" id="logo" />
+      <img src="../img/LOGO.png" alt="Logotipo" id="logo" />
       <a href="index.html" class="tab" id="salud-tab">@SALUD</a>
       <div class="tab-container">
         <ul>
@@ -66,7 +66,7 @@
       </div>
       <!-- Nueva sección para la imagen de la lupa y el menú de búsqueda -->
       <div class="search-section">
-        <img src="img/LUPA.png" alt="Buscar" id="searchIcon" />
+        <img src="../img/LUPA.png" alt="Buscar" id="searchIcon" />
         <!-- Menú de búsqueda -->
         <div class="search-menu" id="searchMenu">
           <input type="text" id="searchInput" placeholder="Buscar..." />
@@ -74,7 +74,7 @@
         </div>
       </div>
       <!-- Moví el menú de inicio de sesión fuera del div tab-container -->
-      <img src="img/USUARIO.png" alt="Iniciar Sesión" id="loginTab" class="small-tab" />
+      <img src="../img/USUARIO.png" alt="Iniciar Sesión" id="loginTab" class="small-tab" />
 
       <!-- Menú desplegable de iniciar sesión -->
       <div class="login-menu" id="loginMenu">
@@ -84,44 +84,65 @@
         <button>Registrarse</button>
       </div>
     </header>
-    <!-- Menú de Navegación -->
-    <!-- Contenido Principal -->
     <main>
-      <div class="carousel-container">
- 
-          <button class="carousel-arrow prev-arrow">&#8249;</button>
-          <img class="carousel-img" src="img/carrusel/carrusel1.jpg" alt="Imagen 1" />
-          <img class="carousel-img" src="img/carrusel/carrusel2.jpg" alt="Imagen 2" />
-          <img class="carousel-img" src="img/carrusel/carrusel3.jpg" alt="Imagen 3" />
-          <button class="carousel-arrow next-arrow">&#8250;</button>
-        </div>
-      </div>
+      <section>
+        <h2>¿Qué son las cookies?</h2>
+        <p>Explicación sobre qué son las cookies y cómo se utilizan en nuestro sitio web.</p>
+      </section>
+
+      <section>
+        <h2>¿Cómo utilizamos las cookies?</h2>
+        <p>
+          Descripción de cómo utilizamos las cookies en nuestro sitio web y los propósitos
+          específicos.
+        </p>
+      </section>
+
+      <section>
+        <h2>¿Qué tipos de cookies utilizamos?</h2>
+        <p>
+          Descripción de los tipos de cookies que utilizamos, como necesarias, analíticas,
+          funcionales, publicitarias, etc.
+        </p>
+      </section>
+
+      <section>
+        <h2>¿Cómo puedo controlar las preferencias de cookies?</h2>
+        <p>
+          Instrucciones sobre cómo los usuarios pueden controlar y administrar sus preferencias de
+          cookies en su navegador web.
+        </p>
+      </section>
+
+      <section>
+        <h2>¿Dónde puedo obtener más información?</h2>
+        <p>Información de contacto para obtener más detalles sobre la política de cookies.</p>
+        <p>Puedes contactarnos en <a href="mailto:info@salud.com">info@salud.com</a>.</p>
+      </section>
     </main>
-    <!-- Botón de Accesibilidad -->
     <button class="accessibility-button" id="accessibilityButton">A</button>
     <!-- Pie de Página -->
     <footer>
       <div class="footer-links">
-        <a href="views/">Política de privacidad</a>
+        <a href="politica_privacidad.html">Política de privacidad</a>
         <a href="views/politicasCookies.html">Política de cookies</a>
         <a href="terminos_condiciones.html">Términos y condiciones</a>
-        <a href="views/contactos.html">Contacto</a>
+        <a href="contactos.html">Contacto</a>
         <a href="sobre_nosotros.html">Sobre nosotros</a>
       </div>
-     
-   
+
       <div class="image-container-rrss">
         <a href="https://twitter.com/" class="image-link">
-          <img src="img/rrss/x.png" alt="Imagen 1">
+          <img src="../img/rrss/x.png" alt="Imagen 1" />
         </a>
         <a href="https://twitter.com/" class="image-link">
-          <img src="img/rrss/facebook.png" alt="Imagen 2">
+          <img src="../img/rrss/facebook.png" alt="Imagen 2" />
         </a>
         <a href="enlace3.html" class="image-link">
-          <img src="img/rrss/linkledin.png" alt="Imagen 3">
+          <img src="../img/rrss/linkledin.png" alt="Imagen 3" />
         </a>
         <a href="enlace4.html" class="image-link">
-          <img src="img/rrss/Instagram.png" alt="Imagen 4">
+          <img src="../img/rrss/Instagram.png" alt="Imagen 4" />
         </a>
       </div>
     </footer>
@@ -136,34 +157,34 @@
         searchMenu.style.display = searchMenu.style.display === "block" ? "none" : "block";
       });
       // JavaScript para el carrusel de imágenes
-      const images = document.querySelectorAll('.carousel-img');
-const prevArrow = document.querySelector('.prev-arrow');
-const nextArrow = document.querySelector('.next-arrow');
+      const images = document.querySelectorAll(".carousel-img");
+      const prevArrow = document.querySelector(".prev-arrow");
+      const nextArrow = document.querySelector(".next-arrow");
 
-let currentIndex = 0;
+      let currentIndex = 0;
 
-function showImage(index) {
-    if (index < 0) {
-        currentIndex = images.length - 1;
-    } else if (index >= images.length) {
-        currentIndex = 0;
-    }
-    
-    images.forEach(image => image.style.display = 'none');
-    images[currentIndex].style.display = 'block';
-}
+      function showImage(index) {
+        if (index < 0) {
+          currentIndex = images.length - 1;
+        } else if (index >= images.length) {
+          currentIndex = 0;
+        }
 
-showImage(currentIndex);
+        images.forEach((image) => (image.style.display = "none"));
+        images[currentIndex].style.display = "block";
+      }
 
-prevArrow.addEventListener('click', () => {
-    currentIndex--;
-    showImage(currentIndex);
-});
+      showImage(currentIndex);
 
-nextArrow.addEventListener('click', () => {
-    currentIndex++;
-    showImage(currentIndex);
-});
+      prevArrow.addEventListener("click", () => {
+        currentIndex--;
+        showImage(currentIndex);
+      });
+
+      nextArrow.addEventListener("click", () => {
+        currentIndex++;
+        showImage(currentIndex);
+      });
       // JavaScript para el botón de accesibilidad
       document.getElementById("accessibilityButton").addEventListener("click", function () {
         alert("¡Accesibilidad activada!");

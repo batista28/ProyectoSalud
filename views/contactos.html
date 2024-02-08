@@ -2,20 +2,19 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <title>@salud</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONTACTO</title>
+    <style></style>
+    <link rel="icon" href="../img/LOGO.ico" type="image/x-icon" />
     <!-- Enlace para cargar la fuente Inter desde Google Fonts -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
     />
-    <link rel="icon" href="img/LOGO.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/contactos.css" />
   </head>
   <body>
+    <!-- Encabezado -->
     <header>
       <audio id="audioPlayer" src="_Bienvenidos a Salud.mp3"></audio>
       <div id="audioControls">
@@ -24,15 +23,15 @@
         <button id="volumeUpButton">+</button>
         <button id="volumeDownButton">-</button>
       </div>
-      <img src="img/LOGO.png" alt="Logotipo" id="logo" />
-      <a href="index.html" class="tab" id="salud-tab">@SALUD</a>
+      <img src="../img/LOGO.png" alt="Logotipo" id="logo" />
+      <a href="../index.html" class="tab" id="salud-tab">@SALUD</a>
       <div class="tab-container">
         <ul>
           <li class="nav-link">
             <a href="#" class="tab">Especialistas</a>
             <!-- Menú desplegable de Especialistas -->
             <div class="nav-dropdown">
-              <a href="views/traumatologia.html">dr mario bros</a>
+              <a href="traumatologia.html">dr mario bros</a>
               <a href="#">dr rosa melano</a>
               <a href="#">dr bruce barners</a>
               <a href="#">dr house</a>
@@ -66,7 +65,7 @@
       </div>
       <!-- Nueva sección para la imagen de la lupa y el menú de búsqueda -->
       <div class="search-section">
-        <img src="img/LUPA.png" alt="Buscar" id="searchIcon" />
+        <img src="../img/LUPA.png" alt="Buscar" id="searchIcon" />
         <!-- Menú de búsqueda -->
         <div class="search-menu" id="searchMenu">
           <input type="text" id="searchInput" placeholder="Buscar..." />
@@ -74,7 +73,7 @@
         </div>
       </div>
       <!-- Moví el menú de inicio de sesión fuera del div tab-container -->
-      <img src="img/USUARIO.png" alt="Iniciar Sesión" id="loginTab" class="small-tab" />
+      <img src="../img/USUARIO.png" alt="Iniciar Sesión" id="loginTab" class="small-tab" />
 
       <!-- Menú desplegable de iniciar sesión -->
       <div class="login-menu" id="loginMenu">
@@ -84,124 +83,76 @@
         <button>Registrarse</button>
       </div>
     </header>
-    <!-- Menú de Navegación -->
-    <!-- Contenido Principal -->
+
     <main>
-      <div class="carousel-container">
- 
-          <button class="carousel-arrow prev-arrow">&#8249;</button>
-          <img class="carousel-img" src="img/carrusel/carrusel1.jpg" alt="Imagen 1" />
-          <img class="carousel-img" src="img/carrusel/carrusel2.jpg" alt="Imagen 2" />
-          <img class="carousel-img" src="img/carrusel/carrusel3.jpg" alt="Imagen 3" />
-          <button class="carousel-arrow next-arrow">&#8250;</button>
-        </div>
+      <div class="contact-container">
+        <h1>¡Contáctanos!</h1>
+
+        <p>¡Estamos aquí para ayudarte! Puedes contactarnos de las siguientes maneras:</p>
+
+        <ul>
+          <li>
+            Envíanos un correo electrónico a:
+            <a href="mailto:info@tudominio.com">info@tudominio.com</a>
+          </li>
+          <li>Llámanos al: <a href="tel:+123456789">+123456789</a></li>
+          <li>Completa el formulario de contacto a continuación:</li>
+        </ul>
+
+        <form action="procesar_formulario.php" method="POST">
+          <label for="nombre">Nombre:</label><br />
+          <input type="text" id="nombre" name="nombre" required /><br />
+          <label for="email">Correo electrónico:</label><br />
+          <input type="email" id="email" name="email" required /><br />
+          <label for="mensaje">Mensaje:</label><br />
+          <textarea id="mensaje" name="mensaje" required></textarea><br />
+          <input type="submit" value="Enviar" />
+        </form>
       </div>
     </main>
-    <!-- Botón de Accesibilidad -->
     <button class="accessibility-button" id="accessibilityButton">A</button>
+
     <!-- Pie de Página -->
     <footer>
       <div class="footer-links">
-        <a href="views/">Política de privacidad</a>
-        <a href="views/politicasCookies.html">Política de cookies</a>
+        <a href="politica_privacidad.html">Política de privacidad</a>
+        <a href="politica_cookies.html">Política de cookies</a>
         <a href="terminos_condiciones.html">Términos y condiciones</a>
-        <a href="views/contactos.html">Contacto</a>
+        <a href="contactos.html">Contacto</a>
         <a href="sobre_nosotros.html">Sobre nosotros</a>
       </div>
-     
-   
+
       <div class="image-container-rrss">
         <a href="https://twitter.com/" class="image-link">
-          <img src="img/rrss/x.png" alt="Imagen 1">
+          <img src="../img/rrss/x.png" alt="Imagen 1" />
         </a>
         <a href="https://twitter.com/" class="image-link">
-          <img src="img/rrss/facebook.png" alt="Imagen 2">
+          <img src="../img/rrss/facebook.png" alt="Imagen 2" />
         </a>
         <a href="enlace3.html" class="image-link">
-          <img src="img/rrss/linkledin.png" alt="Imagen 3">
+          <img src="../img/rrss/linkledin.png" alt="Imagen 3" />
         </a>
         <a href="enlace4.html" class="image-link">
-          <img src="img/rrss/Instagram.png" alt="Imagen 4">
+          <img src="../img/rrss/Instagram.png" alt="Imagen 4" />
         </a>
       </div>
     </footer>
+
     <script>
       // JavaScript para mostrar y ocultar el menú de iniciar sesión
       document.getElementById("loginTab").addEventListener("click", function () {
         var loginMenu = document.getElementById("loginMenu");
         loginMenu.style.display = loginMenu.style.display === "block" ? "none" : "block";
       });
+
       document.getElementById("searchIcon").addEventListener("click", function () {
         var searchMenu = document.getElementById("searchMenu");
         searchMenu.style.display = searchMenu.style.display === "block" ? "none" : "block";
       });
-      // JavaScript para el carrusel de imágenes
-      const images = document.querySelectorAll('.carousel-img');
-const prevArrow = document.querySelector('.prev-arrow');
-const nextArrow = document.querySelector('.next-arrow');
-
-let currentIndex = 0;
-
-function showImage(index) {
-    if (index < 0) {
-        currentIndex = images.length - 1;
-    } else if (index >= images.length) {
-        currentIndex = 0;
-    }
-    
-    images.forEach(image => image.style.display = 'none');
-    images[currentIndex].style.display = 'block';
-}
-
-showImage(currentIndex);
-
-prevArrow.addEventListener('click', () => {
-    currentIndex--;
-    showImage(currentIndex);
-});
-
-nextArrow.addEventListener('click', () => {
-    currentIndex++;
-    showImage(currentIndex);
-});
       // JavaScript para el botón de accesibilidad
       document.getElementById("accessibilityButton").addEventListener("click", function () {
         alert("¡Accesibilidad activada!");
         // Aquí puedes agregar la lógica adicional que desees
-      });
-      function buscar() {
-        var searchTerm = document.getElementById("searchInput").value;
-        // Puedes realizar alguna lógica adicional con el término de búsqueda si es necesario
-        // Por ejemplo, podrías incluirlo en la URL como parámetro de consulta (?q=termino)
-        // var searchUrl = "resultadoBusqueda.html?q=" + encodeURIComponent(searchTerm);
-        var searchUrl = "view/resultadoBusqueda.html";
-        window.location.href = searchUrl;
-      }
-      // Referencias a los elementos del DOM
-      const audioPlayer = document.getElementById("audioPlayer");
-      const playButton = document.getElementById("playButton");
-      const pauseButton = document.getElementById("pauseButton");
-      const volumeUpButton = document.getElementById("volumeUpButton");
-      const volumeDownButton = document.getElementById("volumeDownButton");
-      // Evento de clic para el botón de reproducción
-      playButton.addEventListener("click", () => {
-        audioPlayer.play(); // Reproduce el audio
-      });
-      // Evento de clic para el botón de pausa
-      pauseButton.addEventListener("click", () => {
-        audioPlayer.pause(); // Pausa el audio
-      });
-      // Evento de clic para el botón de aumentar volumen
-      volumeUpButton.addEventListener("click", () => {
-        if (audioPlayer.volume < 1) {
-          audioPlayer.volume += 0.1; // Aumenta el volumen en un 10%
-        }
-      });
-      // Evento de clic para el botón de disminuir volumen
-      volumeDownButton.addEventListener("click", () => {
-        if (audioPlayer.volume > 0) {
-          audioPlayer.volume -= 0.1; // Disminuye el volumen en un 10%
-        }
       });
     </script>
   </body>
