@@ -2,46 +2,42 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>@salud</title>
-    <style></style>
     <!-- Enlace para cargar la fuente Inter desde Google Fonts -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
-      <link rel="icon" href="img/LOGO.ico" type="image/x-icon" />
-    
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+    <link rel="icon" href="img/LOGO.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
   </head>
   <body>
-  
     <header>
-   
       <audio id="audioPlayer" src="_Bienvenidos a Salud.mp3"></audio>
       <div id="audioControls">
         <button id="playButton">▶</button>
         <button id="pauseButton">❚❚</button>
-        <button id="volumeUpButton"  >+</button>
+        <button id="volumeUpButton">+</button>
         <button id="volumeDownButton">-</button>
       </div>
-
       <img src="img/LOGO.png" alt="Logotipo" id="logo" />
       <a href="index.html" class="tab" id="salud-tab">@SALUD</a>
-
-      <div class="tab-container">  
+      <div class="tab-container">
         <ul>
           <li class="nav-link">
             <a href="#" class="tab">Especialistas</a>
-            <!-- Menú desplegable de Especialistas -->   
+            <!-- Menú desplegable de Especialistas -->
             <div class="nav-dropdown">
               <a href="traumatologia.html">dr mario bros</a>
               <a href="#">dr rosa melano</a>
               <a href="#">dr bruce barners</a>
-              <a href="#">dr house</a></a>
+              <a href="#">dr house</a>
             </div>
-          </li> 
-      
+          </li>
           <li class="nav-link">
             <a href="#" class="tab">Especialidades</a>
             <!-- Menú desplegable de Especialidades -->
@@ -54,105 +50,101 @@
               <a href="#">Urologia</a>
               <a href="#">Cardiologia</a>
               <a href="#">Nefrologia</a>
-              <a href="#">Neumologia(homenaje a pablo valladares)</a>
+              <a href="#">Neumologia (homenaje a pablo valladares)</a>
             </div>
           </li>
-        <li class="nav-link">
-          <a href="novedades.html" class="tab">NOVEDADES</a>
-        </li>
-        <li class="nav-link">
-          <a href="ofertas.html" class="tab">OFERTAS</a>
-        </li>
-        <li class="nav-link">
-          <a href="rrss.html" class="tab">RRSS</a>
-        </li>
-        <li class="nav-link">
-          <a href="gestion de citas.html" class="tab">GESTION DE CITAS</a>
-        </li>
-      </ul>
-     </div>
-         <!-- Nueva sección para la imagen de la lupa y el menú de búsqueda -->
-    <div class="search-section">
-      <img src="img/LUPA.png" alt="Buscar" id="searchIcon" />
-      <!-- Menú de búsqueda -->
-      <div class="search-menu" id="searchMenu">
-        <input type="text" id="searchInput" placeholder="Buscar..." />
-        <button onclick="buscar()">Buscar</button>
-    </div>
-    </div>
-
-    <!-- Moví el menú de inicio de sesión fuera del div tab-container -->
-    <div class="small-tab" id="loginTab">Iniciar Sesión</div>
-  </div>
-</header>
-      
-      
-        <!-- Menú desplegable de iniciar sesión -->
-        <div class="login-menu" id="loginMenu">
-          <input type="text" placeholder="Usuario" />
-          <input type="password" placeholder="Contraseña" />
-          <button>Iniciar Sesión</button>
-          <button>Registrarse</button>
+          <li class="nav-link">
+            <a href="novedades.html" class="tab">NOVEDADES</a>
+          </li>
+          <li class="nav-link">
+            <a href="ofertas.html" class="tab">OFERTAS</a>
+          </li>
+          <li class="nav-link">
+            <a href="rrss.html" class="tab">RRSS</a>
+          </li>
+          <li class="nav-link">
+            <a href="gestion de citas.html" class="tab">GESTION DE CITAS</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Nueva sección para la imagen de la lupa y el menú de búsqueda -->
+      <div class="search-section">
+        <img src="img/LUPA.png" alt="Buscar" id="searchIcon" />
+        <!-- Menú de búsqueda -->
+        <div class="search-menu" id="searchMenu">
+          <input type="text" id="searchInput" placeholder="Buscar..." />
+          <button onclick="buscar()">Buscar</button>
         </div>
       </div>
+      <!-- Moví el menú de inicio de sesión fuera del div tab-container -->
+      <img src="img/USUARIO.png" alt="Iniciar Sesión" id="loginTab" class="small-tab" />
+
+      <!-- Menú desplegable de iniciar sesión -->
+      <div class="login-menu" id="loginMenu">
+        <input type="text" placeholder="Usuario" />
+        <input type="password" placeholder="Contraseña" />
+        <button>Iniciar Sesión</button>
+        <button>Registrarse</button>
+      </div>
     </header>
-
     <!-- Menú de Navegación -->
-   
-
     <!-- Contenido Principal -->
     <main>
       <div class="carousel-container">
-      
-        <img class="carousel-img" src="img/carrusel/carrusel1.jpg" alt="Imagen 1" />
-        <img class="carousel-img" src="img/carrusel/carrusel2.jpg" alt="Imagen 2" />
-        <img class="carousel-img" src="img/carrusel/carrusel3.jpg" alt="Imagen 3" />
-      
+ 
+          <button class="carousel-arrow prev-arrow">&#8249;</button>
+          <img class="carousel-img" src="img/carrusel/carrusel1.jpg" alt="Imagen 1" />
+          <img class="carousel-img" src="img/carrusel/carrusel2.jpg" alt="Imagen 2" />
+          <img class="carousel-img" src="img/carrusel/carrusel3.jpg" alt="Imagen 3" />
+          <button class="carousel-arrow next-arrow">&#8250;</button>
+        </div>
+      </div>
     </main>
-
     <!-- Botón de Accesibilidad -->
     <button class="accessibility-button" id="accessibilityButton">A</button>
-
     <!-- Pie de Página -->
     <footer>
       <p>TODOS LOS DERECHOS RESERVADOS ©</p>
     </footer>
-
     <script>
       // JavaScript para mostrar y ocultar el menú de iniciar sesión
       document.getElementById("loginTab").addEventListener("click", function () {
         var loginMenu = document.getElementById("loginMenu");
         loginMenu.style.display = loginMenu.style.display === "block" ? "none" : "block";
       });
-     
-  document.getElementById("searchIcon").addEventListener("click", function () {
-    var searchMenu = document.getElementById("searchMenu");
-    searchMenu.style.display = searchMenu.style.display === "block" ? "none" : "block";
-  });
-
- 
-
-
+      document.getElementById("searchIcon").addEventListener("click", function () {
+        var searchMenu = document.getElementById("searchMenu");
+        searchMenu.style.display = searchMenu.style.display === "block" ? "none" : "block";
+      });
       // JavaScript para el carrusel de imágenes
-      var currentSlide = 0;
-      var slides = document.querySelectorAll(".carousel-img");
+      const images = document.querySelectorAll('.carousel-img');
+const prevArrow = document.querySelector('.prev-arrow');
+const nextArrow = document.querySelector('.next-arrow');
 
-      function showSlide(index) {
-        slides.forEach((slide) => (slide.style.display = "none"));
-        slides[index].style.display = "block";
-      }
+let currentIndex = 0;
 
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      }
+function showImage(index) {
+    if (index < 0) {
+        currentIndex = images.length - 1;
+    } else if (index >= images.length) {
+        currentIndex = 0;
+    }
+    
+    images.forEach(image => image.style.display = 'none');
+    images[currentIndex].style.display = 'block';
+}
 
-      // Mostrar la primera imagen al cargar la página
-      showSlide(currentSlide);
+showImage(currentIndex);
 
-      // Cambiar a la siguiente imagen cada 3 segundos (3000 milisegundos)
-      setInterval(nextSlide, 3000);
+prevArrow.addEventListener('click', () => {
+    currentIndex--;
+    showImage(currentIndex);
+});
 
+nextArrow.addEventListener('click', () => {
+    currentIndex++;
+    showImage(currentIndex);
+});
       // JavaScript para el botón de accesibilidad
       document.getElementById("accessibilityButton").addEventListener("click", function () {
         alert("¡Accesibilidad activada!");
@@ -165,37 +157,33 @@
         // var searchUrl = "resultadoBusqueda.html?q=" + encodeURIComponent(searchTerm);
         var searchUrl = "resultadoBusqueda.html";
         window.location.href = searchUrl;
-    }
-// Referencias a los elementos del DOM
-const audioPlayer = document.getElementById('audioPlayer');
-const playButton = document.getElementById('playButton');
-const pauseButton = document.getElementById('pauseButton');
-const volumeUpButton = document.getElementById('volumeUpButton');
-const volumeDownButton = document.getElementById('volumeDownButton');
-
-// Evento de clic para el botón de reproducción
-playButton.addEventListener('click', () => {
-  audioPlayer.play(); // Reproduce el audio
-});
-
-// Evento de clic para el botón de pausa
-pauseButton.addEventListener('click', () => {
-  audioPlayer.pause(); // Pausa el audio
-});
-
-// Evento de clic para el botón de aumentar volumen
-volumeUpButton.addEventListener('click', () => {
-  if (audioPlayer.volume < 1) {
-    audioPlayer.volume += 0.1; // Aumenta el volumen en un 10%
-  }
-});
-
-// Evento de clic para el botón de disminuir volumen
-volumeDownButton.addEventListener('click', () => {
-  if (audioPlayer.volume > 0) {
-    audioPlayer.volume -= 0.1; // Disminuye el volumen en un 10%
-  }
-});
+      }
+      // Referencias a los elementos del DOM
+      const audioPlayer = document.getElementById("audioPlayer");
+      const playButton = document.getElementById("playButton");
+      const pauseButton = document.getElementById("pauseButton");
+      const volumeUpButton = document.getElementById("volumeUpButton");
+      const volumeDownButton = document.getElementById("volumeDownButton");
+      // Evento de clic para el botón de reproducción
+      playButton.addEventListener("click", () => {
+        audioPlayer.play(); // Reproduce el audio
+      });
+      // Evento de clic para el botón de pausa
+      pauseButton.addEventListener("click", () => {
+        audioPlayer.pause(); // Pausa el audio
+      });
+      // Evento de clic para el botón de aumentar volumen
+      volumeUpButton.addEventListener("click", () => {
+        if (audioPlayer.volume < 1) {
+          audioPlayer.volume += 0.1; // Aumenta el volumen en un 10%
+        }
+      });
+      // Evento de clic para el botón de disminuir volumen
+      volumeDownButton.addEventListener("click", () => {
+        if (audioPlayer.volume > 0) {
+          audioPlayer.volume -= 0.1; // Disminuye el volumen en un 10%
+        }
+      });
     </script>
   </body>
 </html>

@@ -26,7 +26,6 @@ header {
 }
 
 .tab {
-
   background-color: #2cb89f;
   width: 180px; /* Ancho fijo para todas las pestañas */
   height: 45px;
@@ -38,6 +37,7 @@ header {
   font-family: "Inter", sans-serif;
   margin-right: 20px; /* Separación entre las pestañas */
   padding: 0 15px; /* Añadido relleno horizontal para espacio interno */
+  border-radius: 5%;
 }
 #salud-tab {
   font-size: 24px;
@@ -75,10 +75,10 @@ header {
 }
 
 #loginTab {
-  margin-left: auto;
-  margin-right: 20px;
-  margin-top: 1em;
-  margin-right: 1em;
+  width: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+  background-color: transparent;
 }
 
 .login-menu input {
@@ -88,30 +88,18 @@ header {
   box-sizing: border-box;
 }
 
-.login-menu button {
-  background-color: #315d75;
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 /* Nueva sección para la imagen de la lupa y el menú de búsqueda */
 .search-section {
   position: relative;
-  display: inline-block;  
+  display: inline-block;
   margin-right: 5px;
-}
- 
 }
 
 #searchIcon {
   width: 50px;
   cursor: pointer;
   margin-top: 15px;
-
-
+}
 .search-menu {
   position: absolute;
   top: 9.5vh;
@@ -145,6 +133,27 @@ header {
   border-radius: 15%;
 }
 
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* ajusta el color de fondo según sea necesario */
+  color: #315d75; /* ajusta el color del texto según sea necesario */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.5em;
+  z-index: 2; /* asegura que estén por encima de las imágenes */
+}
+
+.prev-arrow {
+  left: 0;
+}
+
+.next-arrow {
+  right: 0;
+}
 /* Ajusta el estilo del menú de inicio de sesión */
 #loginTab {
   margin-right: auto; /* Mueve el menú de inicio de sesión a la derecha */
@@ -267,4 +276,18 @@ button {
 button:hover {
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Sombra en el texto al pasar el mouse */
 }
-git
+/* Estilos para los botones de navegación del carrusel */
+#previousButton,
+#nextButton {
+  font-size: 2em; /* Tamaño de la fuente para que la flecha sea más grande */
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin: 0 5px;
+  color: white; /* Color del texto */
+}
+
+#previousButton:hover,
+#nextButton:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Sombra en el texto al pasar el mouse */
+}
