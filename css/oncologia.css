@@ -294,3 +294,32 @@ footer {
   right: 20px; /* Ajusta según tu preferencia */
   z-index: 1; /* Asegura que esté encima de otros elementos */
 }
+.image-container-rrss {
+  display: flex;
+  /* Para distribuir equitativamente el espacio entre las imágenes */
+}
+
+.image-link {
+  width: 50px; /* Tamaño igual para todas las imágenes */
+  height: 50px; /* Tamaño igual para todas las imágenes */
+}
+
+.image-link img {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+  height: 100%; /* Hace que la imagen ocupe todo el alto del contenedor */
+  object-fit: contain; /* Ajusta la imagen dentro del contenedor manteniendo su proporción */
+}
+
+.footer-links {
+  text-align: center; /* Centra los enlaces horizontalmente */
+}
+
+.footer-links a {
+  color: #ffffff; /* Color del texto de los enlaces */
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  margin: 0 10px; /* Ajusta el margen entre los enlaces */
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Subraya los enlaces al pasar el mouse sobre ellos */
+}
