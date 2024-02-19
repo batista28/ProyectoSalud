@@ -337,3 +337,59 @@ footer {
 .footer-links a:hover {
   text-decoration: underline; /* Subraya los enlaces al pasar el mouse sobre ellos */
 }
+/* Estilos para la ventana de opciones de accesibilidad */
+.accessibility-options {
+  position: fixed;
+  bottom: 120px; /* Cambiado a la parte inferior */
+  right: 0px; /* Cambiado a la parte derecha */
+  background-color: #2cb89f;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #fff;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  display: none; /* Oculta la ventana por defecto */
+}
+
+.accessibility-options h2 {
+  margin-top: 0;
+  color: #fff; /* Cambiado el color del texto a blanco */
+}
+
+.accessibility-options label {
+  display: block;
+  margin-bottom: 10px;
+  margin-right: 100px;
+  color: #fff; /* Cambiado el color del texto a blanco */
+}
+
+.accessibility-options button {
+  padding: 10px 20px;
+  background-color: #315d75;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.accessibility-options button:hover {
+  background-color: #315d75;
+}
+
+.accessibility-options button:hover {
+  background-color: #315d75;
+}
+.focused-reading-mode {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  z-index: 1000; /* Asegura que esté por encima del contenido */
+  display: none; /* Oculta por defecto */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff; /* Color del texto resaltado */
+  font-size: 24px; /* Tamaño del texto resaltado */
+}

@@ -15,6 +15,7 @@
   </head>
   <body>
     <header>
+    
       <audio id="audioPlayer" src="_Bienvenidos a Salud.mp3"></audio>
      
       <div id="audioControls">
@@ -103,9 +104,31 @@
     </main>
    
     <!-- Botón de Accesibilidad -->
-    <button class="accessibility-button" id="accessibilityButton">A</button>
+    <button class="accessibility-button" id="accessibilityButton" aria-label="Activar accesibilidad">A</button>
     
-    <!-- Pie de Página -->
+    <!-- Ventana emergente de opciones de accesibilidad -->
+    <div id="accessibilityOptions" class="accessibility-options">
+      <h2>Opciones de Accesibilidad</h2>
+      <label for="highContrast">Alto Contraste</label>
+      <input type="checkbox" id="highContrast">
+      <label for="largerText">Texto Más Grande</label>
+      <input type="checkbox" id="largerText">
+      <!-- Nuevas opciones de accesibilidad -->
+      <label for="fontFamily">Tipo de Fuente</label>
+      <select id="fontFamily">
+        <option value="Arial">Arial</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Tahoma">Tahoma</option>
+        <!-- Agrega más opciones de fuente si es necesario -->
+      </select>
+      <label for="animation">Animaciones</label>
+     <input type="checkbox" id="animation">
+      <!-- Agrega más opciones de accesibilidad según sea necesario -->
+      <br>
+      <button onclick="applyAccessibilityOptions()">Aplicar</button>
+    </div>
+    
+    <!-- Pie< de Página -->
     <footer>
 
        <!-- Enlances de footed-->
@@ -175,9 +198,46 @@ nextArrow.addEventListener('click', () => {
 });
       // JavaScript para el botón de accesibilidad
       document.getElementById("accessibilityButton").addEventListener("click", function () {
-        alert("¡Accesibilidad activada!");
-        // Aquí puedes agregar la lógica adicional que desees
+        var accessibilityOptions = document.getElementById("accessibilityOptions");
+        accessibilityOptions.style.display = accessibilityOptions.style.display === "block" ? "none" : "block";
       });
+      function applyAccessibilityOptions() {
+  var highContrast = document.getElementById("highContrast").checked;
+  var largerText = document.getElementById("largerText").checked;
+  var fontFamily = document.getElementById("fontFamily").value;
+  var lineHeight = document.getElementById("lineHeight").value;
+  var letterSpacing = document.getElementById("letterSpacing").value;
+  var animation = document.getElementById("animation").checked;
+  
+  if (highContrast) {
+    document.body.style.background = "black";
+    document.body.style.color = "white";
+  } else {
+    document.body.style.background = "";
+    document.body.style.color = "";
+  }
+  
+  if (largerText) {
+    document.body.style.fontSize = "20px";
+  } else {
+    document.body.style.fontSize = "";
+  }
+  
+  document.body.style.fontFamily = fontFamily;
+  document.body.style.lineHeight = lineHeight;
+  document.body.style.letterSpacing = letterSpacing + "em";
+
+  if (animation) {
+    // Activa las animaciones
+  } else {
+    // Desactiva las animaciones
+  }
+
+  var accessibilityOptions = document.getElementById("accessibilityOptions");
+  accessibilityOptions.style.display = "none";
+}
+
+      
       function buscar() {
         var searchTerm = document.getElementById("searchInput").value;
         // Puedes realizar alguna lógica adicional con el término de búsqueda si es necesario
@@ -212,6 +272,12 @@ nextArrow.addEventListener('click', () => {
           audioPlayer.volume -= 0.1; // Disminuye el volumen en un 10%
         }
       });
+
+      // Función para activar/desactivar el Modo de Lectura Enfocada
+function toggleFocusedReadingMode() {
+    const focusedReadingMode = document.getElementById('focusedReadingMode');
+    focusedReadingMode.style.display = focusedReadingMode.style.display === 'block' ? 'none' : 'block';
+}
     </script>
   </body>
 </html>
