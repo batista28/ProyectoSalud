@@ -311,42 +311,80 @@ footer {
 }
 
 body {
-  font-family: "Inter", sans-serif;
   background-color: #9cdbd3;
-  color: #315d75;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  text-align: center;
+  color: white;
 }
 
 main {
   padding: 20px;
-  text-align: center;
-  font-family: "Inter", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.offer-tab {
-  width: 15em;
-  margin: 20px;
+h2 {
+  font-size: 2em;
+  color: #315d75;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2em;
+  color: #315d75;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-top: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
   background-color: #2cb89f;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
-.offer-tab .card-img-top {
-  width: 7em;
-  border-radius: 50%;
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
 }
-.offer-tab .card-body .card-title,
-.offer-tab .card-body .card-text {
-  color: #ffffff;
-  font-family: "Inter", sans-serif;
+form input[type=text],
+form input[type=email],
+form input[type=password] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: white;
 }
-.offer-tab .card-body .btn-info {
+form textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: black;
+}
+form textarea {
+  height: 150px;
+}
+form input[type=submit] {
+  width: 100%;
   background-color: #315d75;
-  border-color: #2cb89f;
-  font-family: "Inter", sans-serif;
-  border-radius: 25px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-.offer-tab .card-body .btn-info:hover {
-  background-color: #224051;
-  border-color: #228f7b;
-  border-radius: 25px;
-}/*# sourceMappingURL=ofertas.css.map */
+form input[type=submit]:hover {
+  background-color: #2c4b65;
+}/*# sourceMappingURL=registrarse.css.map */

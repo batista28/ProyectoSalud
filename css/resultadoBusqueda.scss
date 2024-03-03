@@ -1,0 +1,27 @@
+// Utilizando las variables ya definidas
+$color-border: #ddd;
+$color-shadow: rgba(0, 0, 0, 0.1);
+$color-button-bg: #2cb89f; // Verde para botones
+$color-button-hover-bg: #116f5e; // Verde oscuro para hover
+$color-text-white: white;
+$color-background-header: #315d75; // Azul para el encabezado
+$font-family-inter: "Inter", sans-serif;
+$border-radius-large: 25px;
+$color-text: #555; // Color de texto general
+$main-margin-vertical: 30px; // Margen vertical para el main
+
+@import "header";
+@import "footer";
+
+body {
+    background-color: #9cdbd3; // Color de fondo claro para la página
+    font-family: $font-family-inter;
+    margin: 0;
+    color: $color-text;
+}
+
+h1 {
+    color: $color-background-header;
+    $font-family-inter: "Inter", sans-serif;
+    text-align: center;
+}

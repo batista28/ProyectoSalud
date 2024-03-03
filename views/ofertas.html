@@ -1,189 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OFERTAS</title>
-    
-    <link rel="icon" href="../img/LOGO.ico" type="image/x-icon" />
-    <!-- Enlace para cargar la fuente Inter desde Google Fonts -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-    />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/ofertas.css" />
-  </head>
-  <body>
-    <!-- Encabezado -->
-    <header>
-      <audio id="audioPlayer" src="_Bienvenidos a Salud.mp3"></audio>
-      <div id="audioControls">
-        <button id="playButton">▶</button>
-        <button id="pauseButton">❚❚</button>
-        <button id="volumeUpButton">+</button>
-        <button id="volumeDownButton">-</button>
-      </div>
-      <img src="img/LOGO.png" alt="Logotipo" id="logo" />
-      <a href="index.html" class="tab" id="salud-tab">@SALUD</a>
-      <div class="tab-container">
-        <ul>
-          <li class="nav-link">
-            <a href="#" class="tab">Especialistas</a>
-            <!-- Menú desplegable de Especialistas -->
-            <div class="nav-dropdown">
-              <a href="views/traumatologia.html">dr mario bros</a>
-              <a href="#">dr rosa melano</a>
-              <a href="#">dr bruce barners</a>
-              <a href="#">dr house</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>OFERTAS</title>
+
+        <link rel="icon" href="../img/LOGO.ico" type="image/x-icon" />
+        <!-- Enlace para cargar la fuente Inter desde Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/ofertas.css" />
+    </head>
+    <body>
+        <!-- Encabezado -->
+        <header>
+            <audio id="audioPlayer" src="_Bienvenidos a Salud.mp3"></audio>
+            <div id="audioControls">
+                <button id="playButton">▶</button>
+                <button id="pauseButton">❚❚</button>
+                <button id="volumeUpButton">+</button>
+                <button id="volumeDownButton">-</button>
             </div>
-          </li>
-          <li class="nav-link">
-            <a href="#" class="tab">Especialidades</a>
-            <!-- Menú desplegable de Especialidades -->
-            <div class="nav-dropdown">
-              <a href="views/traumatologia.html">Traumatologia</a>
-              <a href="views/oncologia.html">Oncologia</a>
-              <a href="#">Pediatria</a>
-              <a href="#">Neurologia</a>
-              <a href="#">Psiquiatria</a>
-              <a href="#">Urologia</a>
-              <a href="#">Cardiologia</a>
-              <a href="#">Nefrologia</a>
-              <a href="#">Neumologia (homenaje a pablo valladares)</a>
+            <img src="../img/LOGO.png" alt="Logotipo" id="logo" />
+            <a href="index.html" class="tab" id="salud-tab">@SALUD</a>
+            <div class="tab-container">
+                <ul>
+                    <li class="nav-link">
+                        <a href="#" class="tab">Especialistas</a>
+                        <!-- Menú desplegable de Especialistas -->
+                        <div class="nav-dropdown">
+                            <a href="views/traumatologia.html">dr mario bros</a>
+                            <a href="#">dr rosa melano</a>
+                            <a href="#">dr bruce barners</a>
+                            <a href="#">dr house</a>
+                        </div>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" class="tab">Especialidades</a>
+                        <!-- Menú desplegable de Especialidades -->
+                        <div class="nav-dropdown">
+                            <a href="views/traumatologia.html">Traumatologia</a>
+                            <a href="views/oncologia.html">Oncologia</a>
+                            <a href="#">Pediatria</a>
+                            <a href="#">Neurologia</a>
+                            <a href="#">Psiquiatria</a>
+                            <a href="#">Urologia</a>
+                            <a href="#">Cardiologia</a>
+                            <a href="#">Nefrologia</a>
+                            <a href="#">Neumologia (homenaje a pablo valladares)</a>
+                        </div>
+                    </li>
+                    <li class="nav-link">
+                      <a href="novedades.html" class="tab">Novedades</a>
+                  </li>
+                  <li class="nav-link">
+                      <a href="ofertas.html" class="tab">Ofertas</a>
+                  </li>
+                  <li class="nav-link">
+                      <a href="gestion de citas.html" class="tab">Gestion de citas</a>
+                  </li>
+                </ul>
             </div>
-          </li>
-          <li class="nav-link">
-            <a href="views/novedades.html" class="tab">NOVEDADES</a>
-          </li>
-          <li class="nav-link">
-            <a href="views/ofertas.html" class="tab">OFERTAS</a>
-          </li>
-          <li class="nav-link">
-            <a href="views/gestion de citas.html" class="tab">GESTION DE CITAS</a>
-          </li>
-        </ul>
-      </div>
-      <!-- Nueva sección para la imagen de la lupa y el menú de búsqueda -->
-      <div class="search-section">
-        <img src="../img/LUPA.png" alt="Buscar" id="searchIcon" />
-        <!-- Menú de búsqueda -->
-        <div class="search-menu" id="searchMenu">
-          <input type="text" id="searchInput" placeholder="Buscar..." />
-          <button onclick="buscar()">Buscar</button>
-        </div>
-      </div>
-      <!-- Moví el menú de inicio de sesión fuera del div tab-container -->
-      <img src="../img/USUARIO.png" alt="Iniciar Sesión" id="loginTab" class="small-tab" />
+            <!-- Nueva sección para la imagen de la lupa y el menú de búsqueda -->
+            <div class="search-section">
+                <img src="../img/LUPA.png" alt="Buscar" id="searchIcon" />
+                <!-- Menú de búsqueda -->
+                <div class="search-menu" id="searchMenu">
+                    <input type="text" id="searchInput" placeholder="Buscar..." />
+                    <button onclick="buscar()">Buscar</button>
+                </div>
+            </div>
+            <!-- Moví el menú de inicio de sesión fuera del div tab-container -->
+            <img src="../img/USUARIO.png" alt="Iniciar Sesión" id="loginTab" class="small-tab" />
 
-      <!-- Menú desplegable de iniciar sesión -->
-      <div class="login-menu" id="loginMenu">
-        <input type="text" placeholder="Usuario" />
-        <input type="password" placeholder="Contraseña" />
-        <button>Iniciar Sesión</button>
-        <button>Registrarse</button>
-      </div>
-    </header>
-    <!-- Menú de Navegación -->
-    <!-- Contenido Principal -->
+            <!-- Menú desplegable de iniciar sesión -->
+            <div class="login-menu" id="loginMenu">
+                <input type="text" placeholder="Usuario" />
+                <input type="password" placeholder="Contraseña" />
+                <button>Iniciar Sesión</button>
+                <button>Registrarse</button>
+            </div>
+        </header>
+        <!-- Menú de Navegación -->
+        <!-- Contenido Principal -->
 
-    <!-- Menú de Navegación -->
-  
-    <main> 
-     
-    <div class="d-flex flex-row">
-    <div class="card shadow offer-tab" style="width: 15em; margin: 20px;">
-      <img src="../img/oferta.png" class="card-img-top" alt="..." style="width: 7em; border-radius: 50%;" />
-      <div class="card-body">
-          <h5 class="card-title" style="color: #ffffff;">OFERTA 1</h5>
-          <p class="card-text" style="color: #ffffff;">2 Citas en Pediatria por el precio de una</p>
-          <p class="card-text" style="color: #ffffff;">50.00 euros.</p>
-          <a href="#" class="btn btn-info" style="background-color: #315d75; border-color: #2cb89f;">Adquirir</a>
-      </div>
-  </div>
+        <!-- Menú de Navegación -->
 
-  <div class="card shadow offer-tab" style="width: 15em; margin: 20px;">
-    <img src="../img/oferta.png" class="card-img-top" alt="..." style="width: 7em; border-radius: 50%;" />
-    <div class="card-body">
-        <h5 class="card-title" style="color: #ffffff;">OFERTA 2</h5>
-        <p class="card-text" style="color: #ffffff;">4 Citas en Psicologia por el precio de dos</p>
-        <p class="card-text" style="color: #ffffff;">75.00 euros</p>
-        <a href="#" class="btn btn-info" style="background-color: #315d75; border-color: #2cb89f;">Adquirir</a>
-    </div>
-</div>A<Z
-<div class="card shadow offer-tab" style="width: 15em; margin: 20px;">
-  <img src="../img/oferta.png" class="card-img-top" alt="..." style="width: 7em; border-radius: 50%;" />
-  <div class="card-body">
-      <h5 class="card-title" style="color: #ffffff;">OFERTA 3</h5>
-      <p class="card-text" style="color: #ffffff;">3x2 en citas de cardiologia</p>
-      <p class="card-text" style="color: #ffffff;">90.00 euros</p>
-      <a href="#" class="btn btn-info" style="background-color: #315d75; border-color: #2cb89f;">Adquirir</a>
-  </div>
-</div>
-<div class="card shadow offer-tab" style="width: 15em; margin: 20px;">
-  <img src="../img/oferta.png" class="card-img-top" alt="..." style="width: 7em; border-radius: 50%;" />
-  <div class="card-body">
-      <h5 class="card-title" style="color: #2010ad;">OFERTA 4</h5>
-      <p class="card-text" style="color: #0d8891;">8 citas de cualquier especialidad</p>
-      <p class="card-text" style="color: #25044b;">160.00 euros.</p>
-      <a href="#" class="btn btn-info" style="background-color: #315d75; border-color: #2cb89f;">Adquirir</a>
-  </div>
-</div>
-  </div>
-</main>
- <button class="accessibility-button" id="accessibilityButton">A</button>
+        <main>
+            <div class="d-flex flex-row">
+                <div class="card shadow offer-tab">
+                    <img src="../img/oferta.png" class="card-img-top" alt="Oferta 1" />
+                    <div class="card-body">
+                        <h5 class="card-title">OFERTA 1</h5>
+                        <p class="card-text">2 Citas en Pediatria por el precio de una</p>
+                        <p class="card-text">50.00 euros.</p>
+                        <a href="#" class="btn btn-info">Adquirir</a>
+                    </div>
+                </div>
 
- 
- 
-    <footer>
-      <div class="footer-links">
-        <a href="views/">Política de privacidad</a>
-        <a href="views/politicasCookies.html">Política de cookies</a>
-        <a href="terminos_condiciones.html">Términos y condiciones</a>
-        <a href="views/contactos.html">Contacto</a>
-        <a href="sobre_nosotros.html">Sobre nosotros</a>
-      </div>
-     
-   
-      <div class="image-container-rrss">
-        <a href="https://twitter.com/" class="image-link">
-          <img src="../img/rrss/x.png" alt="Imagen 1">
-        </a>
-        <a href="https://www.facebook.com/" class="image-link">
-          <img src="../img/rrss/facebook.png" alt="Imagen 2">
-        </a>
-        <a href="https://www.linkedin.com/feed/" class="image-link">
-          <img src="../img/rrss/linkledin.png" alt="Imagen 3">
-        </a>
-        <a href="https://www.instagram.com/" class="image-link">
-          <img src="../img/rrss/Instagram.png" alt="Imagen 4">
-        </a>
-      </div>
-    </footer>
+                <div class="d-flex flex-row">
+                  <div class="card shadow offer-tab">
+                      <img src="../img/oferta.png" class="card-img-top" alt="Oferta 1" />
+                      <div class="card-body">
+                          <h5 class="card-title">OFERTA 2</h5>
+                          <p class="card-text">2 Citas en Pediatria por el precio de una</p>
+                          <p class="card-text">50.00 euros.</p>
+                          <a href="#" class="btn btn-info">Adquirir</a>
+                      </div>
+                  </div>
 
- <script>
-   // JavaScript para mostrar y ocultar el menú de iniciar sesión
-   document.getElementById("loginTab").addEventListener("click", function () {
-     var loginMenu = document.getElementById("loginMenu");
-     loginMenu.style.display = loginMenu.style.display === "block" ? "none" : "block";
-   });
-  
-document.getElementById("searchIcon").addEventListener("click", function () {
- var searchMenu = document.getElementById("searchMenu");
- searchMenu.style.display = searchMenu.style.display === "block" ? "none" : "block";
-});
- // JavaScript para el botón de accesibilidad
- document.getElementById("accessibilityButton").addEventListener("click", function () {
-        alert("¡Accesibilidad activada!");
-        // Aquí puedes agregar la lógica adicional que desees
-      });
+                  <div class="d-flex flex-row">
+                    <div class="card shadow offer-tab">
+                        <img src="../img/oferta.png" class="card-img-top" alt="Oferta 1" />
+                        <div class="card-body">
+                            <h5 class="card-title">OFERTA 3</h5>
+                            <p class="card-text">2 Citas en Pediatria por el precio de una</p>
+                            <p class="card-text">50.00 euros.</p>
+                            <a href="#" class="btn btn-info">Adquirir</a>
+                        </div>
+                    </div>
 
-      function buscar() {
-        var searchTerm = document.getElementById("searchInput").value;
-        // Puedes realizar alguna lógica adicional con el término de búsqueda si es necesario
-        // Por ejemplo, podrías incluirlo en la URL como parámetro de consulta (?q=termino)
-        // var searchUrl = "resultadoBusqueda.html?q=" + encodeURIComponent(searchTerm);
-        var searchUrl = "resultadoBusqueda.html";
-        window.location.href = searchUrl;
-    }
-    </script>
+                    <div class="d-flex flex-row">
+                      <div class="card shadow offer-tab">
+                          <img src="../img/oferta.png" class="card-img-top" alt="Oferta 1" />
+                          <div class="card-body">
+                              <h5 class="card-title">OFERTA 4</h5>
+                              <p class="card-text">2 Citas en Traumatologia por el precio de una</p>
+                              <p class="card-text">30.00 euros.</p>
+                              <a href="#" class="btn btn-info">Adquirir</a>
+                          </div>
+                      </div>
+                <!-- Más tarjetas de oferta según tu estructura original -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a href="views/">Política de privacidad</a>
+                <a href="views/politicasCookies.html">Política de cookies</a>
+                <a href="terminos_condiciones.html">Términos y condiciones</a>
+                <a href="views/contactos.html">Contacto</a>
+                <a href="sobre_nosotros.html">Sobre nosotros</a>
+            </div>
+
+            <div class="image-container-rrss">
+                <a href="https://twitter.com/" class="image-link">
+                    <img src="../img/rrss/x.png" alt="Imagen 1" />
+                </a>
+                <a href="https://www.facebook.com/" class="image-link">
+                    <img src="../img/rrss/facebook.png" alt="Imagen 2" />
+                </a>
+                <a href="https://www.linkedin.com/feed/" class="image-link">
+                    <img src="../img/rrss/linkledin.png" alt="Imagen 3" />
+                </a>
+                <a href="https://www.instagram.com/" class="image-link">
+                    <img src="../img/rrss/Instagram.png" alt="Imagen 4" />
+                </a>
+            </div>
+        </footer>
+
+        <script>
+            // JavaScript para mostrar y ocultar el menú de iniciar sesión
+            document.getElementById("loginTab").addEventListener("click", function () {
+                var loginMenu = document.getElementById("loginMenu");
+                loginMenu.style.display = loginMenu.style.display === "block" ? "none" : "block";
+            });
+
+            document.getElementById("searchIcon").addEventListener("click", function () {
+                var searchMenu = document.getElementById("searchMenu");
+                searchMenu.style.display = searchMenu.style.display === "block" ? "none" : "block";
+            });
+            // JavaScript para el botón de accesibilidad
+            document.getElementById("accessibilityButton").addEventListener("click", function () {
+                alert("¡Accesibilidad activada!");
+                // Aquí puedes agregar la lógica adicional que desees
+            });
+
+            function buscar() {
+                var searchTerm = document.getElementById("searchInput").value;
+                // Puedes realizar alguna lógica adicional con el término de búsqueda si es necesario
+                // Por ejemplo, podrías incluirlo en la URL como parámetro de consulta (?q=termino)
+                // var searchUrl = "resultadoBusqueda.html?q=" + encodeURIComponent(searchTerm);
+                var searchUrl = "resultadoBusqueda.html";
+                window.location.href = searchUrl;
+            }
+        </script>
+    </body>
+</html>

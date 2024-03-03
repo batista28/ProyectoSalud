@@ -3,16 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CONTACTO</title>
-        <style></style>
-        <link rel="icon" href="../img/LOGO.ico" type="image/x-icon" />
-        <!-- Enlace para cargar la fuente Inter desde Google Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="../css/contactos.css" />
+        <title>Registrarse</title>
+        <link rel="stylesheet" href="../css/registrarse.css" />
     </head>
     <body>
-        <!-- Encabezado -->
         <header>
             <audio id="audioPlayer" src="_Bienvenidos a Salud.mp3"></audio>
             <div id="audioControls">
@@ -22,14 +16,14 @@
                 <button id="volumeDownButton">-</button>
             </div>
             <img src="../img/LOGO.png" alt="Logotipo" id="logo" />
-            <a href="../index.html" class="tab" id="salud-tab">@SALUD</a>
+            <a href="index.html" class="tab" id="salud-tab">@SALUD</a>
             <div class="tab-container">
                 <ul>
                     <li class="nav-link">
                         <a href="#" class="tab">Especialistas</a>
                         <!-- Menú desplegable de Especialistas -->
                         <div class="nav-dropdown">
-                            <a href="traumatologia.html">dr mario bros</a>
+                            <a href="views/traumatologia.html">dr mario bros</a>
                             <a href="#">dr rosa melano</a>
                             <a href="#">dr bruce barners</a>
                             <a href="#">dr house</a>
@@ -92,20 +86,19 @@
                     <input type="text" id="nombre" name="nombre" required /><br />
                     <label for="email">Correo electrónico:</label><br />
                     <input type="email" id="email" name="email" required /><br />
-                    <label for="mensaje">Mensaje:</label><br />
-                    <textarea id="mensaje" name="mensaje" required></textarea><br />
+                    <label for="password">Contraseña:</label><br />
+                    <input type="password" id="password" name="password" required /><br />
                     <input type="submit" value="Enviar" />
                 </form>
             </div>
         </main>
 
-        <!-- Pie de Página -->
         <footer>
             <div class="footer-links">
-                <a href="politica_privacidad.html">Política de privacidad</a>
-                <a href="politica_cookies.html">Política de cookies</a>
+                <a href="views/">Política de privacidad</a>
+                <a href="views/politicasCookies.html">Política de cookies</a>
                 <a href="terminos_condiciones.html">Términos y condiciones</a>
-                <a href="contactos.html">Contacto</a>
+                <a href="views/contactos.html">Contacto</a>
                 <a href="sobre_nosotros.html">Sobre nosotros</a>
             </div>
 
@@ -113,34 +106,16 @@
                 <a href="https://twitter.com/" class="image-link">
                     <img src="../img/rrss/x.png" alt="Imagen 1" />
                 </a>
-                <a href="https://twitter.com/" class="image-link">
+                <a href="https://www.facebook.com/" class="image-link">
                     <img src="../img/rrss/facebook.png" alt="Imagen 2" />
                 </a>
-                <a href="enlace3.html" class="image-link">
+                <a href="https://www.linkedin.com/feed/" class="image-link">
                     <img src="../img/rrss/linkledin.png" alt="Imagen 3" />
                 </a>
-                <a href="enlace4.html" class="image-link">
+                <a href="https://www.instagram.com/" class="image-link">
                     <img src="../img/rrss/Instagram.png" alt="Imagen 4" />
                 </a>
             </div>
         </footer>
-
-        <script>
-            // JavaScript para mostrar y ocultar el menú de iniciar sesión
-            document.getElementById("loginTab").addEventListener("click", function () {
-                var loginMenu = document.getElementById("loginMenu");
-                loginMenu.style.display = loginMenu.style.display === "block" ? "none" : "block";
-            });
-
-            document.getElementById("searchIcon").addEventListener("click", function () {
-                var searchMenu = document.getElementById("searchMenu");
-                searchMenu.style.display = searchMenu.style.display === "block" ? "none" : "block";
-            });
-            // JavaScript para el botón de accesibilidad
-            document.getElementById("accessibilityButton").addEventListener("click", function () {
-                alert("¡Accesibilidad activada!");
-                // Aquí puedes agregar la lógica adicional que desees
-            });
-        </script>
     </body>
 </html>

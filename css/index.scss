@@ -1,0 +1,63 @@
+$color-background-especialista: #f0f0f0;
+$color-border: #ddd;
+$color-shadow: rgba(0, 0, 0, 0.1);
+$color-button-bg: #2cb89f;
+$color-button-hover-bg: #116f5e;
+$color-text-white: white;
+$width-especialista: calc(33.333% - 20px);
+$gap-especialista: 20px;
+$color-background-header: #315d75;
+$font-family-inter: "Inter", sans-serif;
+$border-radius-large: 25px;
+
+@import "header";
+@import "footer";
+
+body {
+    background-color: #9cdbd3;
+    margin: 0px;
+}
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    text-align: center;
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 70%;
+    width: 70%;
+    margin: 0 auto;
+
+    .carousel-img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: none;
+        border-radius: 15%;
+    }
+
+    .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: $color-background-header; // Usando variable existente para el color
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 1.5em;
+        z-index: 2;
+        transform: translateY(-50%);
+
+        &.prev-arrow {
+            left: 0;
+        }
+
+        &.next-arrow {
+            right: 0;
+        }
+    }
+}

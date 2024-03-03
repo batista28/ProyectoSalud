@@ -1,86 +1,136 @@
-body {
-  background-color: #9cdbd3;
-  margin: 0px;
-}
-
 header {
   background-color: #315d75;
   width: 100%;
-  height: 117px;
+  height: auto;
   text-align: left;
   color: white;
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
 }
-
-#audioControls {
+header #audioControls {
   display: flex;
   align-items: center;
 }
-header ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  margin: 10px;
-}
-/* Estilos para los botones de control de audio */
-button {
+header #audioControls button {
   font-size: 1.2em;
   cursor: pointer;
   background-color: transparent;
   border: none;
   margin: 0 5px;
-  color: white; /* Color del texto */
+  color: white;
 }
-
-button:hover {
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Sombra en el texto al pasar el mouse */
+header #audioControls button:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
-
-/* Estilos para las pestañas en el encabezado */
-.tab-container {
+header #logo {
+  width: 9em;
+  height: 9em;
+  margin-right: 20px;
+}
+header #salud-tab {
+  font-size: 24px;
+  background-color: transparent;
+  margin-top: 1em;
+  line-height: 45px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  margin-right: 1em;
+}
+header #salud-tab:hover {
+  background-color: transparent;
+}
+header .tab-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   margin-top: 20px;
   margin-right: 10px;
   gap: 1rem;
+}
+header .tab-container ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header .tab-container ul .nav-link {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.tab {
-  background-color: #2cb89f;
-  width: 180px; /* Ancho fijo para todas las pestañas */
-  height: 45px;
-  line-height: 45px;
-  text-align: center;
-  text-decoration: none;
+header .tab-container ul .nav-link .tab {
+  background-color: transparent;
+  padding: 10px 15px;
   color: white;
-  font-weight: bold;
   font-family: "Inter", sans-serif;
-  margin-right: 200px; /* Espacio entre las pestañas */
-  padding: 0 15px; /* Añadido relleno horizontal para espacio interno */
-}
-
-.tab:last-child {
-  margin-right: 0; /* Eliminar el margen derecho del último elemento */
-}
-
-#salud-tab {
   font-size: 24px;
+  margin-right: 10px;
+  border-radius: 25px;
+}
+header .tab-container ul .nav-link .tab:hover {
+  background-color: #2cb89f;
+}
+header .tab-container ul .nav-link:hover .nav-dropdown {
+  display: block;
+}
+header .tab-container ul .nav-link .nav-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #2cb89f;
+  border: 1px solid #aaaaaa;
+  border-radius: 25px;
+  top: 100%;
   color: white;
-  background-color: transparent;
-  margin-top: 1em;
-  line-height: 45px;
-  margin-right: 1em; /* Reducir el margen derecho */
+  left: 0;
+  padding: 10px;
+  z-index: 1;
 }
-
-#salud-tab:hover {
-  background-color: transparent;
+header .tab-container ul .nav-link .nav-dropdown a {
+  display: block;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  padding: 8px 12px;
+  text-decoration: none;
 }
-
-.small-tab {
+header .tab-container ul .nav-link .nav-dropdown a:hover {
+  background-color: #228f7b;
+}
+header .search-section {
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+}
+header .search-section #searchIcon {
+  width: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+header .search-section .search-menu {
+  position: absolute;
+  top: 13vh;
+  left: -90px;
+  display: none;
+  background-color: #315d75;
+  border: 1px solid #aaaaaa;
+  border-radius: 25px;
+  padding: 10px;
+}
+header .search-section .search-menu button {
+  margin-bottom: 10px;
+  width: calc(100% - 20px);
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: #2cb89f;
+  color: white;
+  font-family: "Inter", sans-serif;
+  border-radius: 25px;
+}
+header .small-tab {
   background-color: #2cb89f;
   color: white;
   padding: 8px 12px;
@@ -89,11 +139,17 @@ button:hover {
   cursor: pointer;
   font-family: "Inter", sans-serif;
 }
-/* Estilo del menú desplegable de iniciar sesión */
-.login-menu {
+header #loginTab {
+  width: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+  background-color: transparent;
+  margin-right: auto;
+}
+header .login-menu {
   position: absolute;
-  margin-top: 26vh;
-  right: 0px; /* Ajuste para mover el menú a la izquierda */
+  top: 18vh;
+  right: 0px;
   display: none;
   background-color: #315d75;
   border: 1px solid #aaaaaa;
@@ -101,154 +157,100 @@ button:hover {
   padding: 10px;
   width: 280px;
 }
-
-#loginTab {
-  width: 50px;
-  cursor: pointer;
-  margin-top: 15px;
-  background-color: transparent;
-}
-
-.login-menu input {
+header .login-menu button {
   margin-bottom: 10px;
-  width: 100%;
+  width: calc(100% - 20px);
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: #2cb89f;
+  color: white;
+  font-family: "Inter", sans-serif;
+  border-radius: 25px;
+}
+header .login-menu input {
+  margin-bottom: 15px;
+  width: calc(100% - 20px);
   padding: 8px;
   box-sizing: border-box;
 }
-
-/* Nueva sección para la imagen de la lupa y el menú de búsqueda */
-.search-section {
-  position: relative;
-  display: inline-block;
-  margin-right: 5px;
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header #logo {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  header #audioControls {
+    order: -1;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  header #salud-tab {
+    font-size: 20px;
+    margin-top: 0;
+    line-height: normal;
+    width: 100%;
+    text-align: center;
+  }
+  header .tab-container {
+    order: -1;
+    width: 100%;
+    margin-top: 0;
+    justify-content: space-around;
+  }
+  header .tab-container ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  header .tab-container ul .nav-link {
+    width: 100%;
+    justify-content: center;
+  }
+  header .tab-container ul .nav-link .tab {
+    font-size: 20px;
+    width: 100%;
+    margin-right: 0;
+  }
+  header .tab-container ul .nav-link .nav-dropdown {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  header .search-section #searchIcon,
+  header .search-section .small-tab,
+  header #loginTab #searchIcon,
+  header #loginTab .small-tab {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 20px;
+    display: block;
+  }
+  header .search-menu,
+  header .login-menu {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    padding: 10px;
+  }
 }
 
-#searchIcon {
-  width: 50px;
-  cursor: pointer;
-  margin-top: 15px;
-}
-.search-menu {
-  position: absolute;
-  top: 9.5vh;
-  left: -90px; /* Ajuste para mover el menú a la izquierda */
-  display: none;
+footer {
   background-color: #315d75;
-  border: 1px solid #aaaaaa;
-  border-radius: 25px;
-  padding: 10px;
-}
-#logo {
-  width: 9em;
-  height: 9em;
-  margin-right: 20px;
-}
-
-/* Ajusta el estilo del menú de inicio de sesión */
-#loginTab {
-  width: 50px;
-  cursor: pointer;
-  margin-top: 15px;
-  background-color: transparent;
-}
-nav {
-  background-color: #2cb89f;
-  float: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.nav-link {
-  color: white;
-}
-
-.nav-link:hover .nav-dropdown {
-  display: block;
-}
-
-.nav-dropdown {
-  display: none;
-  position: absolute;
-  background-color: #2cb89f;
-  padding: 10px;
-  z-index: 1;
-  border-radius: 5px;
-  top: 100%;
-  left: 0;
-}
-
-.nav-dropdown a {
-  display: block;
-  color: white;
-  padding: 8px 12px;
-  margin: 5px 0;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
-}
-.nav-link a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 8px 12px;
-  margin: 5px 0;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
-}
-
-/* Estilos para el contenido principal */
-main {
-  margin: 0 auto; /* Centra el contenido en pantallas más grandes */
-}
-
-#citasModal .modal-title {
-  text-align: center;
-}
-/* Ajustes de estilo para la ventana modal y el formulario */
-#citasModal .modal-dialog {
-  max-width: 100vh; /* Reducir el ancho de la ventana modal */
-}
-
-#citasModal .lightbox {
-  background-color: #2cb89f; /* Color de fondo de la ventana modal */
-  color: white; /* Color del texto en la ventana modal */
-  max-width: 1200px; /* O ajusta según tus necesidades */
-  height: 1000px;
-}
-
-#citasModal .modal-content {
-  background-color: #2cb89f; /* Color de fondo de la ventana modal */
-  color: white; /* Color del texto en la ventana modal */
-  top: 50%;
-}
-
-#citasModal .modal-body {
-  padding: 20px;
-}
-/* Aumenta el espacio entre el texto y el cuadro de texto en el formulario de citas */
-#citasModal .modal-body input {
-  margin-bottom: 5vh; /* Ajusta según tu preferencia */
-}
-
-/* Cambia el color del texto de los botones "Cerrar" y "Guardar Cita" en la ventana modal */
-#citasModal .modal-footer button {
-  color: #2cb89f; /* Cambia el color del texto a verde */
-}
-#citaForm label {
-  margin-bottom: 5px;
-}
-
-#citaForm input {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-}
-
-/* Cambia el color de los botones en la ventana modal */
-#citasModal .modal-footer button {
-  background-color: #315d75; /* Color azul para los botones */
-  color: #f3f8fa; /* Color del texto en los botones */
+  height: auto;
+  clear: both;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  margin: 0%;
 }
 
 .accessibility-button {
@@ -259,52 +261,147 @@ main {
   border-radius: 5px;
   cursor: pointer;
   position: fixed;
-  bottom: 20px; /* Ajusta según tu preferencia */
-  right: 20px; /* Ajusta según tu preferencia */
-  z-index: 1; /* Asegura que esté encima de otros elementos */
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  background-color: #315d75;
-  width: 100%;
-  height: auto; /* Cambiado a auto para adaptarse al contenido */
-  clear: both;
-  text-align: center;
+#previousButton,
+#nextButton {
+  font-size: 2em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin: 0 5px;
   color: white;
-  padding: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
+}
+#previousButton:hover,
+#nextButton:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 .image-container-rrss {
   display: flex;
-  /* Para distribuir equitativamente el espacio entre las imágenes */
+  margin: 0 5px;
 }
 
 .image-link {
-  width: 50px; /* Tamaño igual para todas las imágenes */
-  height: 50px; /* Tamaño igual para todas las imágenes */
+  width: 50px;
+  height: 50px;
+  margin: 0 2px;
 }
-
 .image-link img {
-  width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
-  height: 100%; /* Hace que la imagen ocupe todo el alto del contenedor */
-  object-fit: contain; /* Ajusta la imagen dentro del contenedor manteniendo su proporción */
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 5 px;
 }
 
 .footer-links {
-  text-align: center; /* Centra los enlaces horizontalmente */
+  text-align: center;
 }
-
 .footer-links a {
-  color: #ffffff; /* Color del texto de los enlaces */
-  text-decoration: none; /* Quita el subrayado de los enlaces */
-  margin: 0 10px; /* Ajusta el margen entre los enlaces */
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
-.footer-links a:hover {
-  text-decoration: underline; /* Subraya los enlaces al pasar el mouse sobre ellos */
+body {
+  background-color: #9cdbd3;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #555;
 }
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 30px auto;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: #315d75;
+}
+main .container {
+  color: white;
+  background-color: #315d75;
+}
+main .container .nav-tabs {
+  margin-bottom: 20px;
+  background-color: #315d75;
+}
+main .container .nav-tabs .nav-item .nav-link {
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-radius: 25px;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+}
+main .container .nav-tabs .nav-item .nav-link:hover, main .container .nav-tabs .nav-item .nav-link.active {
+  color: white;
+  background-color: #2cb89f;
+}
+main .container .tab-content {
+  padding: 20px;
+  border-radius: 25px;
+  background-color: #315d75;
+}
+main .container .tab-content .tab-pane form .form-group {
+  margin-bottom: 15px;
+}
+main .container .tab-content .tab-pane form .form-group label {
+  color: #315d75;
+}
+main .container .tab-content .tab-pane form .form-group input,
+main .container .tab-content .tab-pane form .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+main .container .tab-content .tab-pane form .form-group input:focus,
+main .container .tab-content .tab-pane form .form-group textarea:focus {
+  border-color: #2cb89f;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(44, 184, 159, 0.5);
+}
+main .container .tab-content .tab-pane form .form-group button[type=submit] {
+  width: auto;
+  background-color: #2cb89f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+main .container .tab-content .tab-pane form .form-group button[type=submit]:hover {
+  background-color: #116f5e;
+}
+main .container .tab-content .tab-pane .list-group-item,
+main .container .tab-content .tab-pane .cita-item {
+  background-color: #9cc1d6;
+  color: #555;
+  border: 1px solid #aaaaaa;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+main .container .tab-content .tab-pane .list-group-item .btn,
+main .container .tab-content .tab-pane .cita-item .btn {
+  margin: 5px;
+  border-radius: 25px;
+}
+main .container .tab-content .tab-pane .list-group-item .btn-info,
+main .container .tab-content .tab-pane .cita-item .btn-info {
+  background-color: #315d75;
+}
+main .container .tab-content .tab-pane .list-group-item .btn-danger,
+main .container .tab-content .tab-pane .cita-item .btn-danger {
+  background-color: #116f5e;
+}/*# sourceMappingURL=gestion de citas.css.map */

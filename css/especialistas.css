@@ -310,43 +310,97 @@ footer {
   text-decoration: underline;
 }
 
-body {
-  font-family: "Inter", sans-serif;
-  background-color: #9cdbd3;
-  color: #315d75;
-  margin: 0;
-  padding: 0;
-}
-
-main {
+.especialistas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 20px;
   padding: 20px;
-  text-align: center;
-  font-family: "Inter", sans-serif;
+  background-color: #9cdbd3;
+  width: 100%;
+  height: auto;
 }
 
-.offer-tab {
-  width: 15em;
-  margin: 20px;
-  background-color: #2cb89f;
-  border-radius: 10px;
-}
-.offer-tab .card-img-top {
-  width: 7em;
-  border-radius: 50%;
-}
-.offer-tab .card-body .card-title,
-.offer-tab .card-body .card-text {
-  color: #ffffff;
-  font-family: "Inter", sans-serif;
-}
-.offer-tab .card-body .btn-info {
+.especialista {
   background-color: #315d75;
-  border-color: #2cb89f;
+  border: 1px solid #aaaaaa;
+  border-radius: 10px;
+  overflow: hidden;
+  width: calc(33.333% - 20px);
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.especialista img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 25px;
+}
+.especialista h3 {
+  margin: 10px 0;
+  color: white;
+}
+.especialista p {
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  color: white;
+}
+.especialista .botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.especialista .botones button {
+  background-color: #2cb89f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
   font-family: "Inter", sans-serif;
   border-radius: 25px;
 }
-.offer-tab .card-body .btn-info:hover {
-  background-color: #224051;
-  border-color: #228f7b;
+.especialista .botones button:hover {
+  background-color: #116f5e;
+}
+
+#videoContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
   border-radius: 25px;
-}/*# sourceMappingURL=ofertas.css.map */
+}
+#videoContainer #videoCloseBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+  background-color: #116f5e;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+#videoContainer video {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 5px;
+}/*# sourceMappingURL=especialistas.css.map */

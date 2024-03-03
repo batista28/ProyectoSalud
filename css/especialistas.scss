@@ -1,0 +1,115 @@
+$color-background-especialista: #f0f0f0;
+$color-border: #ddd;
+$color-shadow: rgba(0, 0, 0, 0.1);
+$color-button-bg: #2cb89f;
+$color-button-hover-bg: #116f5e;
+$color-text-white: white;
+$width-especialista: calc(33.333% - 20px);
+$gap-especialista: 20px;
+$color-background-header: #315d75;
+$font-family-inter: "Inter", sans-serif;
+$border-radius-large: 25px;
+
+@import "header";
+@import "footer";
+.especialistas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; // Centra el contenido horizontalmente
+    align-items: center; // Centra el contenido verticalmente
+    overflow: hidden;
+    gap: $gap-especialista;
+    padding: $gap-especialista;
+    background-color: #9cdbd3;
+    width: 100%; // O un ancho específico, según necesites
+    height: auto;
+}
+
+.especialista {
+    background-color: $color-background-header;
+    border: 1px solid $color-border;
+    border-radius: 10px;
+    overflow: hidden;
+    width: $width-especialista;
+    margin-bottom: $gap-especialista;
+    box-shadow: 0 2px 4px $color-shadow;
+    text-align: center;
+    padding: 20px; // Asegúrate de que haya un padding dentro de la tarjeta para el contenido interno
+    margin-bottom: $gap-especialista; // Espacio debajo de cada tarjeta especialista
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        border-radius: $border-radius-large; // Borde redondeado para la imagen
+    }
+
+    h3 {
+        margin: 10px 0;
+        color: $color-text-white;
+    }
+
+    p {
+        font-size: 0.9em;
+        margin-bottom: 15px;
+        color: $color-text-white;
+    }
+
+    .botones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px; // Agrega un margen debajo del contenedor de botones
+
+        button {
+            background-color: $color-button-bg;
+            color: $color-text-white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: $font-family-inter;
+            border-radius: $border-radius-large;
+
+            &:hover {
+                background-color: $color-button-hover-bg;
+            }
+        }
+    }
+}
+#videoContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    border-radius: $border-radius-large;
+
+    #videoCloseBtn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: $color-text-white;
+        background-color: $color-button-hover-bg;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+
+    video {
+        max-width: 90%;
+        max-height: 90vh;
+        border-radius: 5px;
+    }
+}
+
+// Media queries...

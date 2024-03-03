@@ -1,90 +1,136 @@
-/* Estilos para el encabezado */
-body {
-  background-color: #9cdbd3;
-  margin: 0px;
-}
-
 header {
   background-color: #315d75;
   width: 100%;
-  height: 117px;
+  height: auto;
   text-align: left;
   color: white;
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
 }
-
-header ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  margin: 10px;
-}
-
-/* Estilos para los controles de audio personalizados */
-#audioControls {
+header #audioControls {
   display: flex;
   align-items: center;
 }
-
-/* Estilos para los botones de control de audio */
-button {
+header #audioControls button {
   font-size: 1.2em;
   cursor: pointer;
   background-color: transparent;
   border: none;
   margin: 0 5px;
-  color: white; /* Color del texto */
+  color: white;
 }
-
-button:hover {
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Sombra en el texto al pasar el mouse */
+header #audioControls button:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
-
-/* Estilos para las pestañas en el encabezado */
-.tab-container {
+header #logo {
+  width: 9em;
+  height: 9em;
+  margin-right: 20px;
+}
+header #salud-tab {
+  font-size: 24px;
+  background-color: transparent;
+  margin-top: 1em;
+  line-height: 45px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  margin-right: 1em;
+}
+header #salud-tab:hover {
+  background-color: transparent;
+}
+header .tab-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   margin-top: 20px;
   margin-right: 10px;
   gap: 1rem;
+}
+header .tab-container ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header .tab-container ul .nav-link {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.tab {
-  background-color: #2cb89f;
-  width: 180px; /* Ancho fijo para todas las pestañas */
-  height: 45px;
-  line-height: 45px;
-  text-align: center;
-  text-decoration: none;
+header .tab-container ul .nav-link .tab {
+  background-color: transparent;
+  padding: 10px 15px;
   color: white;
-  font-weight: bold;
   font-family: "Inter", sans-serif;
-  margin-right: 200px; /* Espacio entre las pestañas */
-  padding: 0 15px; /* Añadido relleno horizontal para espacio interno */
-}
-
-.tab:last-child {
-  margin-right: 0; /* Eliminar el margen derecho del último elemento */
-}
-
-#salud-tab {
   font-size: 24px;
+  margin-right: 10px;
+  border-radius: 25px;
+}
+header .tab-container ul .nav-link .tab:hover {
+  background-color: #2cb89f;
+}
+header .tab-container ul .nav-link:hover .nav-dropdown {
+  display: block;
+}
+header .tab-container ul .nav-link .nav-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #2cb89f;
+  border: 1px solid #aaaaaa;
+  border-radius: 25px;
+  top: 100%;
   color: white;
-  background-color: transparent;
-  margin-top: 1em;
-  line-height: 45px;
-  margin-right: 1em; /* Reducir el margen derecho */
+  left: 0;
+  padding: 10px;
+  z-index: 1;
 }
-
-#salud-tab:hover {
-  background-color: transparent;
+header .tab-container ul .nav-link .nav-dropdown a {
+  display: block;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  padding: 8px 12px;
+  text-decoration: none;
 }
-
-.small-tab {
+header .tab-container ul .nav-link .nav-dropdown a:hover {
+  background-color: #228f7b;
+}
+header .search-section {
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+}
+header .search-section #searchIcon {
+  width: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+header .search-section .search-menu {
+  position: absolute;
+  top: 13vh;
+  left: -90px;
+  display: none;
+  background-color: #315d75;
+  border: 1px solid #aaaaaa;
+  border-radius: 25px;
+  padding: 10px;
+}
+header .search-section .search-menu button {
+  margin-bottom: 10px;
+  width: calc(100% - 20px);
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: #2cb89f;
+  color: white;
+  font-family: "Inter", sans-serif;
+  border-radius: 25px;
+}
+header .small-tab {
   background-color: #2cb89f;
   color: white;
   padding: 8px 12px;
@@ -93,11 +139,17 @@ button:hover {
   cursor: pointer;
   font-family: "Inter", sans-serif;
 }
-/* Estilo del menú desplegable de iniciar sesión */
-.login-menu {
+header #loginTab {
+  width: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+  background-color: transparent;
+  margin-right: auto;
+}
+header .login-menu {
   position: absolute;
-  margin-top: 26vh;
-  right: 0px; /* Ajuste para mover el menú a la izquierda */
+  top: 18vh;
+  right: 0px;
   display: none;
   background-color: #315d75;
   border: 1px solid #aaaaaa;
@@ -105,149 +157,92 @@ button:hover {
   padding: 10px;
   width: 280px;
 }
-
-#loginTab {
-  width: 50px;
-  cursor: pointer;
-  margin-top: 15px;
-  background-color: transparent;
-}
-
-.login-menu input {
+header .login-menu button {
   margin-bottom: 10px;
-  width: 100%;
+  width: calc(100% - 20px);
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: #2cb89f;
+  color: white;
+  font-family: "Inter", sans-serif;
+  border-radius: 25px;
+}
+header .login-menu input {
+  margin-bottom: 15px;
+  width: calc(100% - 20px);
   padding: 8px;
   box-sizing: border-box;
 }
-
-/* Nueva sección para la imagen de la lupa y el menú de búsqueda */
-.search-section {
-  position: relative;
-  display: inline-block;
-  margin-right: 5px;
-}
-
-#searchIcon {
-  width: 50px;
-  cursor: pointer;
-  margin-top: 15px;
-}
-.search-menu {
-  position: absolute;
-  top: 9.5vh;
-  left: -90px; /* Ajuste para mover el menú a la izquierda */
-  display: none;
-  background-color: #315d75;
-  border: 1px solid #aaaaaa;
-  border-radius: 25px;
-  padding: 10px;
-}
-
-/* Ajusta el estilo del menú de inicio de sesión */
-#loginTab {
-  margin-right: auto; /* Mueve el menú de inicio de sesión a la derecha */
-}
-#logo {
-  width: 9em;
-  height: 9em;
-  margin-right: 20px;
-}
-nav {
-  background-color: #2cb89f;
-  float: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.nav-link {
-  color: white;
-}
-
-.nav-link:hover .nav-dropdown {
-  display: block;
-}
-
-.nav-dropdown {
-  display: none;
-  position: absolute;
-  background-color: #2cb89f;
-  padding: 10px;
-  z-index: 1;
-  border-radius: 5px;
-  top: 100%;
-  left: 0;
-}
-
-.nav-dropdown a {
-  display: block;
-  color: white;
-  padding: 8px 12px;
-  margin: 5px 0;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
-}
-.nav-link a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 8px 12px;
-  margin: 5px 0;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
-}
-/* Estilos para el contenido principal */
-main {
-  margin-left: 330px;
-  padding: 20px;
-}
-h1 {
-  font-family: Inter, sans-serif;
-  font-size: 24px;
-  color: #315d75;
-  text-align: center;
-}
-/* Estilos para la Sección de Ofertas */
-.offers-section {
-  margin: 50px auto;
-  text-align: center;
-}
-
-.offers-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.offer-tab {
-  background-color: #2cb89f;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 200px; /* Ajusta el ancho según tus necesidades */
-}
-
-.offer-tab h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-  color: #ffffff;
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
-}
-
-.offer-tab p {
-  margin: 5px 0;
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header #logo {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  header #audioControls {
+    order: -1;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  header #salud-tab {
+    font-size: 20px;
+    margin-top: 0;
+    line-height: normal;
+    width: 100%;
+    text-align: center;
+  }
+  header .tab-container {
+    order: -1;
+    width: 100%;
+    margin-top: 0;
+    justify-content: space-around;
+  }
+  header .tab-container ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  header .tab-container ul .nav-link {
+    width: 100%;
+    justify-content: center;
+  }
+  header .tab-container ul .nav-link .tab {
+    font-size: 20px;
+    width: 100%;
+    margin-right: 0;
+  }
+  header .tab-container ul .nav-link .nav-dropdown {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  header .search-section #searchIcon,
+  header .search-section .small-tab,
+  header #loginTab #searchIcon,
+  header #loginTab .small-tab {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 20px;
+    display: block;
+  }
+  header .search-menu,
+  header .login-menu {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    padding: 10px;
+  }
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
   background-color: #315d75;
   width: 100%;
-  height: auto; /* Cambiado a auto para adaptarse al contenido */
+  height: auto;
   clear: both;
   text-align: center;
   color: white;
@@ -255,62 +250,9 @@ footer {
   font-size: 20px;
   font-weight: bold;
   font-family: "Inter", sans-serif;
+  margin: 0%;
 }
 
-.image-container-rrss {
-  display: flex;
-  /* Para distribuir equitativamente el espacio entre las imágenes */
-}
-
-.image-link {
-  width: 50px; /* Tamaño igual para todas las imágenes */
-  height: 50px; /* Tamaño igual para todas las imágenes */
-}
-
-.image-link img {
-  width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
-  height: 100%; /* Hace que la imagen ocupe todo el alto del contenedor */
-  object-fit: contain; /* Ajusta la imagen dentro del contenedor manteniendo su proporción */
-}
-
-.footer-links {
-  text-align: center; /* Centra los enlaces horizontalmente */
-}
-
-.footer-links a {
-  color: #ffffff; /* Color del texto de los enlaces */
-  text-decoration: none; /* Quita el subrayado de los enlaces */
-  margin: 0 10px; /* Ajusta el margen entre los enlaces */
-}
-
-.footer-links a:hover {
-  text-decoration: underline; /* Subraya los enlaces al pasar el mouse sobre ellos */
-}
-
-.nav-dropdown a:nth-child(0),
-.nav-dropdown a:nth-child(1),
-.nav-dropdown a:nth-child(2) {
-  color: white;
-  text-decoration: none;
-  padding: 8px 12px;
-  margin: 5px 0;
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
-}
-#saludTab .nav-dropdown a:nth-child(5),
-#saludTab .nav-dropdown a:nth-child(6),
-#saludTab .nav-dropdown a:nth-child(7) {
-  color: white;
-  text-decoration: none;
-  padding: 8px 12px;
-  margin: 5px 0;
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
-}
 .accessibility-button {
   background-color: #2cb89f;
   color: white;
@@ -319,12 +261,160 @@ footer {
   border-radius: 5px;
   cursor: pointer;
   position: fixed;
-  bottom: 20px; /* Ajusta según tu preferencia */
-  right: 20px; /* Ajusta según tu preferencia */
-  z-index: 1; /* Asegura que esté encima de otros elementos */
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
 }
 
-/* ... (Tu estilo actual) ... */
+#previousButton,
+#nextButton {
+  font-size: 2em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin: 0 5px;
+  color: white;
+}
+#previousButton:hover,
+#nextButton:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
 
-/* Estilos para las imágenes en círculos */
-/* ... (Tu estilo actual) ... */
+.image-container-rrss {
+  display: flex;
+  margin: 0 5px;
+}
+
+.image-link {
+  width: 50px;
+  height: 50px;
+  margin: 0 2px;
+}
+.image-link img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 5 px;
+}
+
+.footer-links {
+  text-align: center;
+}
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #9cdbd3;
+  color: #315d75;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+main .novedades-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+main .novedad {
+  background-color: #2cb89f;
+  border: 1px solid #2cb89f;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+main .novedad h2 {
+  color: #315d75;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+main .novedad button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+main .novedad button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+main .novedad button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #315d75;
+  border-radius: 1.625rem;
+}
+main .novedad button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+main .novedad button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+main .novedad button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+main .novedad button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #315d75;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+main .novedad button.learn-more:hover .circle {
+  width: 100%;
+}
+main .novedad button.learn-more:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+main .novedad button.learn-more:hover .button-text {
+  color: #fff;
+}/*# sourceMappingURL=novedades.css.map */

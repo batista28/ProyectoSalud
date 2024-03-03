@@ -3,15 +3,22 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>@salud</title>
+        <title>Especialistas</title>
         <!-- Enlace para cargar la fuente Inter desde Google Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
         <link rel="icon" href="../img/LOGO.ico" type="image/x-icon" />
-        <link rel="stylesheet" type="text/css" href="../css/novedades.css" />
+        <link rel="stylesheet" href="../css/especialistas.css" />
     </head>
     <body>
         <header>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <!-- Resto del contenido del encabezado -->
+
             <audio id="audioPlayer" src="_Bienvenidos a Salud.mp3"></audio>
 
             <div id="audioControls">
@@ -22,7 +29,7 @@
             </div>
 
             <img src="../img/LOGO.png" alt="Logotipo" id="logo" />
-            <a href="index.html" class="tab" id="salud-tab">@SALUD</a>
+            <a href="../index.html" class="tab" id="salud-tab">@SALUD</a>
 
             <div class="tab-container">
                 <ul>
@@ -30,7 +37,7 @@
                         <a href="#" class="tab">Especialistas</a>
                         <!-- Menú desplegable de Especialistas -->
                         <div class="nav-dropdown">
-                            <a href="views/traumatologia.html">dr mario bros</a>
+                            <a href="traumatologia.html">dr mario bros</a>
                             <a href="#">dr rosa melano</a>
                             <a href="#">dr bruce barners</a>
                             <a href="#">dr house</a>
@@ -41,15 +48,15 @@
 
                         <!-- Menú desplegable de Especialidades -->
                         <div class="nav-dropdown">
-                            <a href="views/traumatologia.html">Traumatologia</a>
-                            <a href="views/oncologia.html">Oncologia</a>
+                            <a href="traumatologia.html">Traumatologia</a>
+                            <a href="oncologia.html">Oncologia</a>
                             <a href="#">Pediatria</a>
                             <a href="#">Neurologia</a>
                             <a href="#">Psiquiatria</a>
                             <a href="#">Urologia</a>
                             <a href="#">Cardiologia</a>
                             <a href="#">Nefrologia</a>
-                            <a href="#">Neumologia (homenaje a pablo valladares)</a>
+                            <a href="#">Neumologia </a>
                         </div>
                     </li>
                     <li class="nav-link">
@@ -86,65 +93,42 @@
         </header>
 
         <main>
-            <h1>NOVEDADES</h1>
-            <section class="novedades-container">
-                <!-- Artículo 1 -->
-                <article class="novedad">
-                    <h2>Avances en la Telemedicina</h2>
-                    <p>
-                        Descubre cómo la telemedicina está transformando el acceso a la atención médica, permitiendo
-                        consultas virtuales eficientes y seguras.
-                    </p>
-                    <button class="learn-more">
-                        <span class="circle" aria-hidden="true">
-                            <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">Leer más</span>
-                    </button>
-                </article>
-
-                <!-- Artículo 2 -->
-                <article class="novedad">
-                    <h2>Nutrición y Salud Mental</h2>
-                    <p>
-                        Explora la relación entre una buena nutrición y su impacto positivo en la salud mental, con
-                        consejos prácticos para tu bienestar.
-                    </p>
-                    <button class="learn-more">
-                        <span class="circle" aria-hidden="true">
-                            <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">Leer más</span>
-                    </button>
-                </article>
-
-                <!-- Artículo 3 -->
-                <article class="novedad">
-                    <h2>Importancia de la Actividad Física</h2>
-                    <p>
-                        Conoce los beneficios de incorporar la actividad física en tu rutina diaria y cómo puede mejorar
-                        significativamente tu calidad de vida.
-                    </p>
-                    <button class="learn-more">
-                        <span class="circle" aria-hidden="true">
-                            <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">Leer más</span>
-                    </button>
-                </article>
-
-                <!-- Agregar más artículos según sea necesario -->
+            <section class="especialistas">
+                <div class="especialista">
+                    <img src="../img/doctores/doctor javier.jpg" alt="Dr. Javier " />
+                    <h3>Dr. Carlos Revenga Giertych</h3>
+                    <p>Especialidad: Traumatologia</p>
+                    <div class="botones">
+                        <button>Pedir cita</button>
+                        <button class="btn btn-info btn-reseña" data-video-src="Friends 1X01.mp4">Reseñas</button>
+                    </div>
+                </div>
+                <div class="especialista">
+                    <img src="../img/doctores/luis.jpeg" alt="Dr. Luis Traverso" />
+                    <h3>Dr. Luis Traverso Guerrero</h3>
+                    <p>Especialidad: Cardiología</p>
+                    <div class="botones">
+                        <button>Pedir cita</button>
+                        <button class="btn btn-info btn-reseña" data-video-src="saw X.mp4">Reseñas</button>
+                    </div>
+                </div>
+                <!-- Repite para más especialistas según sea necesario -->
             </section>
+            <div id="videoContainer">
+                <div id="videoCloseBtn">Cerrar X</div>
+                <video id="reseñaVideo" width="320" height="240" controls>
+                    <!-- El src se establecerá dinámicamente con JavaScript -->
+                </video>
+            </div>
         </main>
 
-        <!-- Pie de Página -->
         <footer>
             <!-- Enlances de footed-->
             <div class="footer-links">
                 <a href="views/">Política de privacidad</a>
-                <a href="views/politicasCookies.html">Política de cookies</a>
+                <a href="politicasCookies.html">Política de cookies</a>
                 <a href="terminos_condiciones.html">Términos y condiciones</a>
-                <a href="views/contactos.html">Contacto</a>
+                <a href="contactos.html">Contacto</a>
                 <a href="sobre_nosotros.html">Sobre nosotros</a>
             </div>
 
@@ -164,31 +148,108 @@
                 </a>
             </div>
         </footer>
+
         <script>
+            document.querySelectorAll(".btn-reseña").forEach((button) => {
+                button.addEventListener("click", function () {
+                    const videoSrc = this.getAttribute("data-video-src");
+                    const videoContainer = document.getElementById("videoContainer");
+                    const videoElement = document.getElementById("reseñaVideo");
+
+                    videoElement.src = videoSrc;
+                    videoContainer.style.display = "flex";
+                    videoElement.load();
+                    videoElement.play();
+                });
+            });
+
+            document.getElementById("videoCloseBtn").addEventListener("click", function () {
+                const videoContainer = document.getElementById("videoContainer");
+                const videoElement = document.getElementById("reseñaVideo");
+
+                videoContainer.style.display = "none";
+                videoElement.pause();
+                videoElement.src = "";
+            });
+
             // JavaScript para mostrar y ocultar el menú de iniciar sesión
             document.getElementById("loginTab").addEventListener("click", function () {
                 var loginMenu = document.getElementById("loginMenu");
                 loginMenu.style.display = loginMenu.style.display === "block" ? "none" : "block";
             });
-
             document.getElementById("searchIcon").addEventListener("click", function () {
                 var searchMenu = document.getElementById("searchMenu");
                 searchMenu.style.display = searchMenu.style.display === "block" ? "none" : "block";
             });
-            // JavaScript para el botón de accesibilidad
-            document.getElementById("accessibilityButton").addEventListener("click", function () {
-                alert("¡Accesibilidad activada!");
-                // Aquí puedes agregar la lógica adicional que desees
+            // JavaScript para el carrusel de imágenes
+            const images = document.querySelectorAll(".carousel-img");
+            const prevArrow = document.querySelector(".prev-arrow");
+            const nextArrow = document.querySelector(".next-arrow");
+
+            let currentIndex = 0;
+
+            function showImage(index) {
+                if (index < 0) {
+                    currentIndex = images.length - 1;
+                } else if (index >= images.length) {
+                    currentIndex = 0;
+                }
+
+                images.forEach((image) => (image.style.display = "none"));
+                images[currentIndex].style.display = "block";
+            }
+
+            showImage(currentIndex);
+
+            prevArrow.addEventListener("click", () => {
+                currentIndex--;
+                showImage(currentIndex);
             });
+
+            nextArrow.addEventListener("click", () => {
+                currentIndex++;
+                showImage(currentIndex);
+            });
+
+            function toggleMenu() {
+                const navMenu = document.querySelector(".nav-menu");
+                navMenu.classList.toggle("active");
+            }
 
             function buscar() {
                 var searchTerm = document.getElementById("searchInput").value;
                 // Puedes realizar alguna lógica adicional con el término de búsqueda si es necesario
                 // Por ejemplo, podrías incluirlo en la URL como parámetro de consulta (?q=termino)
                 // var searchUrl = "resultadoBusqueda.html?q=" + encodeURIComponent(searchTerm);
-                var searchUrl = "resultadoBusqueda.html";
+                var searchUrl = "view/resultadoBusqueda.html";
                 window.location.href = searchUrl;
             }
+            // Referencias a los elementos del DOM
+            const audioPlayer = document.getElementById("audioPlayer");
+            const playButton = document.getElementById("playButton");
+            const pauseButton = document.getElementById("pauseButton");
+            const volumeUpButton = document.getElementById("volumeUpButton");
+            const volumeDownButton = document.getElementById("volumeDownButton");
+            // Evento de clic para el botón de reproducción
+            playButton.addEventListener("click", () => {
+                audioPlayer.play(); // Reproduce el audio
+            });
+            // Evento de clic para el botón de pausa
+            pauseButton.addEventListener("click", () => {
+                audioPlayer.pause(); // Pausa el audio
+            });
+            // Evento de clic para el botón de aumentar volumen
+            volumeUpButton.addEventListener("click", () => {
+                if (audioPlayer.volume < 1) {
+                    audioPlayer.volume += 0.1; // Aumenta el volumen en un 10%
+                }
+            });
+            // Evento de clic para el botón de disminuir volumen
+            volumeDownButton.addEventListener("click", () => {
+                if (audioPlayer.volume > 0) {
+                    audioPlayer.volume -= 0.1; // Disminuye el volumen en un 10%
+                }
+            });
         </script>
     </body>
 </html>

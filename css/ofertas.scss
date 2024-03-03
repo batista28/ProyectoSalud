@@ -1,0 +1,61 @@
+// Definición de variables
+$color-primary: #315d75; // Color principal (ej. para el encabezado y enlaces)
+$color-secondary: #2cb89f; // Color secundario (ej. para botones)
+$color-background: #9cdbd3; // Color de fondo de la página
+$color-text: #333; // Color del texto principal
+$font-family-base: "Inter", sans-serif; // Fuente base
+$color-text-white: white;
+$color-primary: #315d75; // Color principal
+$color-secondary: #2cb89f; // Color secundario
+$color-text: #ffffff; // Color de texto
+$border-radius-large: 25px;
+
+@import "header";
+@import "footer";
+// Estilos generales
+body {
+    font-family: $font-family-base;
+    background-color: $color-background;
+    color: $color-primary;
+    margin: 0;
+    padding: 0;
+}
+
+// Estilos de la sección principal
+main {
+    padding: 20px;
+    text-align: center;
+    font-family: $font-family-base;
+}
+.offer-tab {
+    width: 15em;
+    margin: 20px;
+    background-color: $color-secondary;
+    border-radius: 10px;
+
+    .card-img-top {
+        width: 7em;
+        border-radius: 50%;
+    }
+
+    .card-body {
+        .card-title,
+        .card-text {
+            color: $color-text;
+            font-family: $font-family-base;
+        }
+
+        .btn-info {
+            background-color: $color-primary;
+            border-color: $color-secondary;
+            font-family: $font-family-base;
+            border-radius: $border-radius-large;
+
+            &:hover {
+                background-color: darken($color-primary, 10%);
+                border-color: darken($color-secondary, 10%);
+                border-radius: $border-radius-large;
+            }
+        }
+    }
+}

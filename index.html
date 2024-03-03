@@ -14,8 +14,16 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
   </head>
   <body>
-    <header>
     
+      <header>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <!-- Resto del contenido del encabezado -->
+      
+      
       <audio id="audioPlayer" src="_Bienvenidos a Salud.mp3"></audio>
      
       <div id="audioControls">
@@ -31,7 +39,7 @@
       <div class="tab-container">
         <ul>
           <li class="nav-link">
-            <a href="#" class="tab">Especialistas</a>
+            <a href="views/especialistas.html" class="tab">Especialistas</a>
             <!-- Menú desplegable de Especialistas -->
             <div class="nav-dropdown">
               <a href="views/traumatologia.html">dr mario bros</a>
@@ -58,14 +66,14 @@
 
           </li>
           <li class="nav-link">
-            <a href="views/novedades.html" class="tab">NOVEDADES</a>
-          </li>
-          <li class="nav-link">
-            <a href="views/ofertas.html" class="tab">OFERTAS</a>
-          </li>
-          <li class="nav-link">
-            <a href="views/gestion de citas.html" class="tab">GESTION DE CITAS</a>
-          </li>
+            <a href="views/novedades.html" class="tab">Novedades</a>
+        </li>
+        <li class="nav-link">
+            <a href="views/ofertas.html" class="tab">Ofertas</a>
+        </li>
+        <li class="nav-link">
+            <a href="views/gestion de citas.html" class="tab">Gestion de citas</a>
+        </li>
         </ul>
       </div>
      
@@ -103,30 +111,6 @@
       </div>
     </main>
    
-    <!-- Botón de Accesibilidad -->
-    <button class="accessibility-button" id="accessibilityButton" aria-label="Activar accesibilidad">A</button>
-    
-    <!-- Ventana emergente de opciones de accesibilidad -->
-    <div id="accessibilityOptions" class="accessibility-options">
-      <h2>Opciones de Accesibilidad</h2>
-      <label for="highContrast">Alto Contraste</label>
-      <input type="checkbox" id="highContrast">
-      <label for="largerText">Texto Más Grande</label>
-      <input type="checkbox" id="largerText">
-      <!-- Nuevas opciones de accesibilidad -->
-      <label for="fontFamily">Tipo de Fuente</label>
-      <select id="fontFamily">
-        <option value="Arial">Arial</option>
-        <option value="Verdana">Verdana</option>
-        <option value="Tahoma">Tahoma</option>
-        <!-- Agrega más opciones de fuente si es necesario -->
-      </select>
-      <label for="animation">Animaciones</label>
-     <input type="checkbox" id="animation">
-      <!-- Agrega más opciones de accesibilidad según sea necesario -->
-      <br>
-      <button onclick="applyAccessibilityOptions()">Aplicar</button>
-    </div>
     
     <!-- Pie< de Página -->
     <footer>
@@ -236,6 +220,11 @@ nextArrow.addEventListener('click', () => {
   var accessibilityOptions = document.getElementById("accessibilityOptions");
   accessibilityOptions.style.display = "none";
 }
+function toggleMenu() {
+  const navMenu = document.querySelector('.nav-menu');
+  navMenu.classList.toggle('active');
+}
+
 
       
       function buscar() {
