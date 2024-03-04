@@ -173,20 +173,26 @@ header .login-menu input {
   padding: 8px;
   box-sizing: border-box;
 }
+header .login-menu .hamburger-menu {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   header {
-    padding: 0 10px;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 20px;
   }
   header #logo {
     margin-right: 0;
     margin-bottom: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
   }
   header #audioControls {
-    order: -1;
-    width: 100%;
-    justify-content: space-around;
+    order: 1;
+    margin-top: 0;
     margin-bottom: 20px;
   }
   header #salud-tab {
@@ -220,22 +226,47 @@ header .login-menu input {
     left: 50%;
     transform: translateX(-50%);
   }
-  header .search-section #searchIcon,
-  header .search-section .small-tab,
-  header #loginTab #searchIcon,
-  header #loginTab .small-tab {
-    width: 40px;
-    height: 40px;
-    margin: 0 auto 20px;
-    display: block;
+  header .search-section,
+  header #loginTab {
+    position: relative;
+    margin-top: auto;
+    margin-bottom: -20px;
+    margin-left: auto;
+    margin-right: 5px;
   }
   header .search-menu,
   header .login-menu {
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 40px);
-    padding: 10px;
+    top: auto;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+  }
+  header .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+    padding: 15px;
+    font-size: 24px;
+    color: #2cb89f !important;
+  }
+  header .hamburger-menu .bar {
+    width: 45px;
+    height: 6px;
+    background-color: white;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+  }
+  header .tab-container ul {
+    display: none;
+  }
+  header .hamburger-menu.active ~ .tab-container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
   }
 }
 

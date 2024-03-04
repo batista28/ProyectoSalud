@@ -16,11 +16,11 @@
   <body>
     
       <header>
-        <div class="hamburger-menu" onclick="toggleMenu()">
+        <div class="hamburger-menu" id="hamburgerMenu" onclick="toggleMenu()">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
-        </div>
+      </div>
         <!-- Resto del contenido del encabezado -->
       
       
@@ -181,50 +181,12 @@ nextArrow.addEventListener('click', () => {
     showImage(currentIndex);
 });
       // JavaScript para el botón de accesibilidad
-      document.getElementById("accessibilityButton").addEventListener("click", function () {
-        var accessibilityOptions = document.getElementById("accessibilityOptions");
-        accessibilityOptions.style.display = accessibilityOptions.style.display === "block" ? "none" : "block";
-      });
-      function applyAccessibilityOptions() {
-  var highContrast = document.getElementById("highContrast").checked;
-  var largerText = document.getElementById("largerText").checked;
-  var fontFamily = document.getElementById("fontFamily").value;
-  var lineHeight = document.getElementById("lineHeight").value;
-  var letterSpacing = document.getElementById("letterSpacing").value;
-  var animation = document.getElementById("animation").checked;
-  
-  if (highContrast) {
-    document.body.style.background = "black";
-    document.body.style.color = "white";
-  } else {
-    document.body.style.background = "";
-    document.body.style.color = "";
-  }
-  
-  if (largerText) {
-    document.body.style.fontSize = "20px";
-  } else {
-    document.body.style.fontSize = "";
-  }
-  
-  document.body.style.fontFamily = fontFamily;
-  document.body.style.lineHeight = lineHeight;
-  document.body.style.letterSpacing = letterSpacing + "em";
-
-  if (animation) {
-    // Activa las animaciones
-  } else {
-    // Desactiva las animaciones
-  }
-
-  var accessibilityOptions = document.getElementById("accessibilityOptions");
-  accessibilityOptions.style.display = "none";
+    
+     
+      function toggleMenu() {
+    var menu = document.getElementById("hamburgerMenu");
+    menu.classList.toggle("active");
 }
-function toggleMenu() {
-  const navMenu = document.querySelector('.nav-menu');
-  navMenu.classList.toggle('active');
-}
-
 
       
       function buscar() {
