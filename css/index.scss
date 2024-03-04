@@ -16,7 +16,9 @@ $border-radius-large: 25px;
 body {
     background-color: #9cdbd3;
     margin: 0px;
+    padding-bottom: 120px; /* Espacio inicial para evitar la superposición con el footer */
 }
+
 main {
     padding: 20px;
     max-width: 1200px;
@@ -44,7 +46,7 @@ main {
         position: absolute;
         top: 50%;
         background-color: rgba(0, 0, 0, 0.5);
-        color: $color-background-header; // Usando variable existente para el color
+        color: $color-background-header;
         border: none;
         cursor: pointer;
         padding: 10px;
@@ -58,6 +60,38 @@ main {
 
         &.next-arrow {
             right: 0;
+        }
+    }
+    .dark-mode {
+        background-color: #121212; // Color de fondo oscuro
+        color: #ffffff; // Color de fuente claro
+
+        // Especifica otros elementos según sea necesario
+        header,
+        footer {
+            background-color: #1c1c1c; // Color de fondo oscuro para el header y footer
+            color: #ffffff; // Color de fuente claro
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: lighten(#9cdbd3, 5%);
+        padding-bottom: 150px; /* Aumentar el espacio en pantallas pequeñas */
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .carousel-container {
+        height: 60%;
+        width: 80%;
+
+        .carousel-arrow {
+            padding: 5px;
+            font-size: 1.2em;
         }
     }
 }

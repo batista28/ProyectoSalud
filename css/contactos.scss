@@ -13,91 +13,91 @@ $border-radius-large: 25px;
 @import "footer";
 
 body {
-  background-color: #9cdbd3;
-  margin: 0px;
+    background-color: #9cdbd3;
+    margin: 0px;
 }
 main {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 // Estilos para el formulario de contacto
 form {
-  margin-top: 20px;
-  max-width: 400px; // Reducido de 600px a 400px para hacer el contenedor más pequeño
-  margin: 0 auto; // Centrar el formulario
-  padding: 20px;
-  background-color: #2cb89f;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+    margin-top: 20px;
+    max-width: 400px; // Reducido de 600px a 400px para hacer el contenedor más pequeño
+    margin: 0 auto; // Centrar el formulario
+    padding: 20px;
+    background-color: #2cb89f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: $color-text-white;
-  }
-
-  input[type="text"],
-  input[type="email"] {
-    width: calc(100% - 22px); // Ajusta el ancho para compensar el padding y el borde
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    color: $color-text-white;
-    $font-family-inter: "Inter", sans-serif;
-  }
-  textarea {
-    width: calc(100% - 22px); // Ajusta el ancho para compensar el padding y el borde
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    color: black;
-    $font-family-inter: "Inter", sans-serif;
-  }
-
-  textarea {
-    height: 150px;
-  }
-
-  input[type="submit"] {
-    width: 100%; // Ocupa todo el ancho disponible
-    background-color: #315d75;
-    color: $color-text-white;
-    $font-family-inter: "Inter", sans-serif;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: #2c4b65;
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: $color-text-white;
     }
-  }
+
+    input[type="text"],
+    input[type="email"] {
+        width: calc(100% - 22px); // Ajusta el ancho para compensar el padding y el borde
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        color: $color-text-white;
+        $font-family-inter: "Inter", sans-serif;
+    }
+    textarea {
+        width: calc(100% - 22px); // Ajusta el ancho para compensar el padding y el borde
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        color: black;
+        $font-family-inter: "Inter", sans-serif;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    input[type="submit"] {
+        width: 100%; // Ocupa todo el ancho disponible
+        background-color: #315d75;
+        color: $color-text-white;
+        $font-family-inter: "Inter", sans-serif;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #2c4b65;
+        }
+    }
 }
 
 // Estilos adicionales para el contenido de la página de contacto
 .contact-container {
-  max-width: 600px; // Ancho máximo del contenedor para centrarlo
-  margin: 0 auto; // Centrar horizontalmente
-  text-align: center; // Alinear el contenido al centro
+    max-width: 600px; // Ancho máximo del contenedor para centrarlo
+    margin: 0 auto; // Centrar horizontalmente
+    text-align: center; // Alinear el contenido al centro
 
-  h2 {
-    font-size: 2em;
-    color: #315d75;
-    margin-bottom: 20px;
-  }
+    h2 {
+        font-size: 2em;
+        color: #315d75;
+        margin-bottom: 20px;
+    }
 
-  p {
-    font-size: 1.2em;
-    color: #315d75;
-    margin-bottom: 20px;
-  }
+    p {
+        font-size: 1.2em;
+        color: #315d75;
+        margin-bottom: 20px;
+    }
 }

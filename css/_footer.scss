@@ -4,91 +4,149 @@ $text-color-white: white;
 $font-family-inter: "Inter", sans-serif;
 
 footer {
-  background-color: $background-color-footer;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  color: $text-color-white;
-  padding: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: $font-family-inter;
-  position: fixed; // Cambiar a posición fija
-  bottom: 0; // Mantener el footer siempre abajo
-  left: 0; // Alinear a la izquierda
-  z-index: 1; // Asegurar que esté por encima de otros elementos
+    background-color: $background-color-footer;
+    width: 100%;
+    text-align: center;
+    color: $text-color-white;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: $font-family-inter;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
 }
 
-.accessibility-button {
-  background-color: $background-color-button;
-  color: $text-color-white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 2; // Asegurar que esté por encima del footer
+#accessibilityButton {
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    background-color: $background-color-button;
+    color: $text-color-white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    font-family: $font-family-inter;
+}
+
+.accessibility-menu {
+    display: none;
+    position: fixed;
+    bottom: 150px;
+    right: 20px;
+    background-color: $background-color-button;
+    color: $text-color-white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    font-family: $font-family-inter;
+
+    button {
+        font-size: 1em;
+        margin-bottom: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+
+        &:hover {
+            background-color: darken($background-color-button, 10%);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.accessibility-menu.active {
+    display: block;
 }
 
 #previousButton,
 #nextButton {
-  font-size: 2em;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  margin: 0 5px;
-  color: $text-color-white;
+    font-size: 2em;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin: 0 5px;
+    color: $text-color-white;
 
-  &:hover {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-  }
+    &:hover {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
 }
 
 .image-container-rrss {
-  display: flex;
-  margin: 0 5px;
-}
+    display: flex;
+    margin: 0 5px;
 
-.image-link {
-  width: 50px;
-  height: 50px;
-  margin: 0 2px;
+    .image-link {
+        width: 50px;
+        height: 50px;
+        margin: 0 2px;
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    margin: 5px; // Corrección en la propiedad margin
-  }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            margin: 5px;
+        }
+    }
 }
 
 .footer-links {
-  text-align: center;
+    text-align: center;
 
-  a {
-    color: $text-color-white;
-    text-decoration: none;
-    margin: 0 10px;
+    a {
+        color: $text-color-white;
+        text-decoration: none;
+        margin: 0 10px;
 
-    &:hover {
-      text-decoration: underline;
+        &:hover {
+            text-decoration: underline;
+        }
     }
-  }
-  @media screen and (max-width: 768px) {
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+
+    .accessibility-menu,
+    #accessibilityButton,
+    header,
+    footer,
+    .tab-container .tab {
+        background-color: #333;
+        color: $text-color-white;
+    }
+
+    .accessibility-menu button {
+        color: #fff;
+
+        &:hover {
+            background-color: #444;
+        }
+    }
+}
+
+.large-text {
+    * {
+        font-size: 1.25em !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
     footer {
-      position: relative;
-      bottom: auto;
-      width: 100%;
-      margin-top: 20px;
+        font-size: 16px;
     }
 
-    .accessibility-button {
-      position: relative;
-      bottom: auto;
-      right: auto;
-      margin-top: 20px;
+    #previousButton,
+    #nextButton {
+        font-size: 1.5em;
     }
-  }
 }
