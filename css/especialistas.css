@@ -274,14 +274,16 @@ footer {
   background-color: #315d75;
   width: 100%;
   height: auto;
-  clear: both;
   text-align: center;
   color: white;
   padding: 20px;
   font-size: 20px;
   font-weight: bold;
   font-family: "Inter", sans-serif;
-  margin: 0%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .accessibility-button {
@@ -294,7 +296,7 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 1;
+  z-index: 2;
 }
 
 #previousButton,
@@ -326,7 +328,7 @@ footer {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  margin: 5 px;
+  margin: 5px;
 }
 
 .footer-links {
@@ -339,6 +341,20 @@ footer {
 }
 .footer-links a:hover {
   text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+  .footer-links footer {
+    position: relative;
+    bottom: auto;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .footer-links .accessibility-button {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 20px;
+  }
 }
 
 .especialistas {
