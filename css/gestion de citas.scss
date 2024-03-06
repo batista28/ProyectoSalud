@@ -28,10 +28,11 @@ main {
     border-radius: $border-radius-large;
     box-shadow: 0 0 15px $color-shadow;
     background-color: $color-background-header;
-
+    margin-bottom: 80px;
     .container {
         color: $color-text-white;
         background-color: $color-background-header;
+
         .nav-tabs {
             margin-bottom: 20px; // Espacio entre las pestañas y el contenido de la pestaña
             background-color: $color-background-header;
@@ -118,6 +119,52 @@ main {
 
                     .btn-danger {
                         background-color: $color-button-hover-bg;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $breakpoint-mobile) {
+        main {
+            margin-bottom: 100px; // Aumenta el margen inferior para asegurar espacio con el footer
+            padding: 10px; // Reduce el padding para dar más espacio al contenido en pantallas pequeñas
+            width: auto; // Asegura que main ocupe todo el ancho disponible
+            max-width: 100%; // Elimina el max-width para permitir que main se expanda completamente
+
+            .container {
+                margin-bottom: 80px;
+                .nav-tabs {
+                    .nav-item {
+                        .nav-link {
+                            margin-right: 0; // Elimina el margen derecho para las pestañas en pantallas pequeñas
+                            font-size: 14px; // Reduce el tamaño de fuente de las pestañas para ahorrar espacio
+                        }
+                    }
+                }
+
+                .tab-content {
+                    .tab-pane {
+                        form {
+                            .form-group {
+                                label {
+                                    font-size: 14px; // Reduce el tamaño de fuente de las etiquetas de los campos
+                                }
+
+                                input,
+                                textarea {
+                                    font-size: 14px; // Reduce el tamaño de fuente dentro de los inputs y textareas
+                                }
+
+                                button[type="submit"] {
+                                    font-size: 14px; // Reduce el tamaño de fuente del botón de envío
+                                }
+                            }
+                        }
+
+                        .list-group-item,
+                        .cita-item {
+                            font-size: 14px; // Reduce el tamaño de fuente para los elementos de la lista
+                        }
                     }
                 }
             }

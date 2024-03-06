@@ -14,48 +14,71 @@ $border-radius-large: 25px;
 @import "footer";
 // Estilos generales
 body {
-  font-family: $font-family-base;
-  background-color: $color-background;
-  color: $color-primary;
-  margin: 0;
-  padding: 0;
+    font-family: $font-family-base;
+    background-color: $color-background;
+    color: $color-primary;
+    margin: 0;
+    padding: 0;
 }
 
 // Estilos de la sección principal
 main {
-  padding: 20px;
-  text-align: center;
-  font-family: $font-family-base;
+    padding: 20px;
+    text-align: center;
+    font-family: $font-family-base;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap; // Permite que las tarjetas se ajusten y pasen a la siguiente línea si no hay espacio
+    justify-content: center; // Centra las tarjetas horizontalmente
+    gap: 20px; // Añade un espacio entre las tarjetas
 }
 .offer-tab {
-  width: 15em;
-  margin: 20px;
-  background-color: $color-secondary;
-  border-radius: 10px;
+    width: 15em;
+    margin: 20px;
+    background-color: $color-secondary;
+    border-radius: 10px;
 
-  .card-img-top {
-    width: 7em;
-    border-radius: 50%;
-  }
-
-  .card-body {
-    .card-title,
-    .card-text {
-      color: $color-text;
-      font-family: $font-family-base;
+    .card-img-top {
+        width: 7em;
+        border-radius: 50%;
     }
 
-    .btn-info {
-      background-color: $color-primary;
-      border-color: $color-secondary;
-      font-family: $font-family-base;
-      border-radius: $border-radius-large;
+    .card-body {
+        .card-title,
+        .card-text {
+            color: $color-text;
+            font-family: $font-family-base;
+        }
 
-      &:hover {
-        background-color: darken($color-primary, 10%);
-        border-color: darken($color-secondary, 10%);
-        border-radius: $border-radius-large;
-      }
+        .btn-info {
+            background-color: $color-primary;
+            border-color: $color-secondary;
+            font-family: $font-family-base;
+            border-radius: $border-radius-large;
+
+            &:hover {
+                background-color: darken($color-primary, 10%);
+                border-color: darken($color-secondary, 10%);
+                border-radius: $border-radius-large;
+            }
+        }
     }
-  }
+    // Media query para pantallas pequeñas
+    @media screen and (max-width: 768px) {
+        .offer-tab {
+            width: 80%; // Hace que las tarjetas ocupen más ancho en pantallas pequeñas
+            margin: 20px auto; // Añade margen arriba y abajo, y auto para los lados para centrar
+
+            .card-img-top {
+                width: 50%; // Ajusta el tamaño de la imagen dentro de la tarjeta si es necesario
+            }
+
+            .card-body {
+                .btn-info {
+                    width: 100%; // Hace que el botón ocupe todo el ancho de la tarjeta para facilitar el toque en pantallas táctiles
+                }
+            }
+        }
+    }
 }

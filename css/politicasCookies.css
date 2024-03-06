@@ -1,0 +1,575 @@
+header {
+  background-color: #315d75;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+header #audioControls {
+  display: flex;
+  align-items: center;
+}
+header #audioControls button {
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin: 0 5px;
+  color: white;
+}
+header #audioControls button:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+header #logo {
+  width: 9em;
+  height: 9em;
+  margin-right: 20px;
+}
+header #salud-tab {
+  font-size: 24px;
+  background-color: transparent;
+  margin-top: 1em;
+  line-height: 45px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  margin-right: 1em;
+}
+header #salud-tab:hover {
+  background-color: transparent;
+}
+header .tab-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 10px;
+  gap: 1rem;
+}
+header .tab-container ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header .tab-container ul .nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .tab-container ul .nav-link .tab {
+  background-color: transparent;
+  padding: 10px 15px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  margin-right: 10px;
+  border-radius: 25px;
+}
+header .tab-container ul .nav-link .tab:hover {
+  background-color: #2cb89f;
+}
+header .tab-container ul .nav-link:hover .nav-dropdown {
+  display: block;
+}
+header .tab-container ul .nav-link .nav-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #2cb89f;
+  border: 1px solid #aaaaaa;
+  border-radius: 25px;
+  top: 100%;
+  color: white;
+  left: 0;
+  padding: 10px;
+  z-index: 1;
+}
+header .tab-container ul .nav-link .nav-dropdown a {
+  display: block;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+header .tab-container ul .nav-link .nav-dropdown a:hover {
+  background-color: #228f7b;
+}
+header .search-section {
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+}
+header .search-section #searchIcon {
+  width: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+header .search-section .search-menu {
+  position: absolute;
+  top: 13vh;
+  left: -90px;
+  display: none;
+  background-color: #315d75;
+  border: 1px solid #aaaaaa;
+  border-radius: 25px;
+  padding: 10px;
+}
+header .search-section .search-menu button {
+  margin-bottom: 10px;
+  width: calc(100% - 20px);
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: #2cb89f;
+  color: white;
+  font-family: "Inter", sans-serif;
+  border-radius: 25px;
+}
+header .small-tab {
+  background-color: #2cb89f;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+header #loginTab {
+  width: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+  background-color: transparent;
+  margin-right: auto;
+}
+header .login-menu {
+  position: absolute;
+  top: 18vh;
+  right: 0px;
+  display: none;
+  background-color: #315d75;
+  border: 1px solid #aaaaaa;
+  border-radius: 25px;
+  padding: 10px;
+  width: 280px;
+}
+header .login-menu button {
+  margin-bottom: 10px;
+  width: calc(100% - 20px);
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: #2cb89f;
+  color: white;
+  font-family: "Inter", sans-serif;
+  border-radius: 25px;
+}
+header .login-menu input {
+  margin-bottom: 15px;
+  width: calc(100% - 20px);
+  padding: 8px;
+  box-sizing: border-box;
+}
+header .login-menu .hamburger-menu {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  header #logo {
+    width: 80px;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  header #audioControls {
+    order: 1;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  header #salud-tab {
+    font-size: 20px;
+    margin-top: 0;
+    line-height: normal;
+    width: 100%;
+    text-align: center;
+  }
+  header .tab-container {
+    order: -1;
+    width: 100%;
+    margin-top: 0;
+    justify-content: space-around;
+  }
+  header .tab-container ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  header .tab-container ul .nav-link {
+    width: 100%;
+    justify-content: center;
+  }
+  header .tab-container ul .nav-link .tab {
+    font-size: 20px;
+    width: 100%;
+    margin-right: 0;
+  }
+  header .tab-container ul .nav-link .nav-dropdown {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  header .search-section {
+    position: relative;
+    bottom: 70%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    left: 0%;
+  }
+  header .search-section .search-menu {
+    display: none;
+    z-index: 1;
+    left: 90%;
+  }
+  header .search-section .search-menu input {
+    margin-bottom: 15px;
+    width: calc(100% - 20px);
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  header .search-section .search-menu button {
+    margin-bottom: 15px;
+    width: calc(100% - 10px);
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  header #loginTab {
+    width: 50px;
+    cursor: pointer;
+    margin-top: 15px;
+    background-color: transparent;
+    margin-right: auto;
+  }
+  header .login-menu {
+    position: absolute;
+    top: 1vh;
+    right: 0px;
+    display: none;
+    background-color: #315d75;
+    border: 1px solid #aaaaaa;
+    border-radius: 25px;
+    padding: 10px;
+    width: 40%;
+    z-index: 1;
+  }
+  header .login-menu button {
+    margin-bottom: 10px;
+    width: calc(100% - 20px);
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #2cb89f;
+    color: white;
+    font-family: "Inter", sans-serif;
+    border-radius: 25px;
+  }
+  header .login-menu input {
+    margin-bottom: 15px;
+    width: calc(100% - 20px);
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  header .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+    padding: 15px;
+    font-size: 24px;
+    color: #2cb89f !important;
+  }
+  header .hamburger-menu .bar {
+    width: 45px;
+    height: 6px;
+    background-color: white;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+  }
+  header .tab-container ul {
+    display: none;
+  }
+  header .hamburger-menu.active ~ .tab-container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+footer {
+  background-color: #315d75;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#accessibilityButton {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  background-color: #2cb89f;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  font-family: "Inter", sans-serif;
+}
+
+.accessibility-menu {
+  display: none;
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  background-color: #2cb89f;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  font-family: "Inter", sans-serif;
+}
+.accessibility-menu button {
+  font-size: 1em;
+  margin-bottom: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.accessibility-menu button:hover {
+  background-color: #228f7b;
+}
+.accessibility-menu button:last-child {
+  margin-bottom: 0;
+}
+
+.accessibility-menu.active {
+  display: block;
+}
+
+#previousButton,
+#nextButton {
+  font-size: 2em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin: 0 5px;
+  color: white;
+}
+#previousButton:hover,
+#nextButton:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.image-container-rrss {
+  display: flex;
+  margin: 0 5px;
+}
+.image-container-rrss .image-link {
+  width: 50px;
+  height: 50px;
+  margin: 0 2px;
+}
+.image-container-rrss .image-link img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 5px;
+}
+
+.footer-links {
+  text-align: center;
+}
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+body.dark-mode .accessibility-menu,
+body.dark-mode #accessibilityButton,
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .tab-container .tab {
+  background-color: #333;
+  color: white;
+}
+body.dark-mode .accessibility-menu button {
+  color: #fff;
+}
+body.dark-mode .accessibility-menu button:hover {
+  background-color: #444;
+}
+
+.large-text * {
+  font-size: 1.25em !important;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    font-size: 12px;
+  }
+  #accessibilityButton {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  .accessibility-menu {
+    bottom: 60px;
+  }
+  #previousButton,
+  #nextButton {
+    font-size: 1em;
+  }
+  .image-container-rrss .image-link {
+    width: 40px;
+    height: 40px;
+  }
+  .image-container-rrss .image-link img {
+    margin: 3px;
+  }
+}
+body {
+  background-color: #9cdbd3;
+}
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+main section {
+  margin-bottom: 30px;
+}
+main h2 {
+  color: #315d75;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+main p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+main a {
+  color: #2cb89f;
+  text-decoration: none;
+}
+main a:hover {
+  text-decoration: underline;
+}
+main button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+}
+main button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+main button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #315d75;
+  border-radius: 1.625rem;
+}
+main button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+main button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+main button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+main button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #315d75;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+main button.learn-more:hover .circle {
+  width: 100%;
+}
+main button.learn-more:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+main button.learn-more:hover .button-text {
+  color: #fff;
+}/*# sourceMappingURL=politicasCookies.css.map */

@@ -22,11 +22,11 @@
                 <button id="volumeDownButton">-</button>
             </div>
             <img src="../img/LOGO.png" alt="Logotipo" id="logo" />
-            <a href="index.html" class="tab" id="salud-tab">@SALUD</a>
+            <a href="../index.html" class="tab" id="salud-tab">@SALUD</a>
             <div class="tab-container">
                 <ul>
                     <li class="nav-link">
-                        <a href="#" class="tab">Especialistas</a>
+                        <a href="especialistas.html " class="tab">Especialistas</a>
                         <!-- Menú desplegable de Especialistas -->
                         <div class="nav-dropdown">
                             <a href="views/traumatologia.html">dr mario bros</a>
@@ -157,9 +157,37 @@
                     <img src="../img/rrss/Instagram.png" alt="Imagen 4" />
                 </a>
             </div>
+            <div id="accessibilityButton" onclick="toggleAccessibilityMenu()">A</div>
+
+            <div id="accessibilityMenu" class="accessibility-menu">
+                <button onclick="toggleLargeText()">Texto Grande</button>
+                <button onclick="toggleDarkMode()">Modo Oscuro</button>
+                <button onclick="activateDescriptiveText()">Texto Descriptivo</button>
+            </div>
+
         </footer>
 
         <script>
+              function toggleAccessibilityMenu() {
+        var menu = document.getElementById("accessibilityMenu");
+        menu.classList.toggle("active");
+    }
+
+    function toggleLargeText() {
+        document.body.classList.toggle("large-text");
+    }
+
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+    }
+
+    function activateDescriptiveText() {
+        alert("Texto descriptivo activado. Asegúrate de que todos los elementos multimedia tengan atributos 'alt' adecuados y que los enlaces y botones sean descriptivos.");
+    }
+function toggleAccessibilityMenu() {
+  var menu = document.getElementById("accessibilityMenu");
+  menu.classList.toggle("active");
+}
             // JavaScript para mostrar y ocultar el menú de iniciar sesión
             document.getElementById("loginTab").addEventListener("click", function () {
                 var loginMenu = document.getElementById("loginMenu");
@@ -170,11 +198,7 @@
                 var searchMenu = document.getElementById("searchMenu");
                 searchMenu.style.display = searchMenu.style.display === "block" ? "none" : "block";
             });
-            // JavaScript para el botón de accesibilidad
-            document.getElementById("accessibilityButton").addEventListener("click", function () {
-                alert("¡Accesibilidad activada!");
-                // Aquí puedes agregar la lógica adicional que desees
-            });
+           
 
             function buscar() {
                 var searchTerm = document.getElementById("searchInput").value;

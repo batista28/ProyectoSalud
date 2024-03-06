@@ -49,7 +49,7 @@
             </div>
           </li>
           <li class="nav-link">
-            <a href="#" class="tab">Especialidades</a>
+            <a href="views/especialistas.html" class="tab">Especialidades</a>
             
             <!-- Menú desplegable de Especialidades -->
             <div class="nav-dropdown">
@@ -94,7 +94,7 @@
         <input type="text" placeholder="Usuario" />
         <input type="password" placeholder="Contraseña" />
         <button>Iniciar Sesión</button>
-        <button>Registrarse</button>
+        <button><a href="views/registrarse.html">Registrarse</a></button>
       </div>
     </header>
     <!-- Menú de Navegación -->
@@ -236,7 +236,7 @@ nextArrow.addEventListener('click', () => {
         // Puedes realizar alguna lógica adicional con el término de búsqueda si es necesario
         // Por ejemplo, podrías incluirlo en la URL como parámetro de consulta (?q=termino)
         // var searchUrl = "resultadoBusqueda.html?q=" + encodeURIComponent(searchTerm);
-        var searchUrl = "view/resultadoBusqueda.html";
+        var searchUrl = "views/resultadoBusqueda.html";
         window.location.href = searchUrl;
       }
       // Referencias a los elementos del DOM

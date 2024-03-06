@@ -5,13 +5,17 @@ $color-button-bg: #2cb89f;
 $color-button-hover-bg: #116f5e;
 $color-text-white: white;
 $width-especialista: calc(33.333% - 20px);
-$gap-especialista: 20px;
+$gap-especialista: 80px;
 $color-background-header: #315d75;
 $font-family-inter: "Inter", sans-serif;
 $border-radius-large: 25px;
+$breakpoint-mobile: 768px;
 
 @import "header";
 @import "footer";
+body {
+    background-color: #9cdbd3;
+}
 .especialistas {
     display: flex;
     flex-wrap: wrap;
@@ -20,7 +24,7 @@ $border-radius-large: 25px;
     overflow: hidden;
     gap: $gap-especialista;
     padding: $gap-especialista;
-    background-color: #9cdbd3;
+
     width: 100%; // O un ancho específico, según necesites
     height: auto;
 }
@@ -31,7 +35,6 @@ $border-radius-large: 25px;
     border-radius: 10px;
     overflow: hidden;
     width: $width-especialista;
-    margin-bottom: $gap-especialista;
     box-shadow: 0 2px 4px $color-shadow;
     text-align: center;
     padding: 20px; // Asegúrate de que haya un padding dentro de la tarjeta para el contenido interno
@@ -111,5 +114,15 @@ $border-radius-large: 25px;
         border-radius: 5px;
     }
 }
+@media screen and (max-width: $breakpoint-mobile) {
+    .especialistas {
+        justify-content: space-around; // O "center" si prefieres que todo esté centrado
+        margin-bottom: 60px; // Añade un margen adicional al final del contenedor .especialistas para separarlo del footer
+    }
 
-// Media queries...
+    .especialista {
+        width: 100%; // Hace que cada tarjeta de especialista ocupe todo el ancho disponible, haciéndolas más compactas
+        padding: 15px;
+        margin-bottom: 95px; // Reduce el espacio entre tarjetas para un diseño más compacto
+    }
+}

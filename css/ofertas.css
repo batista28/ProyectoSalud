@@ -177,18 +177,20 @@ header .login-menu .hamburger-menu {
   display: none;
 }
 @media screen and (max-width: 768px) {
-  header {
-    flex-direction: column-reverse;
+  header header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-end;
-    padding-bottom: 20px;
+    padding: 0 20px;
   }
   header #logo {
+    width: 80px;
+    height: auto;
     margin-right: 0;
     margin-bottom: 20px;
     position: absolute;
     top: 20px;
-    left: 20px;
+    right: 20px;
   }
   header #audioControls {
     order: 1;
@@ -226,21 +228,65 @@ header .login-menu .hamburger-menu {
     left: 50%;
     transform: translateX(-50%);
   }
-  header .search-section,
-  header #loginTab {
+  header .search-section {
     position: relative;
-    margin-top: auto;
-    margin-bottom: -20px;
-    margin-left: auto;
-    margin-right: 5px;
+    bottom: 70%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    left: 0%;
   }
-  header .search-menu,
+  header .search-section .search-menu {
+    display: none;
+    z-index: 1;
+    left: 90%;
+  }
+  header .search-section .search-menu input {
+    margin-bottom: 15px;
+    width: calc(100% - 20px);
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  header .search-section .search-menu button {
+    margin-bottom: 15px;
+    width: calc(100% - 10px);
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  header #loginTab {
+    width: 50px;
+    cursor: pointer;
+    margin-top: 15px;
+    background-color: transparent;
+    margin-right: auto;
+  }
   header .login-menu {
-    top: auto;
-    left: auto;
-    right: 0;
-    bottom: 0;
     position: absolute;
+    top: 1vh;
+    right: 0px;
+    display: none;
+    background-color: #315d75;
+    border: 1px solid #aaaaaa;
+    border-radius: 25px;
+    padding: 10px;
+    width: 40%;
+    z-index: 1;
+  }
+  header .login-menu button {
+    margin-bottom: 10px;
+    width: calc(100% - 20px);
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #2cb89f;
+    color: white;
+    font-family: "Inter", sans-serif;
+    border-radius: 25px;
+  }
+  header .login-menu input {
+    margin-bottom: 15px;
+    width: calc(100% - 20px);
+    padding: 8px;
+    box-sizing: border-box;
   }
   header .hamburger-menu {
     display: block;
@@ -398,11 +444,26 @@ body.dark-mode .accessibility-menu button:hover {
 
 @media screen and (max-width: 768px) {
   footer {
-    font-size: 16px;
+    font-size: 12px;
+  }
+  #accessibilityButton {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  .accessibility-menu {
+    bottom: 60px;
   }
   #previousButton,
   #nextButton {
-    font-size: 1.5em;
+    font-size: 1em;
+  }
+  .image-container-rrss .image-link {
+    width: 40px;
+    height: 40px;
+  }
+  .image-container-rrss .image-link img {
+    margin: 3px;
   }
 }
 body {
@@ -417,6 +478,13 @@ main {
   padding: 20px;
   text-align: center;
   font-family: "Inter", sans-serif;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .offer-tab {
@@ -444,4 +512,16 @@ main {
   background-color: #224051;
   border-color: #228f7b;
   border-radius: 25px;
+}
+@media screen and (max-width: 768px) {
+  .offer-tab .offer-tab {
+    width: 80%;
+    margin: 20px auto;
+  }
+  .offer-tab .offer-tab .card-img-top {
+    width: 50%;
+  }
+  .offer-tab .offer-tab .card-body .btn-info {
+    width: 100%;
+  }
 }/*# sourceMappingURL=ofertas.css.map */

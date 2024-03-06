@@ -142,11 +142,29 @@ body.dark-mode {
 
 @media screen and (max-width: 768px) {
     footer {
-        font-size: 16px;
+        font-size: 12px;
+    }
+    #accessibilityButton {
+        position: absolute; // Cambia a posicionamiento absoluto dentro del footer
+        bottom: 10px; // Alinea el botón en la parte inferior del footer
+        right: 10px; // Alinea el botón a la derecha dentro del footer
+    }
+
+    .accessibility-menu {
+        bottom: 60px; // Ajusta según sea necesario para alinear el menú de accesibilidad por encima del botón dentro del footer
     }
 
     #previousButton,
     #nextButton {
-        font-size: 1.5em;
+        font-size: 1em; // Reduce el tamaño de los botones de navegación para pantallas pequeñas
+    }
+
+    .image-container-rrss .image-link {
+        width: 40px; // Reduce el ancho de las imágenes de redes sociales
+        height: 40px; // Reduce la altura de las imágenes de redes sociales
+
+        img {
+            margin: 3px; // Ajusta el margen si es necesario para mantener el espaciado
+        }
     }
 }

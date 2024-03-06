@@ -12,306 +12,354 @@ $breakpoint-mobile: 768px; // Punto de corte para dispositivos móviles
 
 // Encabezado
 header {
-  background-color: $color-background-header;
-  width: 100%;
-  height: auto; // Ajustado para acomodar el contenido interno
-  text-align: left;
-  color: $color-text-white;
-  display: flex;
-  flex-wrap: wrap; // Permite que el contenido se ajuste según el ancho
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-
-  // Controles de audio
-  // Estilos para los controles de audio personalizados
-  #audioControls {
-    display: flex;
-    align-items: center;
-
-    // Estilos para los botones de control de audio
-    button {
-      font-size: 1.2em;
-      cursor: pointer;
-      background-color: transparent;
-      border: none;
-      margin: 0 5px;
-      color: $color-text-white; // Color del texto
-
-      &:hover {
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); // Sombra en el texto al pasar el mouse
-      }
-    }
-  }
-  // Logo
-  #logo {
-    width: 9em;
-    height: 9em;
-    margin-right: 20px;
-  }
-
-  // Pestaña @SALUD
-  #salud-tab {
-    font-size: 24px;
-    background-color: transparent;
-    margin-top: 1em;
-    line-height: 45px;
+    background-color: $color-background-header;
+    width: 100%;
+    height: auto; // Ajustado para acomodar el contenido interno
+    text-align: left;
     color: $color-text-white;
-    font-family: $font-family-inter;
-    margin-right: 1em;
-    &:hover {
-      background-color: transparent;
-    }
-  }
-
-  // Contenedor de pestañas
-  .tab-container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; // Permite que el contenido se ajuste según el ancho
+    justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
-    margin-right: 10px;
-    gap: 1rem;
-    ul {
-      display: flex;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      .nav-link {
-        position: relative;
+    padding: 0 20px;
+
+    // Controles de audio
+    // Estilos para los controles de audio personalizados
+    #audioControls {
         display: flex;
         align-items: center;
-        justify-content: center;
-        .tab {
-          background-color: $color-tab-inactive;
-          padding: 10px 15px;
-          color: $color-text-white;
-          font-family: $font-family-inter;
-          font-size: 24px;
-          margin-right: 10px;
-          border-radius: $border-radius-large;
-          &:hover {
-            background-color: $color-tab-active;
-          }
-        }
-        &:hover .nav-dropdown {
-          display: block;
-        }
-        .nav-dropdown {
-          display: none;
-          position: absolute;
-          background-color: $color-tab-active;
-          border: 1px solid $color-border;
-          border-radius: $border-radius-large;
-          top: 100%;
-          color: $color-text-white;
-          left: 0;
-          padding: 10px;
-          z-index: 1;
-          a {
-            display: block;
-            color: $color-text-white;
-            font-family: $font-family-inter;
-            font-size: 24px;
-            padding: 8px 12px;
-            text-decoration: none;
+
+        // Estilos para los botones de control de audio
+        button {
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            margin: 0 5px;
+            color: $color-text-white; // Color del texto
+
             &:hover {
-              background-color: darken($color-tab-active, 10%);
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); // Sombra en el texto al pasar el mouse
             }
-          }
         }
-      }
     }
-  }
-  .search-section {
-    position: relative;
-    display: inline-block;
-    margin-right: 5px;
-
-    #searchIcon {
-      width: $size-button;
-      cursor: pointer;
-      margin-top: 15px;
+    // Logo
+    #logo {
+        width: 9em;
+        height: 9em;
+        margin-right: 20px;
     }
 
-    .search-menu {
-      position: absolute;
-      top: 13vh;
-      left: -90px;
-      display: none;
-      background-color: $color-background-header;
-      border: 1px solid $color-border;
-      border-radius: $border-radius-large;
-      padding: 10px;
-
-      button {
-        margin-bottom: 10px;
-        width: calc(100% - 20px); // Ajusta el ancho al padding
-        padding: 8px;
-        box-sizing: border-box;
-        background-color: $color-tab-active;
+    // Pestaña @SALUD
+    #salud-tab {
+        font-size: 24px;
+        background-color: transparent;
+        margin-top: 1em;
+        line-height: 45px;
         color: $color-text-white;
         font-family: $font-family-inter;
-        border-radius: $border-radius-large;
-      }
-    }
-  }
-
-  .small-tab {
-    background-color: $color-tab-active;
-    color: $color-text-white;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: $font-family-inter;
-  }
-
-  #loginTab {
-    width: $size-button;
-    cursor: pointer;
-    margin-top: 15px;
-    background-color: transparent;
-    margin-right: auto; // Mueve el menú de inicio de sesión a la derecha
-  }
-
-  .login-menu {
-    position: absolute;
-    top: 18vh;
-    right: 0px;
-    display: none;
-    background-color: $color-background-header;
-    border: 1px solid $color-border;
-    border-radius: $border-radius-large;
-    padding: 10px;
-    width: 280px;
-
-    button {
-      margin-bottom: 10px;
-      width: calc(100% - 20px); // Ajusta el ancho al padding
-      padding: 8px;
-      box-sizing: border-box;
-      background-color: $color-tab-active;
-      color: $color-text-white;
-      font-family: $font-family-inter;
-      border-radius: $border-radius-large;
-    }
-    input {
-      margin-bottom: 15px; // Aumenta el espacio entre inputs y botones
-      width: calc(100% - 20px); // Ajusta el ancho al padding
-      padding: 8px;
-      box-sizing: border-box;
-    }
-    .hamburger-menu {
-      display: none; // Oculta el menú hamburguesa por defecto
-    }
-  }
-  @media screen and (max-width: $breakpoint-mobile) {
-    // Ajustes para centrar el logo en la parte inferior
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: flex-end;
-    padding-bottom: 20px;
-
-    #logo {
-      margin-right: 0;
-      margin-bottom: 20px; // Espacio debajo del logo en móviles
-      position: absolute;
-      top: 20px; // Posiciona el logo en la esquina superior izquierda
-      left: 20px; // Posiciona el logo en la esquina superior izquierda
-    }
-
-    #audioControls {
-      order: 1; // Mover los controles de audio a la derecha
-      margin-top: 0; // Eliminar el espacio superior
-      margin-bottom: 20px; // Añadir un poco de espacio inferior
-    }
-
-    #salud-tab {
-      font-size: 20px; // Tamaño de fuente reducido para @SALUD
-      margin-top: 0;
-      line-height: normal;
-      width: 100%; // Ajuste al ancho del contenedor
-      text-align: center;
-    }
-
-    .tab-container {
-      order: -1; // Pestañas al inicio
-      width: 100%;
-      margin-top: 0;
-      justify-content: space-around;
-
-      ul {
-        flex-direction: column; // Pestañas en columna
-        align-items: center; // Centrado horizontal
-        width: 100%;
-
-        .nav-link {
-          width: 100%;
-          justify-content: center;
-
-          .tab {
-            font-size: 20px; // Tamaño de fuente reducido para las pestañas
-            width: 100%; // Ajuste al ancho del contenedor
-            margin-right: 0; // Sin margen derecho
-          }
-
-          .nav-dropdown {
-            left: 50%; // Centrado del dropdown
-            transform: translateX(-50%); // Alineación precisa
-          }
+        margin-right: 1em;
+        &:hover {
+            background-color: transparent;
         }
-      }
     }
 
-    .search-section,
+    // Contenedor de pestañas
+    .tab-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 20px;
+        margin-right: 10px;
+        gap: 1rem;
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            .nav-link {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .tab {
+                    background-color: $color-tab-inactive;
+                    padding: 10px 15px;
+                    color: $color-text-white;
+                    font-family: $font-family-inter;
+                    font-size: 24px;
+                    margin-right: 10px;
+                    border-radius: $border-radius-large;
+                    &:hover {
+                        background-color: $color-tab-active;
+                    }
+                }
+                &:hover .nav-dropdown {
+                    display: block;
+                }
+                .nav-dropdown {
+                    display: none;
+                    position: absolute;
+                    background-color: $color-tab-active;
+                    border: 1px solid $color-border;
+                    border-radius: $border-radius-large;
+                    top: 100%;
+                    color: $color-text-white;
+                    left: 0;
+                    padding: 10px;
+                    z-index: 1;
+                    a {
+                        display: block;
+                        color: $color-text-white;
+                        font-family: $font-family-inter;
+                        font-size: 24px;
+                        padding: 8px 12px;
+                        text-decoration: none;
+                        &:hover {
+                            background-color: darken($color-tab-active, 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .search-section {
+        position: relative;
+        display: inline-block;
+        margin-right: 5px;
+
+        #searchIcon {
+            width: $size-button;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .search-menu {
+            position: absolute;
+            top: 13vh;
+            left: -90px;
+            display: none;
+            background-color: $color-background-header;
+            border: 1px solid $color-border;
+            border-radius: $border-radius-large;
+            padding: 10px;
+
+            button {
+                margin-bottom: 10px;
+                width: calc(100% - 20px); // Ajusta el ancho al padding
+                padding: 8px;
+                box-sizing: border-box;
+                background-color: $color-tab-active;
+                color: $color-text-white;
+                font-family: $font-family-inter;
+                border-radius: $border-radius-large;
+            }
+        }
+    }
+
+    .small-tab {
+        background-color: $color-tab-active;
+        color: $color-text-white;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: $font-family-inter;
+    }
+
     #loginTab {
-      position: relative; // Cambiar a posición relativa
-      margin-top: auto; // Alinear al final del encabezado
-      margin-bottom: -20px; // Espacio entre los iconos y el borde inferior del encabezado
-      margin-left: auto; // Alinear a la derecha
-      margin-right: 5px; // Espacio entre los iconos y el borde derecho del encabezado
+        width: $size-button;
+        cursor: pointer;
+        margin-top: 15px;
+        background-color: transparent;
+        margin-right: auto; // Mueve el menú de inicio de sesión a la derecha
     }
 
-    .search-menu,
     .login-menu {
-      top: auto; // Eliminar la posición superior
-      left: auto; // Eliminar la posición izquierda
-      right: 0; // Alinear los menús a la derecha
-      bottom: 0; // Posicionar los menús en la esquina inferior derecha
-      position: absolute; // Ajustar posición absoluta
-    }
+        position: absolute;
+        top: 18vh;
+        right: 0px;
+        display: none;
+        background-color: $color-background-header;
+        border: 1px solid $color-border;
+        border-radius: $border-radius-large;
+        padding: 10px;
+        width: 280px;
 
-    .hamburger-menu {
-      display: block;
-      cursor: pointer;
-      position: relative;
-      z-index: 1000;
-      padding: 15px;
-      font-size: 24px; // Ajustar el tamaño del menú hamburguesa
-      color: $color-tab-active !important; // Cambiar el color del menú hamburguesa y forzar la prioridad
-
-      .bar {
-        width: 45px; // Aumenta el ancho de las barras
-        height: 6px; // Aumenta la altura de las barras
-        background-color: $color-text-white;
-        margin: 10px 0; // Ajusta el margen entre las barras
-        transition: background-color 0.3s ease; // Añadido para animar el color de las barras
-      }
+        button {
+            margin-bottom: 10px;
+            width: calc(100% - 20px); // Ajusta el ancho al padding
+            padding: 8px;
+            box-sizing: border-box;
+            background-color: $color-tab-active;
+            color: $color-text-white;
+            font-family: $font-family-inter;
+            border-radius: $border-radius-large;
+        }
+        input {
+            margin-bottom: 15px; // Aumenta el espacio entre inputs y botones
+            width: calc(100% - 20px); // Ajusta el ancho al padding
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .hamburger-menu {
+            display: none; // Oculta el menú hamburguesa por defecto
+        }
     }
+    @media screen and (max-width: $breakpoint-mobile) {
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
 
-    // Oculta el menú principal por defecto en pantallas pequeñas
-    .tab-container ul {
-      display: none;
-    }
+        #logo {
+            width: 80px; // Ajusta esto según el tamaño deseado para el logo
+            height: auto; // Mantiene la proporción del logo
+            margin-right: 0;
+            margin-bottom: 20px; // Espacio debajo del logo en móviles
+            position: absolute;
+            top: 20px; // Ajusta si es necesario para posicionar correctamente en la parte superior
+            right: 20px; // Posiciona el logo a la derecha en lugar de a la izquierda
+        }
 
-    // Muestra el menú principal al hacer clic en el menú hamburguesa
-    .hamburger-menu.active ~ .tab-container ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      margin-top: 20px;
+        #audioControls {
+            order: 1; // Mover los controles de audio a la derecha
+            margin-top: 0; // Eliminar el espacio superior
+            margin-bottom: 20px; // Añadir un poco de espacio inferior
+        }
+
+        #salud-tab {
+            font-size: 20px; // Tamaño de fuente reducido para @SALUD
+            margin-top: 0;
+            line-height: normal;
+            width: 100%; // Ajuste al ancho del contenedor
+            text-align: center;
+        }
+
+        .tab-container {
+            order: -1; // Pestañas al inicio
+            width: 100%;
+            margin-top: 0;
+            justify-content: space-around;
+
+            ul {
+                flex-direction: column; // Pestañas en columna
+                align-items: center; // Centrado horizontal
+                width: 100%;
+
+                .nav-link {
+                    width: 100%;
+                    justify-content: center;
+
+                    .tab {
+                        font-size: 20px; // Tamaño de fuente reducido para las pestañas
+                        width: 100%; // Ajuste al ancho del contenedor
+                        margin-right: 0; // Sin margen derecho
+                    }
+
+                    .nav-dropdown {
+                        left: 50%; // Centrado del dropdown
+                        transform: translateX(-50%); // Alineación precisa
+                    }
+                }
+            }
+        }
+        .search-section {
+            position: relative;
+            bottom: 70%; // Permite que el menú se posicione con respecto al header
+            width: 20%; // Ocupa el ancho completo del header
+            display: flex;
+            justify-content: center; // Centra el ícono de búsqueda
+            left: 0%;
+
+            .search-menu {
+                display: none; // Sigue oculto hasta que se haga clic
+                z-index: 1;
+                left: 90%;
+
+                input {
+                    margin-bottom: 15px; // Aumenta el espacio entre inputs y botones
+                    width: calc(100% - 20px); // Ajusta el ancho al padding
+                    padding: 8px;
+                    box-sizing: border-box;
+                }
+                button {
+                    margin-bottom: 15px; // Aumenta el espacio entre inputs y botones
+                    width: calc(100% - 10px); // Ajusta el ancho al padding
+                    padding: 8px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        #loginTab {
+            width: $size-button;
+            cursor: pointer;
+            margin-top: 15px;
+            background-color: transparent;
+            margin-right: auto; // Mueve el menú de inicio de sesión a la derecha
+        }
+
+        .login-menu {
+            position: absolute;
+            top: 1vh;
+            right: 0px;
+            display: none;
+            background-color: $color-background-header;
+            border: 1px solid $color-border;
+            border-radius: $border-radius-large;
+            padding: 10px;
+            width: 40%;
+            z-index: 1;
+
+            button {
+                margin-bottom: 10px;
+                width: calc(100% - 20px); // Ajusta el ancho al padding
+                padding: 8px;
+                box-sizing: border-box;
+                background-color: $color-tab-active;
+                color: $color-text-white;
+                font-family: $font-family-inter;
+                border-radius: $border-radius-large;
+            }
+            input {
+                margin-bottom: 15px; // Aumenta el espacio entre inputs y botones
+                width: calc(100% - 20px); // Ajusta el ancho al padding
+                padding: 8px;
+                box-sizing: border-box;
+            }
+        }
+        .hamburger-menu {
+            display: block;
+            cursor: pointer;
+            position: relative;
+            z-index: 1000;
+            padding: 15px;
+            font-size: 24px; // Ajustar el tamaño del menú hamburguesa
+            color: $color-tab-active !important; // Cambiar el color del menú hamburguesa y forzar la prioridad
+
+            .bar {
+                width: 45px; // Aumenta el ancho de las barras
+                height: 6px; // Aumenta la altura de las barras
+                background-color: $color-text-white;
+                margin: 10px 0; // Ajusta el margen entre las barras
+                transition: background-color 0.3s ease; // Añadido para animar el color de las barras
+            }
+        }
+
+        // Oculta el menú principal por defecto en pantallas pequeñas
+        .tab-container ul {
+            display: none;
+        }
+
+        // Muestra el menú principal al hacer clic en el menú hamburguesa
+        .hamburger-menu.active ~ .tab-container ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
     }
-  }
 }

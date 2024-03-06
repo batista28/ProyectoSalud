@@ -13,7 +13,7 @@ body {
     font-family: $font-family-base;
     background-color: $color-background;
     color: $color-primary;
-    margin: 0;
+
     padding: 0;
 }
 
@@ -35,6 +35,7 @@ main {
         border-radius: 5px;
         padding: 20px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 100px;
 
         h2 {
             color: $color-primary;
